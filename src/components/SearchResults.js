@@ -63,10 +63,10 @@ const SearchResults = ( { exerciseResults, setExerciseResults }) => {
 
                 {exerciseResults.map((exercise, index) => (
 
-                    <Col>
+                    <Col key={`exercise ${exercise.id} ${index}`}>
 
                     
-                        <ExerciseCard key={index} exercise={exercise} />
+                        <ExerciseCard  exercise={exercise} />
                     
                     
                     </Col>                                   
