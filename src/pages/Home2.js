@@ -2,7 +2,7 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container, Row, Col } from "react-bootstrap";
 
-const Home = () => {
+const Home2 = () => {
 
     // function handleClick(route) {
     //     window.location.href = `/${route}`;
@@ -55,4 +55,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home2
