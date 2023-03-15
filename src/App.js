@@ -13,6 +13,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/quickworkout" element={<QuickWorkout />} />
+        <Route path="/buildworkout" element={<BuildWorkout />} />
+        <Route path="/workoutconfirm" element={<WorkoutConfirm />} />
+        <Route path="/workoutpage" element={<WorkoutPage />} />
+        <Route path="/restpage" element={<RestPage />} />
+        <Route path="/workoutfinish" element={<WorkoutFinish />} />
       </Routes>
     </Container>
   );
