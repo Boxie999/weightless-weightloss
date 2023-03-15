@@ -8,7 +8,7 @@ const Header = () => {
         <Navbar.Brand href="#home">SimpleFit</Navbar.Brand>
                 <Nav className="justify-content-center" activeKey="/home">
                     <Nav.Item>
-                        <Nav.Link href="/home">Home</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="link-1">My Exercises</Nav.Link>
