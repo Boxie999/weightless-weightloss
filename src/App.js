@@ -5,11 +5,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 import Header from './components/Header';
 import Home from './pages/Home';
+import QuickWorkout from './pages/QuickWorkout';
+import BuildWorkout from './pages/BuildWorkout';
+import WorkoutConfirm from './pages/WorkoutConfirm';
+import WorkoutPage from './pages/WorkoutPage';
+import RestPage from './pages/RestPage';
+import WorkoutFinish from './pages/WorkoutFinish';
 
 
 function App() {
   return (
-    <Container>
+    <Container fluid>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
