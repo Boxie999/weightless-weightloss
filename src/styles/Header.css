@@ -1,0 +1,45 @@
+:root {
+    --myBlue: rgb(78, 203, 215);
+    --myGreen: rgb(62, 240, 220);
+    --myBlack: rgb(60, 60, 59);
+}
+
+* {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#navLogo {
+    cursor: pointer;
+    color: var(--myBlack);
+    font-weight: 600;
+    font-size: 40px;
+    margin-top: 2px;
+    margin-left: 23px;
+    margin-bottom: 5px;
+}
+
+/*#navLogo:hover {
+    color: rgb(236, 236, 236);
+}*/
+
+.fit {
+    color: rgb(236, 236, 236);
+}
+
+#homeIcon {
+    cursor: pointer;
+    margin-top: 18px;
+    margin-right: 20px;
+    font-size: 25px;
+    color: white;
+}
+
+#homeIcon:hover {
+    color: var(--myBlack);
+}

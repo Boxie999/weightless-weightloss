@@ -1,22 +1,15 @@
-import React from 'react';
-import { Nav, Navbar, Container } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import "../styles/Header.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse } from '@fortawesome/free-solid-svg-icons'
 
-const Header = () => {
-  return (
-    <Navbar bg="light" expand="sm">
-        <Container>
-        <Navbar.Brand href="#home">SimpleFit</Navbar.Brand>
-                <Nav className="justify-content-center" activeKey="/home">
-                    <Nav.Item>
-                        <Nav.Link href="/">Home</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="link-1">My Exercises</Nav.Link>
-                    </Nav.Item>                    
-                </Nav>
-        </Container>
-    </Navbar>
-  )
+function Header() {
+    return (
+        <nav>
+            <p id="navLogo">SIMPLE<span className="fit">FIT.</span></p>
+            <FontAwesomeIcon id="homeIcon" icon={faHouse} />
+        </nav>
+    );
 }
 
-export default Header
+export default Header;

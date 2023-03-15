@@ -1,32 +1,24 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import React from 'react';
-import { Route, Routes } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Home from './pages/Home';
-import QuickWorkout from './pages/QuickWorkout';
-import BuildWorkout from './pages/BuildWorkout';
-import WorkoutConfirm from './pages/WorkoutConfirm';
-import WorkoutPage from './pages/WorkoutPage';
-import RestPage from './pages/RestPage';
-import WorkoutFinish from './pages/WorkoutFinish';
-
+import WorkoutPicker from './pages/WorkoutPicker';
 
 function App() {
   return (
-    <Container fluid>
+    <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/quickworkout" element={<QuickWorkout />} />
-        <Route path="/buildworkout" element={<BuildWorkout />} />
-        <Route path="/workoutconfirm" element={<WorkoutConfirm />} />
-        <Route path="/workoutpage" element={<WorkoutPage />} />
-        <Route path="/restpage" element={<RestPage />} />
-        <Route path="/workoutfinish" element={<WorkoutFinish />} />
-      </Routes>
-    </Container>
+      <div>
+        {/* Wrap Route elements in a Routes component */}
+        <Routes>
+          {/* Define routes using the Route component to render different page components at different paths */}
+          {/* Define a default route that will render the Home component */}
+          <Route path="/" element={<Home />} />
+          <Route path="WorkoutPicker" element={<WorkoutPicker />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
