@@ -1,0 +1,14 @@
+#exerciseSearch {
+    margin: auto;
+    margin-top: 50px;
+    width: 500px;
+}
+
+#exerciseSearchInput {
+    padding-left: 0px;
+}
+
+#searchResults {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
