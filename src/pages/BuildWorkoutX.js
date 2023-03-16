@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import "../styles/BuildWorkout.css";
 import SearchResultCard from "../components/SearchResultCard";
 import exercises from "../exercises.json";
-import { Stack } from "react-bootstrap";
+import { Stack, Container } from "react-bootstrap";
 import SearchResults from "../components/SearchResults";
 
 
@@ -74,17 +74,17 @@ function WorkoutPicker() {
                 </div>
             </div>
 
-            <div id="searchResults" class="row row-cols-1 row-cols-md-4 d-flex justify-content-center">
+            <Container fluid>
                 <SearchResults
                 exerciseResults={exerciseResults}
                 setExerciseResults={setExerciseResults} />
-            </div>
+            </Container>
 
-            <button className="btn btn-primary border-0 btn-lg chooseButton text-center" href="#" type="button">START WORKOUT</button>
+            
         </div>
     );
 }
 
-
+// div id="searchResults" class="row row-cols-1 row-cols-md-4 d-flex justify-content-center"
 
 export default WorkoutPicker;
