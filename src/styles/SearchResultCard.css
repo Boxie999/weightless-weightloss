@@ -29,21 +29,3 @@
     width: 20px;
     accent-color: var(--myBlue);
 }
-
-
-
-
-
-.addExerciseButton {
-    margin: auto;
-    width: 100px;
-    height: 25px;
-    font-size: 15px;
-    padding-top: 0px;
-    padding-bottom: 20px;
-    background-color: var(--myBlue);
-}
-
-.addExerciseButton:hover {
-    background-color: var(--myGreen);
-}
