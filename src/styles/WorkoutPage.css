@@ -1,0 +1,23 @@
+.workoutPage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: azure;
+    justify-content: space-around;
+}
+
+button {
+    
+    border: none;
+    font-size: 18px;
+    color: #02dec4;
+    background: none;
+    margin: 5px;
+    font-weight: bold;
+
+}
+
+p {
+    font-size: '22px';
+    color: #02dec4;
+}

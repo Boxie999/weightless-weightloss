@@ -1,16 +1,17 @@
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
-import React from 'react';
+import React, { useState } from 'react';
 
 
-function Timer() {
-    let timerActive = true; //button onClick(timerActive= false) so the timer pauses
-    let timerDuration = 30;
+function Timer({timeRemaining, exerciseInProgress}) {
+  
+  
+    
     
 
    return (
     <CountdownCircleTimer
-    isPlaying={timerActive}
-    duration={timerDuration}
+    isPlaying={exerciseInProgress}
+    duration={timeRemaining}
     colors={'#02dec4'}
     //colorsTime={[30,]}
     //isSmoothColorTransition={true}  //if we want to add gradient, optional
@@ -25,7 +26,9 @@ function Timer() {
     {({ remainingTime }) => remainingTime}
   </CountdownCircleTimer>
    )
+   
    }
+  
 
   
 export default Timer;

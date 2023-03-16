@@ -1,0 +1,7 @@
+.timerCard {
+    width: 260px;
+    height: 400px;
+    background-color: rgba(0, 255, 136, 0.843);
+    display: flex;
+    flex-direction: column;
+}
