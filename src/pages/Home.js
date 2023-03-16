@@ -23,8 +23,10 @@ function Home() {
                 </p>
             </div>
             <div id="myExercisesArea">
-                <img id="starJumper" src={jumpingGuy} alt="Star Jumping Guy" />
-                <p id="excerciseHistory">MY EXERCISE HISTORY</p>
+                <NavLink to="/FavouriteExercises">
+                    <img id="starJumper" src={jumpingGuy} alt="Star Jumping Guy" />
+                    <p id="excerciseHistory">MY EXERCISE HISTORY</p>
+                </NavLink>
             </div>
         </div>
     );

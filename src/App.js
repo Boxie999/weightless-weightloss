@@ -8,6 +8,7 @@ import BuildWorkout from './pages/BuildWorkout';
 import BuildWorkoutX from './pages/BuildWorkoutX';
 import WorkoutPicker from './pages/WorkoutPicker';
 import WorkoutPage from './pages/WorkoutPage';
+import FavouriteExercises from './pages/FavouriteExercises';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="BuildWorkout" element={<BuildWorkout />} />
           <Route path="Timer" element={<WorkoutPage />} />
           <Route path="BuildWorkoutX" element={<BuildWorkoutX />} />
+          <Route path="FavouriteExercises" element={<FavouriteExercises />} />
         </Routes>
       </div>
     </Router>
