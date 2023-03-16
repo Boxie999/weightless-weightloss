@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Col, Row, Button, Card } from "react-bootstrap";
 // import { searchOptions, retrieveApiData } from '../utils/retrieveApiData';
-import ExerciseCard from './ExerciseCard';
 import SearchResultCard from './SearchResultCard';
 import exercises from "../exercises.json";
 import "slick-carousel/slick/slick.css"; 

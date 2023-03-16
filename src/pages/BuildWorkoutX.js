@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import "../styles/BuildWorkout.css";
-import SearchResultCard from "../components/SearchResultCard";
 import exercises from "../exercises.json";
 import { Stack, Container } from "react-bootstrap";
 import SearchResults from "../components/SearchResults";
+// import { searchOptions, retrieveApiData } from '../utils/retrieveApiData';
 
 
 function WorkoutPicker() {
