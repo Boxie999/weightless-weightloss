@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WorkoutConfirm = () => {
+const WorkoutConfirm = (checkedArray, workoutExercises) => {
   return (
     <div>WorkoutConfirm</div>
   )

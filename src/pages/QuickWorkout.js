@@ -9,7 +9,7 @@ const QuickWorkout = () => {
             <h1 className="display-4">Quick Workout</h1>
             <br />
             <p className="lead">Don't know where to start? We've got you covered! <br /> <br />
-            Just choose a body region below and get started on a 
+            Just choose a body region and click to get started right away! 
             </p>
             <hr className="my-4" />
             <p>Let's get your body moving and your blood pumping!
