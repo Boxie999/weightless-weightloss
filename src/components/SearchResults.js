@@ -57,7 +57,6 @@ const SearchResults = ( { exerciseResults, setExerciseResults }) => {
       <p>Showing Exercise Results</p>
       <br />
         <Container fluid>
-
         
             <Slider {...settings}>
 
