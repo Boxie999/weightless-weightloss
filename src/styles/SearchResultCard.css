@@ -1,0 +1,44 @@
+.searchResultCard {
+    margin-top: 70px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 20px;
+    width: 243px !important;
+    height: 361px !important;
+}
+
+.card-title {
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+.card-text {
+    font-size: 20px;
+    color: var(--myBlue);
+    margin-bottom: 18px;
+    line-height: 20px;
+}
+
+.exerciseCheck {
+    cursor: pointer;
+    height: 20px;
+    accent-color: var(--myBlue);
+}
+
+
+
+
+
+.addExerciseButton {
+    margin: auto;
+    width: 100px;
+    height: 25px;
+    font-size: 15px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    background-color: var(--myBlue);
+}
+
+.addExerciseButton:hover {
+    background-color: var(--myGreen);
+}
