@@ -14,13 +14,17 @@ function Home() {
                 <p id="homeIntro">Good morning!</p>
                 <h1 id="homeTitle">LET'S GET YOUR BLOOD PUMPING</h1>
                 <p>
-                <NavLink to="/WorkoutPicker"><button className="btn btn-primary border-0 btn-lg chooseButton" href="#" role="button">CHOOSE WORKOUT</button></NavLink>
-                    <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" role="button">CREATE A PLAN</button>
+                <NavLink to="/WorkoutPicker">
+                    <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">QUICK WORKOUT</button>
+                </NavLink>
+                <NavLink to="/BuildWorkout">
+                    <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">CREATE WORKOUT PLAN</button>
+                </NavLink>
                 </p>
             </div>
             <div id="myExercisesArea">
                 <img id="starJumper" src={jumpingGuy} alt="Star Jumping Guy" />
-                <p id="excerciseHistory">MY EXCERCISE HISTORY</p>
+                <p id="excerciseHistory">MY EXERCISE HISTORY</p>
             </div>
         </div>
     );
