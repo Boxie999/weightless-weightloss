@@ -94,6 +94,8 @@ const SearchResults = ( { exerciseResults }) => {
         // const result = checkedArray.map((chA) => (exercises.find(exercise => exercise.id === chA) || {}).name).filter(Boolean);
 
         setWorkoutExercises(result);
+
+        console.log(workoutExercises);
         
     }  
 
