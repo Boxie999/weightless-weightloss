@@ -88,15 +88,44 @@ const SearchResults = ( { exerciseResults, setExerciseResults }) => {
     console.log(checkedArray);
 
     const createWorkout = (event) => {
-        checkedArray.map((item) => {
+
+        // const result = checkedArray.map((chA) => (exercises.find(exercise => exercise.id === chA) || {}).name).filter(Boolean);
+        // Map through the index of user-checked exercise ids first. For each element of that array, we want to perform a .find() operation on the exercises array of objects to find objects with matching ids. Lastly, we want to filter out from the array objects for which the condition is true. This will be our array of objects that we can then use to render 
+
+        const result = checkedArray.map((chA) => (exercises.find(exercise => exercise.id === chA) || {})).filter(Boolean);
+
+
+        console.log(result);
+
+
+
+        // checkedArray.map((item) => {
     
-          let result = exercises.find((exercise) => exercise.id == item);
+        //   let result = exercises.find((exercise) => exercise.id === item);
     
-          setWorkoutExercises([...workoutExercises, result]);
+        //   setWorkoutExercises([...workoutExercises, result]);
     
-          console.log(workoutExercises);
+        //   console.log(workoutExercises);
     
-        })
+        // })
+
+        // for(let i = 0; i < checkedArray.length; i++) {
+        //    let result = exercises.find((exercise) => exercise.id === checkedArray[i]);
+        //     setWorkoutExercises([...workoutExercises, result])
+        // }
+
+        // console.log(workoutExercises)
+
+        // const test = checkedArray.map((eachId) => {
+        //     const matchedUpExercises = exercises.find((exercise) => {
+        //         return exercise.id === eachId
+        //     })
+        //     return matchedUpExercises;
+        // })
+        // const result = test.filter(Boolean).map((element) => {
+        //     return element.name
+        //})
+        
     }  
 
   return (
@@ -112,7 +141,9 @@ const SearchResults = ( { exerciseResults, setExerciseResults }) => {
                     <Col key={`exercise ${exercise.id} ${index}`}>
 
                     
-                        <SearchResultCard  exercise={exercise} />
+                        <SearchResultCard  
+                        exercise={exercise}
+                        handleSelect={handleSelect} />
                     
                     
                     </Col>                                  
