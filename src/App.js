@@ -7,6 +7,7 @@ import Home2 from './pages/Home2';
 import BuildWorkout from './pages/BuildWorkout';
 import BuildWorkoutX from './pages/BuildWorkoutX';
 import WorkoutPicker from './pages/WorkoutPicker';
+import WorkoutPage from './pages/WorkoutPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="WorkoutPicker" element={<WorkoutPicker />} />
           <Route path="Home2" element={<Home2 />} />
           <Route path="BuildWorkout" element={<BuildWorkout />} />
+          <Route path="Timer" element={<WorkoutPage />} />
           <Route path="BuildWorkoutX" element={<BuildWorkoutX />} />
         </Routes>
       </div>
