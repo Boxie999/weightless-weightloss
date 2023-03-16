@@ -24,7 +24,7 @@ function Home() {
             </div>
             <div id="myExercisesArea">
                 <img id="starJumper" src={jumpingGuy} alt="Star Jumping Guy" />
-                <p id="excerciseHistory">MY EXCERCISE HISTORY</p>
+                <p id="excerciseHistory">MY EXERCISE HISTORY</p>
             </div>
         </div>
     );
