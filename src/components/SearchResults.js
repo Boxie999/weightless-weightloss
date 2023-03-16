@@ -101,8 +101,7 @@ const SearchResults = ( { exerciseResults }) => {
 
   return (
     
-    <Container fluid id="searchResults" style={{marginTop: "40px", padding: "15px"}}>
-      <p>Exercise Results</p>
+    <Container fluid id="searchResults" style={{padding: "15px"}}>
         <Container fluid>
         
             <Slider {...settings}>
