@@ -18,15 +18,18 @@ function WorkoutPicker() {
                     <FontAwesomeIcon id="searchIcon" icon={faSearch} />
                 </span>
                 <input id="exerciseSearchInput" type="search" className="form-control border-0 bg-transparent" placeholder="Search exercises by 'body part', 'equipment' or 'muscle target'" aria-label="Search" aria-describedby="search-addon" />
+                <div className="input-group-append">
+                    <button id="searchButton" className="btn btn-outline-secondary border-0" type="button">SEARCH</button>
+                </div>
             </div>
-        <div id="searchResults" class="row row-cols-1 row-cols-md-4 d-flex justify-content-center">
-        <SearchResultCard></SearchResultCard>
-        <SearchResultCard></SearchResultCard>
-        <SearchResultCard></SearchResultCard>
-        <SearchResultCard></SearchResultCard>
-        <SearchResultCard></SearchResultCard>
-        </div>
-        <button className="btn btn-primary border-0 btn-lg chooseButton text-center" href="#" role="button">START WORKOUT</button>
+            <div id="searchResults" class="row row-cols-1 row-cols-md-4 d-flex justify-content-center">
+                <SearchResultCard></SearchResultCard>
+                <SearchResultCard></SearchResultCard>
+                <SearchResultCard></SearchResultCard>
+                <SearchResultCard></SearchResultCard>
+                <SearchResultCard></SearchResultCard>
+            </div>
+            <button className="btn btn-primary border-0 btn-lg chooseButton text-center" href="#" role="button">START WORKOUT</button>
         </div>
     );
 }
