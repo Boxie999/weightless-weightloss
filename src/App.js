@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Home2 from './pages/Home2';
 import BuildWorkout from './pages/BuildWorkout';
+import BuildWorkoutX from './pages/BuildWorkoutX';
 import WorkoutPicker from './pages/WorkoutPicker';
 import WorkoutPage from './pages/WorkoutPage';
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="Home2" element={<Home2 />} />
           <Route path="BuildWorkout" element={<BuildWorkout />} />
           <Route path="Timer" element={<WorkoutPage />} />
+          <Route path="BuildWorkoutX" element={<BuildWorkoutX />} />
         </Routes>
       </div>
     </Router>
