@@ -19,6 +19,16 @@
     line-height: 20px;
 }
 
+.exerciseCheck {
+    cursor: pointer;
+    height: 20px;
+    accent-color: var(--myBlue);
+}
+
+
+
+
+
 .addExerciseButton {
     margin: auto;
     width: 100px;

@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "../styles/SearchResultCard.css";
+import Row from 'react-bootstrap/Row';
 import testerGif from "../images/testerGif.gif"
 
 function SearchResultCard() {
@@ -9,9 +10,12 @@ function SearchResultCard() {
             <div className="card-body">
                 <h5 className="card-title">Archer Pull Up</h5>
                 <p className="card-text">body part - target</p>
-                <button className="btn btn-primary border-0 btn-lg addExerciseButton" href="#" role="button">add exercise</button>
-            </div>
 
+
+                <Row style={{ alignItems: "center" }}>
+                    <input className="exerciseCheck" type="checkbox" />
+                </Row>
+            </div>
         </div>
     );
 }
