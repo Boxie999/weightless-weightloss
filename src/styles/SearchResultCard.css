@@ -9,7 +9,8 @@
 
 .card-title {
     font-size: 25px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
+    line-height: 24px;
 }
 
 .card-text {
@@ -20,8 +21,12 @@
 }
 
 .exerciseCheck {
+    position: absolute;
+    bottom: 20px;
+    left: 111.5px;
     cursor: pointer;
     height: 20px;
+    width: 20px;
     accent-color: var(--myBlue);
 }
 
