@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 import React, { useEffect } from "react";
 import "../styles/Home.css"
 import jumpingGuy from "../images/StarJump.gif"
@@ -23,10 +24,10 @@ function Home() {
                 </p>
             </div>
             <div id="myExercisesArea">
-                <NavLink to="/FavouriteExercises">
+                <Nav.Link href="/FavouriteExercises">
                     <img id="starJumper" src={jumpingGuy} alt="Star Jumping Guy" />
                     <p id="excerciseHistory">MY EXERCISE HISTORY</p>
-                </NavLink>
+                </Nav.Link>
             </div>
         </div>
     );
