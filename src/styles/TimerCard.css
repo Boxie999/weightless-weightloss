@@ -1,13 +1,23 @@
 .timerCard {
     width: 360px;
     height: 500px;
-    background-color: rgba(255, 255, 255, 0.843);
+    padding: 5px;
+    background-color: white;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.20);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.timerCardGif {
+    width: 200px;
+    margin: 20px;
+}
+
+.card-title {
+    margin: 10px;
 }
 
 button {
@@ -25,3 +35,5 @@ p {
     font-size: 22px;
     color: #02dec4;
 }
+
+

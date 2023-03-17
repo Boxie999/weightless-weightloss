@@ -6,6 +6,7 @@ import "../styles/WorkoutPage.css"
 
 
 const WorkoutPage = () => {
+  
   const [exerciseInProgress, setExerciseInProgress] = useState(true)
   const [timeRemaining, setTimeRemaining] = useState(30)
   const [exerciseIndex, setExerciseIndex] = useState(0)
@@ -16,10 +17,7 @@ const WorkoutPage = () => {
       
       < TimerCard  exerciseInProgress={exerciseInProgress}
       exerciseIndex={exerciseIndex}
-      timeRemaining={timeRemaining}/>
-
-
-       
+      timeRemaining={timeRemaining}/>   
       
     </div>
     
