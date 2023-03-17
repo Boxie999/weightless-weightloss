@@ -1,0 +1,15 @@
+.startButton {
+    background-color: var(--myBlack) !important;
+    font-weight: 600 !important;
+    width: 360px;
+    height: 57px;
+    font-weight: 500 !important;
+    font-size: 32px !important;
+    line-height: 38px !important;
+    border-radius: 10px !important;
+    margin: 10px;
+}
+
+.exerciseList {
+    list-style-type: none;
+}
