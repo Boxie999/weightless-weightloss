@@ -45,7 +45,7 @@ const SearchResults = ( { exerciseResults }) => {
 
     const settings = {
         dots: true,
-        infinite: true,
+        infinite: false, // set to false to prevent duplicates on results less than slidesToShow
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
