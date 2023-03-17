@@ -19,7 +19,7 @@ const TimerCard = ({exerciseInProgress, timeRemaining, exerciseIndex}) => {
         timeRemaining={timeRemaining}
         exerciseIndex={exerciseIndex}/></div>
         
-        <div><button /*onClick={pauseTimer}*/>Tap to Pause</button></div>
+        <div><button /* onClick={pauseTimer}*/>Tap to Pause</button></div>
         
         <div><p>Next:</p></div>
       
