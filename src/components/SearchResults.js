@@ -6,7 +6,6 @@ import exercises from "../exercises.json";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import WorkoutConfirm from '../pages/WorkoutConfirm';
 
 
 // First writing functions to create custom arrows for the React Slick carousel we will display the search results in.
@@ -39,7 +38,7 @@ function SampleNextArrow(props) {
 
 const SearchResults = ( { exerciseResults }) => {
     
-    console.log(exerciseResults);
+    console.log(exerciseResults); // Remember exerciseResults is the output search result from a user search
 
     // Settings object for the horizontal scrollbar
 
@@ -89,7 +88,7 @@ const SearchResults = ( { exerciseResults }) => {
 
     const [checkedArray, setCheckedArray] = useState([]);
 
-    const [workoutBuilderExercises, setWorkoutBuilderExercises] = useState([]); // This tracks the workouts chosen by the user from the search results page, which will be collated and used for the workout list
+    // const [workoutBuilderExercises, setWorkoutBuilderExercises] = useState([]); // This tracks the workouts chosen by the user from the search results page, which will be collated and used for the workout list
 
     const handleSelect = (event) => {
 
@@ -117,14 +116,18 @@ const SearchResults = ( { exerciseResults }) => {
         
         // Map through the index of user-checked exercise ids first. For each element of that array, we want to perform a .find() operation on the exercises array of objects to find objects with matching ids. Lastly, we want to filter out from the array objects for which the condition is true. This will be our array of objects that we can then use to render 
 
-        const result = checkedArray.map((chArrId) => (exercises.find(exercise => exercise.id === chArrId) || {})).filter(Boolean);
+        const workoutBuilderExercises = checkedArray.map((chArrId) => (exercises.find(exercise => exercise.id === chArrId) || {})).filter(Boolean);
         // const result = checkedArray.map((chA) => (exercises.find(exercise => exercise.id === chA) || {}).name).filter(Boolean);
 
-        console.log(result);
-
-        setWorkoutBuilderExercises(result);
-
         console.log(workoutBuilderExercises);
+
+        // setWorkoutBuilderExercises([result]);
+
+        // console.log(workoutBuilderExercises);
+
+        localStorage.setItem("workout builder list", JSON.stringify(workoutBuilderExercises)); // Takes the workoutBuilderExercises and sets them in local storage. This allows for it to be accessible on other pages, as well as be set from other sources than just the search page.
+
+        window.location.href = "/WorkoutConfirm"; // Navigate to the Workout Confirm page which will list out the workout exercises that can be reviewed before starting the workout
         
     }  
 
