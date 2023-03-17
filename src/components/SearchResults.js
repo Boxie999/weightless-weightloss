@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Col, Row, Button, Card } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 // import { searchOptions, retrieveApiData } from '../utils/retrieveApiData';
 import SearchResultCard from './SearchResultCard';
 import exercises from "../exercises.json";
@@ -99,7 +99,7 @@ const SearchResults = ( { exerciseResults }) => {
     
           // We want to add the ids of the checked exercises to the checkedArray
     
-          setCheckedArray([...checkedArray, checkedId]);
+          setCheckedArray([checkedId, ...checkedArray]);
     
         } else {
           // Any exercise that is unchecked will have its id removed from the checkedArray
@@ -133,7 +133,11 @@ const SearchResults = ( { exerciseResults }) => {
 
     const addToFavourites = () => {
         if(checkedArray.length > 0) { // We only want the Add To Favourites button to work if there are user-specified exercises to work with
+
+            // Firstly use the array of ids to get an array of exercise objects from the complete exercises list
             const addToFavesExercises = checkedArray.map((chArrId) => (exercises.find(exercise => exercise.id === chArrId) || {})).filter(Boolean);
+
+            // Then call whatever is already logged as favourites in local storage - if there is anything there
 
             const stringifiedFaveExercises = window.localStorage.getItem("fave exercises list");
 
@@ -146,11 +150,23 @@ const SearchResults = ( { exerciseResults }) => {
             } else {
 
                 parsedFaveExercises = JSON.parse(stringifiedFaveExercises);
-            }            
+            }  
+            
+            //console.log(parsedFaveExercises.length);
 
-            const faveExercises = addToFavesExercises.concat(parsedFaveExercises);
+            // We map through the newly collated list of exercise objects for their ids
 
-            console.log(faveExercises);
+            let exerciseObjectIds = addToFavesExercises.map(exercise => exercise.id);
+
+            // We will get our final list of faveExercises by joining/concatenating the new list of exercises chosen by the user  to what is already in local storage - AFTER ensuring that any duplicates in local storage are filtered out. This keeps the most recently selected choice near the 'top' of the list.
+
+            let faveExercises = addToFavesExercises.concat(parsedFaveExercises.filter(({id}) => !exerciseObjectIds.includes(id)));
+
+            // console.log(faveExercises);
+
+            // console.log(faveExercises.length);
+
+            // Then we stringify the new array of favourite exercises and set it back in local storage
 
             window.localStorage.setItem("fave exercises list", JSON.stringify(faveExercises));
 
