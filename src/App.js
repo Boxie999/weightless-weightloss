@@ -11,10 +11,11 @@ import WorkoutPicker from './pages/WorkoutPicker';
 import WorkoutPage from './pages/WorkoutPage';
 import FavouriteExercises from './pages/FavouriteExercises';
 import exercises from "./exercises.json";
+import WorkoutConfirm from "./pages/WorkoutConfirm";
 
 function App() {
 
-  const [searchTerm, setSearchTerm] = useState(""); // This tracks and represents what the user will type into the search field
+    const [searchTerm, setSearchTerm] = useState(""); // This tracks and represents what the user will type into the search field
 
     const [exerciseResults, setExerciseResults] = useState([]); // This tracks and represents the entire COLLECTION of search results DISPLAYED after the user search is submitted
     
@@ -74,6 +75,7 @@ function App() {
           <Route path="Timer" element={<WorkoutPage />} />
           <Route path="BuildWorkoutX" element={<BuildWorkoutX searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults}/>} />
           <Route path="FavouriteExercises" element={<FavouriteExercises />} />
+          <Route path="WorkoutConfirm" element={<WorkoutConfirm />} />
         </Routes>
       </div>
     </Router>

@@ -89,7 +89,7 @@ const SearchResults = ( { exerciseResults }) => {
 
     const [checkedArray, setCheckedArray] = useState([]);
 
-    const [workoutExercises, setWorkoutExercises] = useState([]);
+    const [workoutBuilderExercises, setWorkoutBuilderExercises] = useState([]); // This tracks the workouts chosen by the user from the search results page, which will be collated and used for the workout list
 
     const handleSelect = (event) => {
 
@@ -120,16 +120,18 @@ const SearchResults = ( { exerciseResults }) => {
         const result = checkedArray.map((chArrId) => (exercises.find(exercise => exercise.id === chArrId) || {})).filter(Boolean);
         // const result = checkedArray.map((chA) => (exercises.find(exercise => exercise.id === chA) || {}).name).filter(Boolean);
 
-        setWorkoutExercises(result);
+        console.log(result);
 
-        console.log(workoutExercises);
+        setWorkoutBuilderExercises(result);
+
+        console.log(workoutBuilderExercises);
         
     }  
 
   return (
     
     <Container fluid id="searchResults" style={{marginTop: "40px", padding: "15px"}}>
-      <p>Exercise Results</p>
+      <p>{exerciseResults.length} Exercises Found</p>
         <Container fluid>
         
             <Slider {...settings}>
@@ -154,11 +156,7 @@ const SearchResults = ( { exerciseResults }) => {
         <br /><br />
 
         <button className="btn btn-primary border-0 btn-lg chooseButton text-center" href="#" type="button" onClick={createWorkout}>START WORKOUT</button>
-
-        <WorkoutConfirm 
-      checkedArray={checkedArray}
-      workoutExercises={workoutExercises}
-        />
+        
       
     </Container>
   )
