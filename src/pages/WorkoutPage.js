@@ -12,11 +12,13 @@ const WorkoutPage = () => {
 
   return (
     <div className='workoutPage'>
-      <div><button>Tap to Pause</button></div>
+      
       
       < TimerCard  exerciseInProgress={exerciseInProgress}
       exerciseIndex={exerciseIndex}
       timeRemaining={timeRemaining}/>
+
+
        
       
     </div>
