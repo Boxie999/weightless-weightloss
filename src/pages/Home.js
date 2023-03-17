@@ -18,7 +18,7 @@ function Home() {
                 <NavLink to="/WorkoutPicker">
                     <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">QUICK WORKOUT</button>
                 </NavLink>
-                <NavLink to="/BuildWorkout">
+                <NavLink to="/BuildWorkoutX">
                     <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">CREATE WORKOUT PLAN</button>
                 </NavLink>
                 </p>

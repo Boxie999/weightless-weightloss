@@ -125,11 +125,37 @@ const SearchResults = ( { exerciseResults }) => {
 
         // console.log(workoutBuilderExercises);
 
-        localStorage.setItem("workout builder list", JSON.stringify(workoutBuilderExercises)); // Takes the workoutBuilderExercises and sets them in local storage. This allows for it to be accessible on other pages, as well as be set from other sources than just the search page.
+        window.localStorage.setItem("workout builder list", JSON.stringify(workoutBuilderExercises)); // Takes the workoutBuilderExercises and sets them in local storage. This allows for it to be accessible on other pages, as well as be set from other sources than just the search page.
 
         window.location.href = "/WorkoutConfirm"; // Navigate to the Workout Confirm page which will list out the workout exercises that can be reviewed before starting the workout
         
     }  
+
+    const addToFavourites = () => {
+        if(checkedArray.length > 0) { // We only want the Add To Favourites button to work if there are user-specified exercises to work with
+            const addToFavesExercises = checkedArray.map((chArrId) => (exercises.find(exercise => exercise.id === chArrId) || {})).filter(Boolean);
+
+            const stringifiedFaveExercises = window.localStorage.getItem("fave exercises list");
+
+            let parsedFaveExercises;
+
+            if(!stringifiedFaveExercises) {
+
+                parsedFaveExercises = [];
+
+            } else {
+
+                parsedFaveExercises = JSON.parse(stringifiedFaveExercises);
+            }            
+
+            const faveExercises = addToFavesExercises.concat(parsedFaveExercises);
+
+            console.log(faveExercises);
+
+            window.localStorage.setItem("fave exercises list", JSON.stringify(faveExercises));
+
+        }
+    }
 
   return (
     
@@ -158,7 +184,10 @@ const SearchResults = ( { exerciseResults }) => {
         </Container>
         <br /><br />
 
+        
         <button className="btn btn-primary border-0 btn-lg chooseButton text-center" href="#" type="button" onClick={createWorkout}>START WORKOUT</button>
+
+        <button className="btn btn-primary border-0 btn-lg chooseButton text-center" href="#" type="button" onClick={addToFavourites}>ADD TO FAVOURITES</button>
         
       
     </Container>
