@@ -17,32 +17,32 @@ const fullBodyPlan =
         { name: 'full body 6' }
     ];
 const upperBodyPlan =
-[
-    { name: 'upper body 1' },
-    { name: 'upper body 2' },
-    { name: 'upper body 3' },
-    { name: 'upper body 4' },
-    { name: 'upper body 5' },
-    { name: 'upper body 6' }
-];
+    [
+        { name: 'upper body 1' },
+        { name: 'upper body 2' },
+        { name: 'upper body 3' },
+        { name: 'upper body 4' },
+        { name: 'upper body 5' },
+        { name: 'upper body 6' }
+    ];
 const corePlan =
-[
-    { name: 'core 1' },
-    { name: 'core 2' },
-    { name: 'core 3' },
-    { name: 'core 4' },
-    { name: 'core 5' },
-    { name: 'core 6' }
-];
+    [
+        { name: 'core 1' },
+        { name: 'core 2' },
+        { name: 'core 3' },
+        { name: 'core 4' },
+        { name: 'core 5' },
+        { name: 'core 6' }
+    ];
 const legsPlan =
-[
-    { name: 'legs 1' },
-    { name: 'legs 2' },
-    { name: 'legs 3' },
-    { name: 'legs 4' },
-    { name: 'legs 5' },
-    { name: 'legs 6' }
-];
+    [
+        { name: 'legs 1' },
+        { name: 'legs 2' },
+        { name: 'legs 3' },
+        { name: 'legs 4' },
+        { name: 'legs 5' },
+        { name: 'legs 6' }
+    ];
 
 function WorkoutPicker() {
 
