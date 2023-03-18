@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(62, 240, 220);
+}
+
+
+.workoutPage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+

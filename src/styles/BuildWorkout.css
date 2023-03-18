@@ -8,11 +8,6 @@
     padding-left: 0px;
 }
 
-#searchResults {
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-
 #searchButton {
     background-color: var(--myBlue);
     border-top-right-radius: 50px;
@@ -21,4 +16,6 @@
     border-bottom-left-radius: 0px;
     color: white;
     padding-right:16px;
+    margin: 0px;
+    height: 40px;
 }

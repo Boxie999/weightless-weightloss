@@ -1,0 +1,39 @@
+.timerCard {
+    width: 360px;
+    height: 500px;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timerCardGif {
+    width: 200px;
+    margin: 20px;
+}
+
+.card-title {
+    margin: 10px;
+}
+
+button {
+    
+    border: none;
+    font-size: 18px;
+    color: #02dec4;
+    background: none;
+    margin: 5px;
+    font-weight: bold;
+
+}
+
+p {
+    font-size: 22px;
+    color: #02dec4;
+}
+
+

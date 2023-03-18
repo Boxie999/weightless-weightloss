@@ -8,6 +8,13 @@
     font-family: 'Barlow Condensed', sans-serif;
 }
 
+body {
+    -webkit-transition: background-color .2s linear;
+    -ms-transition: background-color .2s linear;
+    transition: background-color .2s linear;
+    will-change: background-color;
+}
+
 nav {
     display: flex !important;
     flex-direction: row;

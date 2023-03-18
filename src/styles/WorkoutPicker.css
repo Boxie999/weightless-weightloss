@@ -1,0 +1,74 @@
+#selectText {
+    font-size: 20px;
+    color: var(--myBlue);
+}
+
+#figure {
+    height: 550px;
+    position: relative;
+    left: -122.5px;
+}
+
+#wholeBody {
+    z-index: -10;
+    position: absolute;
+    width: 245px;
+    height: auto;
+}
+
+#upperBody {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 83px;
+    width: 245px;
+    height: auto;
+    transition: opacity .5s;
+}
+
+#core {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 170px;
+    width: 245px;
+    height: auto;
+    transition: opacity .5s;
+}
+
+#legs {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 302px;
+    width: 245px;
+    height: auto;
+    transition: opacity .5s;
+}
+
+#head:hover {
+    opacity: 1;
+}
+
+#upperBody:hover {
+    opacity: 1;
+}
+
+#core:hover {
+    opacity: 1;
+}
+
+#legs:hover {
+    opacity: 1;
+}
+
+#pickerStart {
+    margin: auto;
+}
+
+#targetPart {
+    color: var(--myBlue);
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 10px;
+}

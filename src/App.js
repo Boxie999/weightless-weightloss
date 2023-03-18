@@ -9,6 +9,7 @@ import BuildWorkout from './pages/BuildWorkout';
 import BuildWorkoutX from './pages/BuildWorkoutX';
 import WorkoutPicker from './pages/WorkoutPicker';
 import WorkoutPage from './pages/WorkoutPage';
+import List from './components/List';
 import FavouriteExercises from './pages/FavouriteExercises';
 import exercises from "./exercises.json";
 import WorkoutConfirm from "./pages/WorkoutConfirm";
@@ -76,6 +77,7 @@ function App() {
           <Route path="BuildWorkoutX" element={<BuildWorkoutX searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults}/>} />
           <Route path="FavouriteExercises" element={<FavouriteExercises searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults} />} />
           <Route path="WorkoutConfirm" element={<WorkoutConfirm />} />
+          <Route path="List" element={<List />} />
         </Routes>
       </div>
     </Router>
