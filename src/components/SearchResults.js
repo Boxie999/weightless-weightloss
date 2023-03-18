@@ -105,6 +105,7 @@ const SearchResults = ( { exerciseResults }) => {
           // Any exercise that is unchecked will have its id removed from the checkedArray
     
           const filteredCheckedArray = checkedArray.filter((element) => element !== checkedId);
+          
           setCheckedArray(filteredCheckedArray);
         }
     }
@@ -169,6 +170,8 @@ const SearchResults = ( { exerciseResults }) => {
             // Then we stringify the new array of favourite exercises and set it back in local storage
 
             window.localStorage.setItem("fave exercises list", JSON.stringify(faveExercises));
+
+            alert("Exercises added to Favourites.");
 
         }
     }

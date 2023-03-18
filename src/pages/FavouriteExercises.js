@@ -24,16 +24,23 @@ const FavouriteExercises = ({ searchTerm, setSearchTerm, handleSubmit, exerciseR
     //     }
     // });
 
-    const favouritesArray = JSON.parse(localStorage.getItem("fave exercises list"));
+    const parsedFaveArray = JSON.parse(localStorage.getItem("fave exercises list"));
 
-    
+    let favouritesArray;
+
+    if(!parsedFaveArray) {
+        favouritesArray=[];
+    } else {
+        favouritesArray = parsedFaveArray
+    }
+        
     
 
     return (
         <div className="text-center">
-            <div id="exerciseSearch" className="input-group border rounded-pill rounded">
-                
-            </div>
+            <h2 className="border">
+                My Favourite Exercises
+            </h2>
 
             <Container fluid>
                 <FavouritesDisplay favouritesArray={favouritesArray}  />

@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import FavouriteExercises from '../pages/FavouriteExercises';
+import FavouritesDisplayCard from './FavouritesDisplayCard';
 
 
 // First writing functions to create custom arrows for the React Slick carousel we will display the search results in.
@@ -99,6 +100,9 @@ const FavouritesDisplay = ( { favouritesArray }) => {
           // Any exercise that is unchecked will have its id removed from the checkedArray
     
           const filteredFaveCheckedArray = checkedFaveArray.filter((element) => element !== faveCheckedId);
+
+          console.log(filteredFaveCheckedArray);
+
           setCheckedFaveArray(filteredFaveCheckedArray);
         }
     }
@@ -125,6 +129,10 @@ const FavouritesDisplay = ( { favouritesArray }) => {
 
     const deleteSingleFavourites = () => {
 
+        console.log(JSON.parse(window.localStorage.getItem("fave exercises list")));
+        console.log((JSON.parse(window.localStorage.getItem("fave exercises list"))).length);
+
+
         const localStorageArrayWithoutDeletedItems = checkedFaveArray.map((faveToDeleteId) => ((JSON.parse(window.localStorage.getItem("fave exercises list"))).find(faveExercise => faveExercise.id !== faveToDeleteId) || {})).filter(Boolean);
 
         localStorage.setItem("fave exercises list", JSON.stringify(localStorageArrayWithoutDeletedItems));
@@ -139,7 +147,7 @@ const FavouritesDisplay = ( { favouritesArray }) => {
     return (
     
         <Container fluid id="searchResults" style={{marginTop: "40px", padding: "15px"}}>
-          <p>{favouritesArray.length} Exercises in Favourites</p>
+          <h5>{favouritesArray.length} Exercises in Favourites</h5>
             <Container fluid>
             
                 <Slider {...settings}>
@@ -149,7 +157,7 @@ const FavouritesDisplay = ( { favouritesArray }) => {
                         <Col key={`exercise ${exercise.id} ${index}`}>
     
                         
-                            <SearchResultCard  
+                            <FavouritesDisplayCard  
                             exercise={exercise}
                             handleSelectFave={handleSelectFave} />
                         
