@@ -18,7 +18,8 @@ const WorkoutPage = () => {
       
       < TimerCard  exerciseInProgress={exerciseInProgress}
       exerciseIndex={exerciseIndex}
-      timeRemaining={timeRemaining}/>   
+      timeRemaining={timeRemaining}
+      setExerciseInProgress={setExerciseInProgress}/>   
       
     </div>
     
@@ -26,3 +27,5 @@ const WorkoutPage = () => {
 }
 
 export default WorkoutPage
+
+

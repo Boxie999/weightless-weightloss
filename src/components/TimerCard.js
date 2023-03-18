@@ -4,11 +4,11 @@ import "../styles/TimerCard.css"
 import testerGif from "../images/testerGif.gif"
 
 
-const TimerCard = ({exerciseInProgress, timeRemaining, exerciseIndex}) => {
+const TimerCard = ({exerciseInProgress, timeRemaining, exerciseIndex, setExerciseInProgress}) => {
   
-//   const pauseTimer = () => {
-//     setExerciseInProgress(false)
-//   }
+ const pauseTimer = () => {
+    setExerciseInProgress(!exerciseInProgress)
+  }
 
   return (
     <div className='timerCard'>
@@ -19,7 +19,7 @@ const TimerCard = ({exerciseInProgress, timeRemaining, exerciseIndex}) => {
         timeRemaining={timeRemaining}
         exerciseIndex={exerciseIndex}/></div>
         
-        <div><button /* onClick={pauseTimer}*/>Tap to Pause</button></div>
+        <div><button  onClick={pauseTimer}>Tap to {exerciseInProgress ? 'Pause' : 'Play'}</button></div>
         
         <div><p>Next:</p></div>
       
