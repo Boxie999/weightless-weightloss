@@ -23,15 +23,16 @@ const FavouriteExercises = ({ searchTerm, setSearchTerm, handleSubmit, exerciseR
     //         return []
     //     }
     // });
-
-    const parsedFaveArray = JSON.parse(localStorage.getItem("fave exercises list"));
-
+    
     let favouritesArray;
 
-    if(!parsedFaveArray) {
+    if(!(JSON.parse(localStorage.getItem("fave exercises list")))) {
+
         favouritesArray=[];
+
     } else {
-        favouritesArray = parsedFaveArray
+
+        favouritesArray = JSON.parse(localStorage.getItem("fave exercises list"));
     }
         
     
