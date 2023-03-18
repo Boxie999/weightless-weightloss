@@ -1,8 +1,6 @@
 .searchResultCard {
-    margin-top: 20px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-bottom: 20px;
+    margin-top: 20px !important;
+    margin:auto;
     width: 243px !important;
     height: 361px !important;
 }

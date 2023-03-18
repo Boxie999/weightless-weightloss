@@ -44,7 +44,7 @@ const SearchResults = ({ exerciseResults }) => {
   // Settings object for the horizontal scrollbar
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false, // set to false to prevent duplicates on results less than slidesToShow
     speed: 500,
     slidesToShow: 4,
@@ -59,7 +59,7 @@ const SearchResults = ({ exerciseResults }) => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
