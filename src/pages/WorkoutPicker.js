@@ -51,10 +51,7 @@ function WorkoutPicker() {
     const [CoreIsShown, setCoreIsShown] = useState(false);
     const [LegsIsShown, setLegsIsShown] = useState(false);
 
-    // useEffect(() => { localStorage.setItem('workout plan', JSON.stringify(bodyPart)) }, [bodyPart]);
-    
-    useEffect(() => { localStorage.setItem('workout builder list', JSON.stringify(bodyPart)) }, [bodyPart]);
-
+    useEffect(() => { localStorage.setItem('workout plan', JSON.stringify(bodyPart)) }, [bodyPart]);
     useEffect(() => { document.body.style.backgroundColor = 'white' }, [])
     useEffect(() => { document.body.style.backgroundImage = 'linear-gradient(0deg, rgba(0, 233, 255, 0) 23%, rgba(62, 240, 220, 0) 80%)' }, [])
 
@@ -64,32 +61,10 @@ function WorkoutPicker() {
 
             <div id="figure">
                 <img id="wholeBody" src={wholeBody} alt="whole body" />
-                <img id="upperBody" src={upperBody} alt="upper body" onMouseEnter={() => setUpperIsShown(true)} onMouseLeave={() => setUpperIsShown(false)} onClick={() => {
-
-                    setBodyPart(upperBodyPlan);
-
-                    if(UpperIsShown === true) {
-
-                        setUpperIsShown(false);
-
-                    } else {
-
-                        setUpperIsShown(true)
-                    }
-
-                    }} />
-
-                <img id="core" src={core} alt="core" onMouseEnter={() => setCoreIsShown(true)} onMouseLeave={() => setCoreIsShown(false)} onClick={() => {
-                    
-                    setBodyPart(corePlan);
-
-                    
-                    
-                    }} />
-
+                <img id="upperBody" src={upperBody} alt="upper body" onMouseEnter={() => setUpperIsShown(true)} onMouseLeave={() => setUpperIsShown(false)} onClick={() => setBodyPart(upperBodyPlan)} />
+                <img id="core" src={core} alt="core" onMouseEnter={() => setCoreIsShown(true)} onMouseLeave={() => setCoreIsShown(false)} onClick={() => setBodyPart(corePlan)} />
                 <img id="legs" src={legs} alt="" onMouseEnter={() => setLegsIsShown(true)} onMouseLeave={() => setLegsIsShown(false)} onClick={() => setBodyPart(legsPlan)} />
             </div>
-
             {(UpperIsShown || CoreIsShown || LegsIsShown) || (<label id="targetPart" >FULL BODY</label>)}
             {UpperIsShown && (<label id="targetPart" >UPPER BODY</label>)}
             {CoreIsShown && (<label id="targetPart" >CORE</label>)}
