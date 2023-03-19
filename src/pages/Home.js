@@ -26,7 +26,7 @@ function Home() {
             <div id="myExercisesArea">
                 <Nav.Link href="/FavouriteExercises">
                     <img id="starJumper" src={jumpingGuy} alt="Star Jumping Guy" />
-                    <p id="excerciseHistory">MY EXERCISE HISTORY</p>
+                    <p id="excerciseHistory">MY FAVOURITE EXERCISES</p>
                 </Nav.Link>
             </div>
         </div>

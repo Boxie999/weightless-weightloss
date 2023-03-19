@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/SearchResultCard.css";
 import Row from 'react-bootstrap/Row';
 
-function SearchResultCard( { exercise, handleSelect }) {
+function SearchResultCard( { exercise, handleSelect, checkedArray }) {
     return (
         <div className="card searchResultCard shadow p-3 mb-5 bg-white rounded border-0" style={{ width: '18rem' }}>
             <img className="card-img-top" src={exercise.gifUrl} alt={exercise.name} />
@@ -16,7 +16,8 @@ function SearchResultCard( { exercise, handleSelect }) {
                     className="exerciseCheck"
                     type="checkbox"
                     value={exercise.id}
-                    onChange={handleSelect} />
+                    onChange={handleSelect}
+                    checked={checkedArray.includes(exercise.id)} />
                 </Row>
             </div>
         </div>

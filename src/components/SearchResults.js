@@ -88,6 +88,8 @@ const SearchResults = ( { exerciseResults }) => {
 
     const [checkedArray, setCheckedArray] = useState([]);
 
+    //const [boxIsChecked, setBoxIsChecked] = useState(false);
+
     // const [workoutBuilderExercises, setWorkoutBuilderExercises] = useState([]); // This tracks the workouts chosen by the user from the search results page, which will be collated and used for the workout list
 
     const handleSelect = (event) => {
@@ -98,7 +100,7 @@ const SearchResults = ( { exerciseResults }) => {
         if(isChecked) {
     
           // We want to add the ids of the checked exercises to the checkedArray
-    
+              
           setCheckedArray([checkedId, ...checkedArray]);
     
         } else {
@@ -132,7 +134,14 @@ const SearchResults = ( { exerciseResults }) => {
         
     }  
 
+    // To track the indexes of the checked boxes within the search results 
+
+    // let indexesOfCheckedArray = checkedArray.map((id) => exerciseResults.findIndex((exercise) => exercise.id == id));
+
+    // console.log(indexesOfCheckedArray);
+
     const addToFavourites = () => {
+
         if(checkedArray.length > 0) { // We only want the Add To Favourites button to work if there are user-specified exercises to work with
 
             // Firstly use the array of ids to get an array of exercise objects from the complete exercises list
@@ -171,7 +180,22 @@ const SearchResults = ( { exerciseResults }) => {
 
             window.localStorage.setItem("fave exercises list", JSON.stringify(faveExercises));
 
+           // To try and make sure all checkboxes are unchecked after this operation
+
+            // let allCheckboxes = document.getElementsByTagName("input");
+
+            // for (let i = 0; i < exerciseResults.length; i++) {
+            //     if (allCheckboxes[i].type == "checkbox") {
+
+            //         allCheckboxes.checked = false;
+            //     }
+            // }
+
+            setCheckedArray([]); // Once the exercises have been added to Favourites, we want checkedArray to be cleared, so that previous choices do not persist within any subsequent operations
+
             alert("Exercises added to Favourites.");
+
+            
 
         }
     }

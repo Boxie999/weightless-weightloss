@@ -169,7 +169,7 @@ const FavouritesDisplay = ( { favouritesArray }) => {
     return (
     
         <Container fluid id="searchResults" style={{marginTop: "40px", padding: "15px"}}>
-          <h5>{favouritesArray.length} Exercises in Favourites</h5>
+          <p>{favouritesArray.length} Exercises in Favourites</p>
             <Container fluid>
             
                 <Slider {...settings}>
