@@ -4,44 +4,40 @@ import React, { useState } from 'react';
 import "../styles/List.css"
 
 
-function List() {
+function List({exerciseList, setExerciseList, exerciseId, setExerciseId, setTimeRemaining, setExerciseInProgress,exerciseIndex}) {
 
-    const [objects, setObjects] = useState(
-        [
-            { name: 'exercise 1' },
-            { name: 'exercise 2' },
-            { name: 'exercise 3' },
-            { name: 'exercise 4' },
-            { name: 'exercise 5' },
-            { name: 'exercise 6' }
-        ]
-    )
     const updateArray = (result) => {
-        const arrayToEdit = [...objects]
+        const arrayToEdit = [...exerciseList]
         const [itemToMove] = arrayToEdit.splice(result.source.index, 1)
         arrayToEdit.splice(result.destination.index, 0, itemToMove)
-        setObjects(arrayToEdit)
+        setExerciseList(arrayToEdit)
+        console.log(arrayToEdit)
     }
+    const startExercise = () => {
+        setExerciseId(exerciseList[0].id)
+        setTimeRemaining(30)
+        setExerciseInProgress(true)
+    }
+            
     return (
-        <div className="text-center">
-            <button className="btn btn-primary border-0 btn-lg startButton" href="#" type="button">START</button>
+        <div className="text-center listContainer">
+            <button onClick={startExercise} className="btn btn-primary border-0 btn-lg startButton" href="#" type="button">START</button>
             <div>
                 <DragDropContext onDragEnd={updateArray}>
                     <Droppable droppableId='exercises'>
                         {(provided) => {
                             return (
                                 <ul className='exercises' {...provided.droppableProps} ref={provided.innerRef}>
-                                    {objects.map((item, index) => {
+                                    {exerciseList.map((item, index) => {
                                         return (
                                             <Draggable key={index} draggableId={String(index)} index={index}>
                                                 {(provided) => {
                                                     return (
                                                         <li className="exerciseList" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                                                            {item.name}
+                                                            <div className={`exerciseListItem ${item.id === exerciseId ? 'inProgress' : ''}`}>{item.name}</div>
                                                         </li>
                                                     )
                                                 }}
-
                                             </Draggable>
                                         )
                                     })}
@@ -49,16 +45,11 @@ function List() {
                                 </ul>
                             )
                         }}
-
                     </Droppable>
                 </DragDropContext>
             </div>
         </div>
     )
-
 }
-
-
-
 
 export default List;

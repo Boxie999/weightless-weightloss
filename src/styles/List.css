@@ -1,7 +1,7 @@
 .startButton {
     background-color: var(--myBlack) !important;
     font-weight: 600 !important;
-    width: 360px;
+    width: 330px;
     height: 57px;
     font-weight: 500 !important;
     font-size: 32px !important;
@@ -12,4 +12,25 @@
 
 .exerciseList {
     list-style-type: none;
+}
+
+.exerciseListItem {
+    height: 50px;
+    width: 300px;
+    font-size: 28px;
+    background-color: aliceblue;
+    margin: 4px;
+    border-radius: 8px;
+}
+
+.listContainer {
+    width: 360px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.inProgress {
+background-color: yellow;
 }
