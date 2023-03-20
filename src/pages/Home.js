@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 import React, { useEffect } from "react";
 import "../styles/Home.css"
 import jumpingGuy from "../images/StarJump.gif"
@@ -17,14 +18,16 @@ function Home() {
                 <NavLink to="/WorkoutPicker">
                     <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">QUICK WORKOUT</button>
                 </NavLink>
-                <NavLink to="/BuildWorkout">
+                <NavLink to="/BuildWorkoutX">
                     <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">CREATE WORKOUT PLAN</button>
                 </NavLink>
                 </p>
             </div>
             <div id="myExercisesArea">
-                <img id="starJumper" src={jumpingGuy} alt="Star Jumping Guy" />
-                <p id="excerciseHistory">MY EXERCISE HISTORY</p>
+                <Nav.Link href="/FavouriteExercises">
+                    <img id="starJumper" src={jumpingGuy} alt="Star Jumping Guy" />
+                    <p id="excerciseHistory">MY EXERCISE HISTORY</p>
+                </Nav.Link>
             </div>
         </div>
     );

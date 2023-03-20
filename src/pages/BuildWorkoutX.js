@@ -8,54 +8,63 @@ import SearchResults from "../components/SearchResults";
 // import { searchOptions, retrieveApiData } from '../utils/retrieveApiData';
 
 
-function WorkoutPicker() {
+function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResults, setExerciseResults }) {
 
     useEffect(() => { document.body.style.backgroundColor = 'white' }, []);
 
     useEffect(() => { document.body.style.backgroundImage = 'linear-gradient(0deg, rgba(0, 233, 255, 0) 23%, rgba(62, 240, 220, 0) 80%)' }, []);
 
-    const [searchTerm, setSearchTerm] = useState(""); // This tracks and represents what the user will type into the search field
 
-    const [exerciseResults, setExerciseResults] = useState([]); // This tracks and represents the entire COLLECTION of search results DISPLAYED after the search is submitted
-    
+    const [showText, setShowText] = useState(false);
+    const onPress = () => setShowText(true);
+    const ResultsContainer = () =>
+        <Container fluid>
+            <SearchResults
+                exerciseResults={exerciseResults}
+                setExerciseResults={setExerciseResults} />
+        </Container>;
+    // const [searchTerm, setSearchTerm] = useState(""); // This tracks and represents what the user will type into the search field
 
-    const handleSubmit = async () => {
-        
-        if(searchTerm) {
+    // const [exerciseResults, setExerciseResults] = useState([]); // This tracks and represents the entire COLLECTION of search results DISPLAYED after the user search is submitted
 
-            const exerciseSearchResults = exercises;
 
-            // This mimics the API call, and is the full array of exercises that is produced from the API call/request
-            // USED THIS TO CONSERVE API CALL CREDITS
-            //************************
-            //await retrieveApiData("https://exercisedb.p.rapidapi.com/exercises", searchOptions)
+    // const handleSubmit = async () => {
 
-            // The searchOptions contains the information that will authorise the API call during the search
+    //     if(searchTerm) {
 
-            //***********************
+    //         const exerciseApiResults = exercises;
 
-            //console.log(exerciseSearchResults);
+    //         // This mimics the API call, and is the full array of exercises that is produced from the API call/request
+    //         // USED THIS TO CONSERVE API CALL CREDITS
+    //         //************************
+    //         //await retrieveApiData("https://exercisedb.p.rapidapi.com/exercises", searchOptions)
 
-            // Now, we want to add actual search functionality, by filtering through the array of objects and grabbing all objects with values that correspond to the search term. The proviso is that they are all body weight exercises.
+    //         // The searchOptions contains the information that will authorise the API call during the search
 
-            const specificExerciseSearches = exerciseSearchResults.filter((exercise) => (exercise.equipment.toLowerCase() === "body weight") 
-            && (exercise.bodyPart.toLowerCase().includes(searchTerm)
-            || exercise.equipment.toLowerCase().includes(searchTerm)
-            || exercise.name.toLowerCase().includes(searchTerm)
-            || exercise.target.toLowerCase().includes(searchTerm)
-            )
-            )
-            
-            // We want to ensure that, after the search result is submitted, the search field is cleared and the exerciseResult state value is set to the resulting data from the search.
+    //         //***********************
 
-            setSearchTerm("");
+    //         //console.log(exerciseSearchResults);
 
-            setExerciseResults(specificExerciseSearches);
+    //         // Now, we want to add actual search functionality, by filtering through the array of objects and grabbing all objects with values that correspond to the search term. The proviso is that they are all body weight exercises.
 
-            //console.log(specificExerciseSearches);
-            
-        }
-    }
+    //         const specificExerciseSearches = exerciseApiResults.filter((exercise) => (exercise.equipment.toLowerCase() === "body weight") 
+    //         && (exercise.bodyPart.toLowerCase().includes(searchTerm)
+    //         || exercise.equipment.toLowerCase().includes(searchTerm)
+    //         || exercise.name.toLowerCase().includes(searchTerm)
+    //         || exercise.target.toLowerCase().includes(searchTerm)
+    //         )
+    //         )
+
+    //         // We want to ensure that, after the search result is submitted, the search field is cleared and the exerciseResult state value is set to the resulting data from the search.
+
+    //         setSearchTerm("");
+
+    //         setExerciseResults(specificExerciseSearches);
+
+    //         //console.log(specificExerciseSearches);
+
+    //     }
+    // }
 
     return (
         <div className="text-center">
@@ -64,26 +73,19 @@ function WorkoutPicker() {
                     <FontAwesomeIcon id="searchIcon" icon={faSearch} />
                 </span>
                 <input id="exerciseSearchInput" type="search"
-                value={searchTerm} 
-                onChange={(event) => {setSearchTerm(event.target.value.toLowerCase())}}                
-                className="form-control border-0 bg-transparent" placeholder="Search exercises by 'body part', 'equipment' or 'muscle target'" aria-label="Search" aria-describedby="search-addon" />
+                    value={searchTerm}
+                    onChange={(event) => { setSearchTerm(event.target.value.toLowerCase()) }}
+                    className="form-control border-0 bg-transparent" placeholder="Search exercises by 'body part', 'equipment' or 'muscle target'" aria-label="Search" aria-describedby="search-addon" />
                 <div className="input-group-append">
                     <button id="searchButton" className="btn btn-outline-secondary border-0" type="button"
-                    onClick={handleSubmit}>SEARCH</button>
+                        onClick={handleSubmit} onMouseUp={onPress}>SEARCH</button>
                 </div>
             </div>
-
-            <Container fluid>
-                <SearchResults
-                exerciseResults={exerciseResults}
-                setExerciseResults={setExerciseResults} />
-            </Container>
-
-            
+            {showText ? <ResultsContainer /> : null}
         </div>
     );
 }
 
 // div id="searchResults" class="row row-cols-1 row-cols-md-4 d-flex justify-content-center"
 
-export default WorkoutPicker;
+export default BuildWorkoutX;

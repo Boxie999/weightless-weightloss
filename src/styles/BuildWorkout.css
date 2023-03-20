@@ -19,3 +19,11 @@
     margin: 0px;
     height: 40px;
 }
+
+.slick-prev:before {
+    color: black !important;
+}
+
+.slick-next:before {
+    color: black !important;
+}
