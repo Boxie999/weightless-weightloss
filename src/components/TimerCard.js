@@ -45,14 +45,25 @@ const TimerCard = () => {
       />  </div> 
       
       <div>
+        
         <button onClick={() => 
         duration > 10 ? setDuration(duration - 10) : setDuration(duration)} >
           - 10s
         </button>
 
+        <button onClick={() => 
+        duration > 1 ? setDuration(duration - 1) : setDuration(duration)} >
+          - 1s
+        </button>
+
         <button className='pauseButton' onClick={() => 
             isPlaying === true ? setIsPlaying(false) : setIsPlaying(true)} >Tap to  
           {isPlaying === true ? " Pause" : " Play"}
+        </button>
+
+        <button onClick={() => 
+            setDuration(duration + 1)} >
+          + 1s
         </button>
 
         <button onClick={() => 
