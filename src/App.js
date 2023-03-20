@@ -13,6 +13,7 @@ import List from './components/List';
 import FavouriteExercises from './pages/FavouriteExercises';
 import exercises from "./exercises.json";
 import WorkoutConfirm from "./pages/WorkoutConfirm";
+import WorkoutFinish from "./pages/WorkoutFinish";
 
 function App() {
 
@@ -79,6 +80,7 @@ function App() {
           <Route path="WorkoutConfirm" element={<WorkoutConfirm />} />
           <Route path="List" element={<List />} />
           <Route path="WorkoutPage" element={<WorkoutPage />} />
+          <Route path="WorkoutFinish" element={<WorkoutFinish />} />
         </Routes>
       </div>
     </Router>
