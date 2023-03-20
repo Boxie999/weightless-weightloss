@@ -26,6 +26,7 @@ function App() {
           <Route path="Timer" element={<WorkoutPage />} />
           <Route path="BuildWorkoutX" element={<BuildWorkoutX />} />
           <Route path="List" element={<List />} />
+          <Route path="WorkoutPage" element={<WorkoutPage />} />
         </Routes>
       </div>
     </Router>
