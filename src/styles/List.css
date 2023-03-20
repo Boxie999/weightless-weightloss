@@ -1,17 +1,46 @@
 .startButton {
     background-color: var(--myBlack) !important;
     font-weight: 600 !important;
-    width: 330px;
-    height: 57px;
-    font-weight: 500 !important;
-    font-size: 32px !important;
-    line-height: 38px !important;
+    width: 360px;
+    height: 60px;
+    padding-top: 3px;
+    font-weight: 700 !important;
+    font-size: 48px !important;
+    line-height: 0px !important;
     border-radius: 10px !important;
     margin: 10px;
+    margin-top: 0px;
+}
+
+.exercises {
+    padding-left: 0px;
+}
+
+.exercises {
+    padding-left: 0px;
 }
 
 .exerciseList {
-    list-style-type: none;
+    background-color: white;
+    margin-bottom: 10px !important;
+    height: 47px;
+    width: 360px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .2);
+}
+
+li {
+    list-style: none;
+    margin: auto;
+}
+
+@media (max-width: 780px) {
+    .exerciseList {
+        margin-left: calc(50% - 180px);
+    }
 }
 
 .exerciseListItem {

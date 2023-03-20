@@ -83,14 +83,14 @@ const WorkoutPage = () => {
 
   return (
     <div className='workoutPage'>
-      
       <List exerciseList={exerciseList} exerciseIndex={exerciseIndex} setExerciseList={setExerciseList} 
       exerciseId={exerciseId} setExerciseId={setExerciseId} setExerciseInProgress={setExerciseInProgress}
       setTimeRemaining={setTimeRemaining}
       ></List>
       < TimerCard  exerciseInProgress={exerciseInProgress}
       exerciseIndex={exerciseIndex}
-      timeRemaining={timeRemaining}/>   
+      timeRemaining={timeRemaining}
+      setExerciseInProgress={setExerciseInProgress}/>   
       
     </div>
     
@@ -98,3 +98,5 @@ const WorkoutPage = () => {
 }
 
 export default WorkoutPage
+
+

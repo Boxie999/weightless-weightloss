@@ -1,0 +1,26 @@
+
+.workoutFinish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.finish-heading {
+    font-weight: 600;
+    color: white;
+    font-size: 82px;
+    line-height: 74px;
+    text-align: center;
+    
+}
+
+.finish-text {
+    font-size: 30px;
+}
+
+.finishImage {
+    height: 300px;
+    margin-top: 30px;
+}

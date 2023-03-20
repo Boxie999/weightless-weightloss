@@ -16,5 +16,14 @@
     border-bottom-left-radius: 0px;
     color: white;
     padding-right:16px;
+    margin: 0px;
+    height: 40px;
 }
 
+.slick-prev:before {
+    color: black !important;
+}
+
+.slick-next:before {
+    color: black !important;
+}

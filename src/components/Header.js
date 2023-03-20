@@ -3,12 +3,13 @@ import { Nav } from "react-bootstrap";
 import "../styles/Header.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
+import Logo from "../images/logo.svg"
 
 function Header() {
     return (
         <nav>
             <Nav.Link href="/">
-            <p id="navLogo">SIMPLE<span className="fit">FIT.</span></p>
+            <img id="Logo" src={Logo} alt="Weightless Weightloss" />
             </Nav.Link>
 
             <Nav.Link href="/">
