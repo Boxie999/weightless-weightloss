@@ -47,11 +47,13 @@ const legsPlan =
 function WorkoutPicker() {
 
     const [bodyPart, setBodyPart] = useState(fullBodyPlan)
+    const [bodyRegionName, setBodyRegionName] = useState("FULL BODY");
     const [UpperIsShown, setUpperIsShown] = useState(false);
     const [CoreIsShown, setCoreIsShown] = useState(false);
-    const [LegsIsShown, setLegsIsShown] = useState(false);
+    const [LegsIsShown, setLegsIsShown] = useState(false); 
+    
+    useEffect(() => { localStorage.setItem('workout builder list', JSON.stringify(bodyPart)) }, [bodyPart]);
 
-    useEffect(() => { localStorage.setItem('workout plan', JSON.stringify(bodyPart)) }, [bodyPart]);
     useEffect(() => { document.body.style.backgroundColor = 'white' }, [])
     useEffect(() => { document.body.style.backgroundImage = 'linear-gradient(0deg, rgba(0, 233, 255, 0) 23%, rgba(62, 240, 220, 0) 80%)' }, [])
 
@@ -61,14 +63,77 @@ function WorkoutPicker() {
 
             <div id="figure">
                 <img id="wholeBody" src={wholeBody} alt="whole body" />
-                <img id="upperBody" src={upperBody} alt="upper body" onMouseEnter={() => setUpperIsShown(true)} onMouseLeave={() => setUpperIsShown(false)} onClick={() => setBodyPart(upperBodyPlan)} />
-                <img id="core" src={core} alt="core" onMouseEnter={() => setCoreIsShown(true)} onMouseLeave={() => setCoreIsShown(false)} onClick={() => setBodyPart(corePlan)} />
-                <img id="legs" src={legs} alt="" onMouseEnter={() => setLegsIsShown(true)} onMouseLeave={() => setLegsIsShown(false)} onClick={() => setBodyPart(legsPlan)} />
+
+                <img id="upperBody" src={upperBody} alt="upper body" onMouseEnter={() => setUpperIsShown(true)} onMouseLeave={() => setUpperIsShown(false)} onClick={() => {                    
+
+                    if(bodyPart === upperBodyPlan) {
+
+                        console.log(bodyPart);
+
+                        setBodyPart(fullBodyPlan);
+                        setBodyRegionName("FULL BODY");
+                        console.log(bodyPart);
+
+                    } else {
+
+                        console.log(bodyPart);
+
+                        setUpperIsShown(true);
+
+                        setBodyPart(upperBodyPlan);
+                        setBodyRegionName("UPPER BODY");
+                        console.log(bodyPart);
+
+                        {{}}
+                    }
+                    }} />
+
+                <img id="core" src={core} alt="core" onMouseEnter={() => setCoreIsShown(true)} onMouseLeave={() => setCoreIsShown(false)} onClick={() => {                 
+                    
+                    if(bodyPart === corePlan) {
+
+                        console.log(bodyPart);
+
+                        setBodyPart(fullBodyPlan);
+                        setBodyRegionName("FULL BODY");
+                        console.log(bodyPart);
+
+                    } else {
+
+                        console.log(bodyPart);
+
+                        setBodyPart(corePlan);
+                        setCoreIsShown(true);
+                        setBodyRegionName("CORE");
+                        console.log(bodyPart);
+                    }                    
+                    }} />
+
+                <img id="legs" src={legs} alt="" onMouseEnter={() => setLegsIsShown(true)} onMouseLeave={() => setLegsIsShown(false)} onClick={() => {
+
+                    
+
+                    if(bodyPart === legsPlan) {
+
+                        console.log(bodyPart);
+
+                        setBodyPart(fullBodyPlan);
+                        setBodyRegionName("FULL BODY");
+                        console.log(bodyPart);
+
+                    } else {
+
+                        console.log(bodyPart);
+
+                        setBodyPart(legsPlan);
+                        setLegsIsShown(true);
+                        setBodyRegionName("LEGS");
+                        console.log(bodyPart);
+                    }              
+                }}  />
             </div>
-            {(UpperIsShown || CoreIsShown || LegsIsShown) || (<label id="targetPart" >FULL BODY</label>)}
-            {UpperIsShown && (<label id="targetPart" >UPPER BODY</label>)}
-            {CoreIsShown && (<label id="targetPart" >CORE</label>)}
-            {LegsIsShown && (<label id="targetPart" >LEGS</label>)}
+
+            <label id="targetPart" >{bodyRegionName}</label>
 
             <NavLink to="/List">
                 <button id="pickerStart" className="btn btn-primary border-0 btn-lg chooseButton" href="#" role="button">START WORKOUT</button>
