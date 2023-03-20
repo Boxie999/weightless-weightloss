@@ -78,6 +78,7 @@ function App() {
           <Route path="FavouriteExercises" element={<FavouriteExercises searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults} />} />
           <Route path="WorkoutConfirm" element={<WorkoutConfirm />} />
           <Route path="List" element={<List />} />
+          <Route path="WorkoutPage" element={<WorkoutPage />} />
         </Routes>
       </div>
     </Router>

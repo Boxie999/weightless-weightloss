@@ -17,7 +17,7 @@ function SampleNextArrow(props) {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "silver" }}
+        style={{ ...style, display: "block", background: "white" }}
         onClick={onClick}
       />
     );
@@ -28,7 +28,7 @@ function SampleNextArrow(props) {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "silver" }}
+        style={{ ...style, display: "block", background: "white" }}
         onClick={onClick}
       />
     );
@@ -46,7 +46,7 @@ const FavouritesDisplay = ( { favouritesArray }) => {
     // Settings object for the horizontal scrollbar
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: false, // set to false to prevent duplicates on results less than slidesToShow
         speed: 500,
         slidesToShow: 4,
@@ -56,16 +56,16 @@ const FavouritesDisplay = ( { favouritesArray }) => {
         initialSlide: 0,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1115,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 860,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
@@ -73,7 +73,7 @@ const FavouritesDisplay = ( { favouritesArray }) => {
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 600,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1

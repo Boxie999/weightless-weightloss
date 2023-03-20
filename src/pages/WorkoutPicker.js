@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import "../styles/WorkoutPicker.css";
 import { NavLink } from "react-router-dom";
 import "../styles/WorkoutPicker.css"

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import "../styles/BuildWorkout.css";
@@ -14,13 +14,22 @@ function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResult
 
     useEffect(() => { document.body.style.backgroundImage = 'linear-gradient(0deg, rgba(0, 233, 255, 0) 23%, rgba(62, 240, 220, 0) 80%)' }, []);
 
+
+    const [showText, setShowText] = useState(false);
+    const onPress = () => setShowText(true);
+    const ResultsContainer = () =>
+        <Container fluid>
+            <SearchResults
+                exerciseResults={exerciseResults}
+                setExerciseResults={setExerciseResults} />
+        </Container>;
     // const [searchTerm, setSearchTerm] = useState(""); // This tracks and represents what the user will type into the search field
 
     // const [exerciseResults, setExerciseResults] = useState([]); // This tracks and represents the entire COLLECTION of search results DISPLAYED after the user search is submitted
-    
+
 
     // const handleSubmit = async () => {
-        
+
     //     if(searchTerm) {
 
     //         const exerciseApiResults = exercises;
@@ -45,7 +54,7 @@ function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResult
     //         || exercise.target.toLowerCase().includes(searchTerm)
     //         )
     //         )
-            
+
     //         // We want to ensure that, after the search result is submitted, the search field is cleared and the exerciseResult state value is set to the resulting data from the search.
 
     //         setSearchTerm("");
@@ -53,7 +62,7 @@ function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResult
     //         setExerciseResults(specificExerciseSearches);
 
     //         //console.log(specificExerciseSearches);
-            
+
     //     }
     // }
 
@@ -64,22 +73,15 @@ function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResult
                     <FontAwesomeIcon id="searchIcon" icon={faSearch} />
                 </span>
                 <input id="exerciseSearchInput" type="search"
-                value={searchTerm} 
-                onChange={(event) => {setSearchTerm(event.target.value.toLowerCase())}}                
-                className="form-control border-0 bg-transparent" placeholder="Search exercises by 'body part', 'equipment' or 'muscle target'" aria-label="Search" aria-describedby="search-addon" />
+                    value={searchTerm}
+                    onChange={(event) => { setSearchTerm(event.target.value.toLowerCase()) }}
+                    className="form-control border-0 bg-transparent" placeholder="Search exercises by 'body part', 'equipment' or 'muscle target'" aria-label="Search" aria-describedby="search-addon" />
                 <div className="input-group-append">
                     <button id="searchButton" className="btn btn-outline-secondary border-0" type="button"
-                    onClick={handleSubmit}>SEARCH</button>
+                        onClick={handleSubmit} onMouseUp={onPress}>SEARCH</button>
                 </div>
             </div>
-
-            <Container fluid>
-                <SearchResults
-                exerciseResults={exerciseResults}
-                setExerciseResults={setExerciseResults} />
-            </Container>
-
-            
+            {showText ? <ResultsContainer /> : null}
         </div>
     );
 }
