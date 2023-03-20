@@ -25,7 +25,6 @@
     margin-bottom: 10px !important;
     height: 47px;
     width: 360px;
-    margin-left: calc(50% - 180px);
     font-size: 32px;
     font-weight: 500;
     line-height: 40px;
@@ -33,10 +32,13 @@
     box-shadow: 0 0 10px rgb(0, 0, 0, .2);
 }
 
-.exerciseList:active {
-    margin-left: calc(50% - 180px);
-}
-
 li {
     list-style: none;
+    margin: auto;
+}
+
+@media (max-width: 780px) {
+    .exerciseList {
+        margin-left: calc(50% - 180px);
+    }
 }
