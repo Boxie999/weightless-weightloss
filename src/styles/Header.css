@@ -13,6 +13,7 @@ body {
     -ms-transition: background-color .2s linear;
     transition: background-color .2s linear;
     will-change: background-color;
+    background-attachment: fixed;
 }
 
 nav {

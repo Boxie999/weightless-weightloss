@@ -8,7 +8,7 @@ function Header() {
     return (
         <nav>
             <Nav.Link href="/">
-            <p id="navLogo">SIMPLE<span className="fit">FIT.</span></p>
+            <p id="navLogo">WEIGHT<span className="fit">LESS.</span></p>
             </Nav.Link>
 
             <Nav.Link href="/">
