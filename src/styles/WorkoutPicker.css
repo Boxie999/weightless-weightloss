@@ -14,6 +14,7 @@
     position: absolute;
     width: 245px;
     height: auto;
+
 }
 
 #upperBody {
@@ -91,4 +92,46 @@
     top: 302px;
     width: 245px;
     height: auto;
+}
+
+@media (max-width: 576px) {
+
+    #figure {
+        height: 400px;
+        left: -87.5px;
+    }
+
+    #wholeBody {
+        width: 175px;
+    }
+
+    #upperBody {
+        top: 59px;
+        width: 175px;
+    }
+
+    #core {
+        top: 122px;
+        width: 175px;
+    }
+
+    #legs {
+        top: 216.5px;
+        width: 175px;
+    }
+
+    #upperBodyX {
+        top: 59px;
+        width: 175px;
+    }
+
+    #coreX {
+        top: 122px;
+        width: 175px;
+    }
+
+    #legsX {
+        top: 216.5px;
+        width: 175px;
+    }
 }

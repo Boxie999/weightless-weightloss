@@ -7,13 +7,13 @@ import "../styles/WorkoutPage.css"
 import { json } from 'react-router-dom'
 
 
-const WorkoutPage = ({exerciseList, setExerciseList}) => {
-
+const WorkoutList = ({exerciseList, setExerciseList}) => {
   
   const [exerciseInProgress, setExerciseInProgress] = useState(false)
   const [timeRemaining, setTimeRemaining] = useState(0)
   const [exerciseIndex, setExerciseIndex] = useState(0)
-  const [exerciseId, setExerciseId] = useState(0)
+  const [exerciseId, setExerciseId] = useState()
+
 
     // [{
     //   "bodyPart": "waist",
@@ -80,37 +80,18 @@ const WorkoutPage = ({exerciseList, setExerciseList}) => {
     //   "target": "lats"
     // }])
 
-/* Donnahue -Tutor
-setExerciseID is the state to store the current ID being used in the timer
-We need to track which exercise is currently being ran
-Idea 1: Create a new state that tracks the current exercise and compare that to our exerciseId var
-Idea 2: Don't create a new state, but everytime we change our exercise in Timecard.js, grab the id and then compare it to our exercise id state
-
-
-
-*/
-   
-
   return (
     <div className='workoutPage'>
       <List exerciseList={exerciseList} exerciseIndex={exerciseIndex} setExerciseList={setExerciseList} 
       exerciseId={exerciseId} setExerciseId={setExerciseId} setExerciseInProgress={setExerciseInProgress}
-      setTimeRemaining={setTimeRemaining} startButtonHidden={true} dragDisabled={true}
-
+      setTimeRemaining={setTimeRemaining}
       ></List>
-       < TimerCard  exerciseInProgress={exerciseInProgress}
-      exerciseIndex={exerciseIndex}
-      timeRemaining={timeRemaining}
-      exerciseList={exerciseList}
-      setExerciseId={setExerciseId}
-      setExerciseIndex={setExerciseIndex}
-      setExerciseInProgress={setExerciseInProgress}/>   
-  
+     
     </div>
     
   )
 }
 
-export default WorkoutPage
+export default WorkoutList
 
 

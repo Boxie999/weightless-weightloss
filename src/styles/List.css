@@ -42,3 +42,24 @@ li {
         margin-left: calc(50% - 180px);
     }
 }
+
+/* .exerciseListItem {
+    height: 50px;
+    width: 300px;
+    font-size: 28px;
+    background-color: aliceblue;
+    margin: 4px;
+    border-radius: 8px;
+} */
+
+.listContainer {
+    width: 360px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.inProgress {
+background-color: yellow;
+}

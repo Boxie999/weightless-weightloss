@@ -20,18 +20,11 @@ const renderTime = ({ remainingTime }) => {
 
 // Made-up array of exercises
 
-let exerciseList = [
-    {name: "bodyweight standing one arm row (with towel)"},
-    {name: "Exercise 2"},
-    {name: "Exercise 3"},
-    {name: "Exercise 4"},
-    {name: "Exercise 5"},
-    {name: "Exercise 6"}
-]
+
 
 
   
-function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInProgress, duration, setDuration, isPlaying, setIsPlaying, exerciseIndex, setExerciseIndex }) {
+function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInProgress, duration, setDuration, isPlaying, setIsPlaying, exerciseIndex, setExerciseIndex, setExerciseId, exerciseList }) {
     
       const exerciseColor = '#02dec4'
       const restColor = '#d10f08'
@@ -58,6 +51,8 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
                     setDuration(30);
                     setKey((prevKey) => prevKey + 1)
                     setExerciseIndex(exerciseIndex + 1)
+                    setExerciseId()
+
                     //should indicate the color change for the next button here
                 } else {
                     setExerciseInProgress(false);

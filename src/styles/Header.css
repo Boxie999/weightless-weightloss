@@ -30,14 +30,31 @@ nav {
     margin-left: 23px;
 }
 
-#homeIcon {
-    cursor: pointer;
-    margin-top: 15px;
-    margin-right: 20px;
-    font-size: 25px;
-    color: white;
+.myLink {
+    color: var(--myBlack);
+    font-weight: 500;
+    margin-right: 23px;
 }
 
-#homeIcon:hover {
-    color: var(--myBlack);
+.myLink:hover {
+    color: rgb(236, 236, 236);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar {
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+    min-width: 297px;
+}
+
+@media (max-width: 576px) {
+    #Logo {
+        height: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
 }

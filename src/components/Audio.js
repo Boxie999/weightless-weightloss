@@ -1,4 +1,4 @@
-import wav from '../music/fit-app-music.wav'; 
+import wav from '../music/fit-app-music.wav';
 import React, { useEffect } from 'react';
     
 function AudioComponent() {
@@ -7,7 +7,7 @@ function AudioComponent() {
      
 // I want the music file to play as soon as the component renders. 
 
-     useEffect(() => {
+     useEffect(() => { 
         audio.play();
         audio.loop=true;
       }, [])

@@ -128,7 +128,7 @@ const FavouritesDisplay = ( { favouritesArray }) => {
 
         window.localStorage.setItem("workout builder list", JSON.stringify(faveWorkoutBuilderExercises));
 
-        window.location.href = "/WorkoutConfirm";
+        window.location.href = "/WorkoutList";
 
     }
 
