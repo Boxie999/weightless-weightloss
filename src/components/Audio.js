@@ -1,4 +1,4 @@
-import wav from '/Users/admin/Downloads/bootcamp/simple-fit/src/music/fit-app-music.wav';
+import wav from '../music/fit-app-music.wav'; 
 import React, { useEffect } from 'react';
     
 function AudioComponent() {

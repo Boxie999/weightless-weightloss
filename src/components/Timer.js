@@ -40,7 +40,8 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
 
     return (
       
-      <div><AudioComponent />
+      <div>
+      <AudioComponent />
           <CountdownCircleTimer
             key={key}
             isPlaying={isPlaying}
