@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import ExerciseCard from '../components/ExerciseCard'
 import Timer from '../components/Timer'
 import List from '../components/List'
@@ -79,6 +79,9 @@ const WorkoutList = ({exerciseList, setExerciseList}) => {
     //   "name": "archer pull up",
     //   "target": "lats"
     // }])
+
+    useEffect(() => { document.body.style.backgroundColor = 'rgb(0, 233, 255)' }, [])
+    useEffect(() => { document.body.style.backgroundImage = 'linear-gradient(0deg, rgba(0, 233, 255, 1) 23%, rgba(62, 240, 220, 1) 80%)' }, [])
 
   return (
     <div className='workoutPage'>

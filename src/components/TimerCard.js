@@ -4,7 +4,7 @@ import list from '../components/List'
 import "../styles/WorkoutPage.css"
 import "../styles/TimerCard.css"
 import testerGif from "../images/testerGif.gif"
-import restImage from '/Users/admin/Downloads/bootcamp/simple-fit/src/images/restImage.png';
+import restImage from '../images/restImage.png';
 
 const TimerCard = ({exerciseList, setExerciseId, exerciseIndex, setExerciseIndex}) => {
   console.log(exerciseList);
