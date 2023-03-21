@@ -58,7 +58,7 @@ function WorkoutPicker() {
     const [LegsIsSelected, setLegsIsSelected] = useState(false);
     const [bodyRegionName, setBodyRegionName] = useState("FULL BODY");
 
-    useEffect(() => { localStorage.setItem('workout plan', JSON.stringify(bodyPart)) }, [bodyPart]);
+    useEffect(() => { localStorage.setItem('workout builder list', JSON.stringify(bodyPart)) }, [bodyPart]);
     useEffect(() => { document.body.style.backgroundColor = 'white' }, [])
     useEffect(() => { document.body.style.backgroundImage = 'linear-gradient(0deg, rgba(0, 233, 255, 0) 23%, rgba(62, 240, 220, 0) 80%)' }, [])
 
@@ -80,7 +80,7 @@ function WorkoutPicker() {
             {CoreIsShown && (<label id="targetPart" >CORE</label>)}
             {LegsIsShown && (<label id="targetPart" >LEGS</label>)}
 
-            <NavLink to="/WorkoutConfirm">
+            <NavLink to="/WorkoutList">
                 <button id="pickerStart" className="btn btn-primary border-0 btn-lg chooseButton" role="button">START WORKOUT</button>
             </NavLink>
         </div>

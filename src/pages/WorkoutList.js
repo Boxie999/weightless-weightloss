@@ -7,13 +7,13 @@ import "../styles/WorkoutPage.css"
 import { json } from 'react-router-dom'
 
 
-const WorkoutPage = () => {
+const WorkoutList = ({exerciseList, setExerciseList}) => {
   
   const [exerciseInProgress, setExerciseInProgress] = useState(false)
   const [timeRemaining, setTimeRemaining] = useState(0)
   const [exerciseIndex, setExerciseIndex] = useState(0)
   const [exerciseId, setExerciseId] = useState()
-  const [exerciseList, setExerciseList] = useState(JSON.parse(window.localStorage.getItem("workout plan")))
+
 
     // [{
     //   "bodyPart": "waist",
@@ -80,9 +80,6 @@ const WorkoutPage = () => {
     //   "target": "lats"
     // }])
 
-
-   
-
   return (
     <div className='workoutPage'>
       <List exerciseList={exerciseList} exerciseIndex={exerciseIndex} setExerciseList={setExerciseList} 
@@ -95,6 +92,6 @@ const WorkoutPage = () => {
   )
 }
 
-export default WorkoutPage
+export default WorkoutList
 
 

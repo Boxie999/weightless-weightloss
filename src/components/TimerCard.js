@@ -6,22 +6,13 @@ import "../styles/TimerCard.css"
 import testerGif from "../images/testerGif.gif"
 import restImage from '../images/restImage.png';
 
-const TimerCard = () => {
-  
+const TimerCard = ({exerciseList, setExerciseId, exerciseIndex, setExerciseIndex}) => {
+  console.log(exerciseList);
   const [key, setKey] = useState(0)
     const [exerciseInProgress, setExerciseInProgress] = useState(false);
     const [duration, setDuration] = useState(10);
     const [isPlaying, setIsPlaying] = useState(true);
-    const [exerciseIndex, setExerciseIndex] = useState(0); 
-
-    let exerciseList = [
-      {name: "bodyweight standing one arm row (with towel)"},
-      {name: "Exercise 2"},
-      {name: "Exercise 3"},
-      {name: "Exercise 4"},
-      {name: "Exercise 5"},
-      {name: "Exercise 6"}
-  ]
+   
 
     const exerciseGif = <img className='timerCardGif' src={testerGif} alt="Card image cap" />
     const restImageShow = <img className='timerCardGif' src={restImage} alt='Card image cap' />
@@ -44,6 +35,8 @@ const TimerCard = () => {
       setIsPlaying={setIsPlaying}
       exerciseIndex={exerciseIndex}
       setExerciseIndex={setExerciseIndex}
+      setExerciseId={setExerciseId}
+      exerciseList={exerciseList}
       />  </div> 
       
       <div>

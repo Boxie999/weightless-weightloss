@@ -4,7 +4,15 @@ import React, { useState } from 'react';
 import "../styles/List.css"
 
 
-function List({exerciseList, setExerciseList, exerciseId, setExerciseId, setTimeRemaining, setExerciseInProgress,exerciseIndex}) {
+function List({ exerciseList,
+    setExerciseList,
+    exerciseId,
+    setExerciseId,
+    setTimeRemaining,
+    setExerciseInProgress,
+    exerciseIndex,
+    startButtonHidden,
+    dragDisabled }) {
 
     const updateArray = (result) => {
         const arrayToEdit = [...exerciseList]
@@ -15,15 +23,15 @@ function List({exerciseList, setExerciseList, exerciseId, setExerciseId, setTime
         console.log(arrayToEdit)
     }
     const startExercise = () => {
-        window.location.href= "/WorkoutPage"
+        window.location.href = "/WorkoutPage"
         // setExerciseId(exerciseList[0].id)
         // setTimeRemaining(30)
         // setExerciseInProgress(true)
     }
-            
+
     return (
         <div className="text-center listContainer">
-            <button onClick={startExercise} className="btn btn-primary border-0 btn-lg startButton" href="#" type="button">START</button>
+            <button onClick={startExercise} className={`btn btn-primary border-0 btn-lg startButton ${startButtonHidden ? 'd-none' : ''}`} href="#" type="button">START</button>
             <div>
                 <DragDropContext onDragEnd={updateArray}>
                     <Droppable droppableId='exercises'>
@@ -32,11 +40,13 @@ function List({exerciseList, setExerciseList, exerciseId, setExerciseId, setTime
                                 <ul className='exercises' {...provided.droppableProps} ref={provided.innerRef}>
                                     {exerciseList.map((item, index) => {
                                         return (
-                                            <Draggable key={index} draggableId={String(index)} index={index}>
+                                            <Draggable isDragDisabled={dragDisabled} key={index} draggableId={String(index)} index={index}>
                                                 {(provided) => {
                                                     return (
                                                         <li className="exerciseList" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                                                            <div className={`exerciseListItem ${item.id === exerciseId ? 'inProgress' : ''}`}>{item.name}</div>
+                                                            <div className={`exerciseListItem ${exerciseIndex - 1 === exerciseList.findIndex((listItem) => {
+                                                                return listItem.id === item.id
+                                                            }) ? 'inProgress' : ''}`}>{item.name}</div>
                                                         </li>
                                                     )
                                                 }}
@@ -50,6 +60,7 @@ function List({exerciseList, setExerciseList, exerciseId, setExerciseId, setTime
                     </Droppable>
                 </DragDropContext>
             </div>
+
         </div>
     )
 }

@@ -17,9 +17,14 @@ import WorkoutFinish from "./pages/WorkoutFinish";
 import WorkoutList from "./pages/WorkoutList"
 
 function App() {
-
+  let localStorageArray;
+  if(!(JSON.parse(localStorage.getItem("workout builder list")))) {
+      localStorageArray=[];
+  } else {
+      localStorageArray = JSON.parse(localStorage.getItem("workout builder list"));
+  }
     const [searchTerm, setSearchTerm] = useState(""); // This tracks and represents what the user will type into the search field
-
+    const [exerciseList, setExerciseList] = useState(localStorageArray) // excercise list *Global State*
     const [exerciseResults, setExerciseResults] = useState([]); // This tracks and represents the entire COLLECTION of search results DISPLAYED after the user search is submitted
     
 
@@ -80,9 +85,9 @@ function App() {
           <Route path="FavouriteExercises" element={<FavouriteExercises searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults} />} />
           <Route path="WorkoutConfirm" element={<WorkoutConfirm />} />
           <Route path="List" element={<List />} />
-          <Route path="WorkoutPage" element={<WorkoutPage />} />
+          <Route path="WorkoutPage" element={<WorkoutPage exerciseList={exerciseList} setExerciseList={setExerciseList} />} />
           <Route path="WorkoutFinish" element={<WorkoutFinish />} />
-          <Route path="WorkoutList" element={<WorkoutList />} />
+          <Route path="WorkoutList" element={<WorkoutList exerciseList={exerciseList} setExerciseList = {setExerciseList} />} />
         </Routes>
       </div>
     </Router>
