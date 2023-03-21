@@ -12,6 +12,55 @@ import legsX from "../images/body/LegsX.svg"
 
 const fullBodyPlan =
     [
+        {
+            "bodyPart": "cardio",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3224.gif",
+            "id": "3224",
+            "name": "jack jump (male)",
+            "target": "cardiovascular system"
+        },
+        {
+            "bodyPart": "cardio",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1160.gif",
+            "id": "1160",
+            "name": "burpee",
+            "target": "cardiovascular system"
+        },
+        {
+            "bodyPart": "cardio",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3360.gif",
+            "id": "3360",
+            "name": "bear crawl",
+            "target": "cardiovascular system"
+        },
+        {
+            "bodyPart": "cardio",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
+            "id": "3220",
+            "name": "astride jumps (male)",
+            "target": "cardiovascular system"
+        },
+        {
+            "bodyPart": "cardio",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0630.gif",
+            "id": "0630",
+            "name": "mountain climber",
+            "target": "cardiovascular system"
+        },
+          
+        {
+            "bodyPart": "cardio",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3672.gif",
+            "id": "3672",
+            "name": "back and forth step",
+            "target": "cardiovascular system"
+        },    
         { name: 'full body 1' },
         { name: 'full body 2' },
         { name: 'full body 3' },
@@ -19,8 +68,65 @@ const fullBodyPlan =
         { name: 'full body 5' },
         { name: 'full body 6' }
     ];
+
 const upperBodyPlan =
     [
+        {
+            "bodyPart": "cardio",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1160.gif",
+            "id": "1160",
+            "name": "burpee",
+            "target": "cardiovascular system"
+          },
+        {
+            "bodyPart": "upper arms",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0283.gif",
+            "id": "0283",
+            "name": "diamond push-up",
+            "target": "triceps"
+        },
+        {
+            "bodyPart": "upper arms",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1399.gif",
+            "id": "1399",
+            "name": "bench dip on floor",
+            "target": "triceps"
+            },
+            {
+            "bodyPart": "chest",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0662.gif",
+            "id": "0662",
+            "name": "push-up",
+            "target": "pectorals"
+            },
+            {
+            "bodyPart": "chest",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1689.gif",
+            "id": "1689",
+            "name": "push and pull bodyweight",
+            "target": "pectorals"
+        },
+        {
+            "bodyPart": "back",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1365.gif",
+            "id": "1365",
+            "name": "upper back stretch",
+            "target": "upper back"
+        },
+        {
+            "bodyPart": "back",
+            "equipment": "body weight",
+            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1405.gif",
+            "id": "1405",
+            "name": "back pec stretch",
+            "target": "lats"
+        },
         { name: 'upper body 1' },
         { name: 'upper body 2' },
         { name: 'upper body 3' },
@@ -28,24 +134,139 @@ const upperBodyPlan =
         { name: 'upper body 5' },
         { name: 'upper body 6' }
     ];
+
 const corePlan =
-    [
-        { name: 'core 1' },
-        { name: 'core 2' },
-        { name: 'core 3' },
-        { name: 'core 4' },
-        { name: 'core 5' },
-        { name: 'core 6' }
-    ];
+[
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0687.gif",
+        "id": "0687",
+        "name": "russian twist",
+        "target": "abs"
+      },
+      {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3544.gif",
+        "id": "3544",
+        "name": "bodyweight incline side plank",
+        "target": "abs"
+      },
+      {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0664.gif",
+        "id": "0664",
+        "name": "push-up to side plank",
+        "target": "abs"
+      },
+      {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0464.gif",
+        "id": "0464",
+        "name": "front plank with twist",
+        "target": "abs"
+      },
+      {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0872.gif",
+        "id": "0872",
+        "name": "reverse crunch",
+        "target": "abs"
+      },
+      {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0003.gif",
+        "id": "0003",
+        "name": "air bike",
+        "target": "abs"
+      },
+      {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0006.gif",
+        "id": "0006",
+        "name": "alternate heel touchers",
+        "target": "abs"
+      },
+
+    { name: 'core 1' },
+    { name: 'core 2' },
+    { name: 'core 3' },
+    { name: 'core 4' },
+    { name: 'core 5' },
+    { name: 'core 6' }
+];
+
 const legsPlan =
-    [
-        { name: 'legs 1' },
-        { name: 'legs 2' },
-        { name: 'legs 3' },
-        { name: 'legs 4' },
-        { name: 'legs 5' },
-        { name: 'legs 6' }
-    ];
+[
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1460.gif",
+        "id": "1460",
+        "name": "walking lunge",
+        "target": "glutes"
+      },
+      {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3433.gif",
+        "id": "3433",
+        "name": "swimmer kicks v. 2 (male)",
+        "target": "glutes"
+      },
+      {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2368.gif",
+        "id": "2368",
+        "name": "split squats",
+        "target": "quads"
+      },
+      {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0778.gif",
+        "id": "0778",
+        "name": "spider crawl push up",
+        "target": "glutes"
+      },
+      {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1587.gif",
+        "id": "1587",
+        "name": "seated wide angle pose sequence",
+        "target": "hamstrings"
+      },
+      {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1576.gif",
+        "id": "1576",
+        "name": "leg up hamstring stretch",
+        "target": "hamstrings"
+      }, 
+      {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1585.gif",
+        "id": "1585",
+        "name": "runners stretch",
+        "target": "hamstrings"
+      },
+    { name: 'legs 1' },
+    { name: 'legs 2' },
+    { name: 'legs 3' },
+    { name: 'legs 4' },
+    { name: 'legs 5' },
+    { name: 'legs 6' }
+];
 
 function WorkoutPicker() {
 
