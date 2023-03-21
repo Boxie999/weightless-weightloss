@@ -18,6 +18,11 @@
     align-items: center;
 }
 
+.card-title {
+    margin: 100px;
+    text-align: center;
+}
+
 .timerCard:nth-child(2) > div:nth-child(3) {
     font-size: 30px;
     color: #02DEC4;
@@ -25,12 +30,8 @@
 }
 
 .timerCardGif {
-    width: 200px;
+    width: 180px;
     margin: 20px;
-}
-
-.card-title {
-    margin: 10px;
 }
 
 
@@ -49,9 +50,14 @@ button {
     font-weight: bold;
 }
 
-p {
-    font-size: 22px;
-    color: #02dec4;
+
+.nextExerciseText {
+    font-size: 15px;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+    text-align: center;
+
 }
-
-

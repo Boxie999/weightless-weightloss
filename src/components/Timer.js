@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import { CountdownCircleTimer } from "react-countdown-circle-timer"
 import "../styles/WorkoutPage.css"
 import "../styles/TimerCard.css"
+import AudioComponent from './Audio'
 
 const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {
@@ -20,7 +21,7 @@ const renderTime = ({ remainingTime }) => {
 // Made-up array of exercises
 
 let exerciseList = [
-    {name: "Exercise 1"},
+    {name: "bodyweight standing one arm row (with towel)"},
     {name: "Exercise 2"},
     {name: "Exercise 3"},
     {name: "Exercise 4"},
@@ -38,7 +39,8 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
       const restTrailColor = '#949191'
 
     return (
-  
+      
+      <div><AudioComponent />
           <CountdownCircleTimer
             key={key}
             isPlaying={isPlaying}
@@ -47,7 +49,7 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
             trailColor={exerciseInProgress ? exerciseTrailColor : restTrailColor}
             strokeWidth={15}
             strokeLinecap={'square'}
-            size={140}
+            size={130}
             onComplete={() => {
                 if(exerciseInProgress === false) {
 
@@ -70,7 +72,7 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
           >
             {renderTime}
           </CountdownCircleTimer>
-        
+          </div>
 
         
         

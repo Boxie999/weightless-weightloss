@@ -23,7 +23,6 @@
     top: 83px;
     width: 245px;
     height: auto;
-    transition: opacity .5s;
 }
 
 #core {
@@ -33,7 +32,6 @@
     top: 170px;
     width: 245px;
     height: auto;
-    transition: opacity .5s;
 }
 
 #legs {
@@ -43,11 +41,6 @@
     top: 302px;
     width: 245px;
     height: auto;
-    transition: opacity .5s;
-}
-
-#head:hover {
-    opacity: 1;
 }
 
 #upperBody:hover {
@@ -71,4 +64,31 @@
     font-weight: 600;
     font-size: 30px;
     margin-bottom: 10px;
+}
+
+#upperBodyX {
+    cursor: pointer;
+    opacity: 1;
+    position: absolute;
+    top: 83px;
+    width: 245px;
+    height: auto;
+}
+
+#coreX {
+    cursor: pointer;
+    opacity: 1;
+    position: absolute;
+    top: 170px;
+    width: 245px;
+    height: auto;
+}
+
+#legsX {
+    cursor: pointer;
+    opacity: 1;
+    position: absolute;
+    top: 302px;
+    width: 245px;
+    height: auto;
 }
