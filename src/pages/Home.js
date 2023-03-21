@@ -12,21 +12,21 @@ function Home() {
     return (
         <div>
             <div id="homeIntroJumbo" className="jumbotron">
-                <p id="homeIntro">Good morning!</p>
+                <p id="homeIntro">Hey you!</p>
                 <h1 id="homeTitle">LET'S GET YOUR BLOOD PUMPING</h1>
                 <p>
-                <NavLink to="/WorkoutPicker">
-                    <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">QUICK WORKOUT</button>
-                </NavLink>
-                <NavLink to="/BuildWorkoutX">
-                    <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">CREATE WORKOUT PLAN</button>
-                </NavLink>
+                    <NavLink to="/WorkoutPicker">
+                        <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">QUICK WORKOUT</button>
+                    </NavLink>
+                    <NavLink to="/BuildWorkoutX">
+                        <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">CREATE WORKOUT PLAN</button>
+                    </NavLink>
                 </p>
             </div>
             <div id="myExercisesArea">
                 <Nav.Link href="/FavouriteExercises">
                     <img id="starJumper" src={jumpingGuy} alt="Star Jumping Guy" />
-                    <p id="excerciseHistory">MY FAVOURITE EXERCISES</p>
+                    <p id="exerciseHistory">MY FAVOURITE EXERCISES</p>
                 </Nav.Link>
             </div>
         </div>

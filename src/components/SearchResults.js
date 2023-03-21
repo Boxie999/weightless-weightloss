@@ -131,7 +131,7 @@ const SearchResults = ({ exerciseResults }) => {
 
     window.localStorage.setItem("workout builder list", JSON.stringify(workoutBuilderExercises)); // Takes the workoutBuilderExercises and sets them in local storage. This allows for it to be accessible on other pages, as well as be set from other sources than just the search page.
 
-        window.location.href = "/WorkoutConfirm"; // Navigate to the Workout Confirm page which will list out the workout exercises that can be reviewed before starting the workout
+        window.location.href = "/WorkoutList"; // Navigate to the Workout Confirm page which will list out the workout exercises that can be reviewed before starting the workout
         
     }  
 
