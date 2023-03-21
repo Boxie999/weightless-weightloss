@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/WorkoutFinish.css"
-import finishImage from '/Users/admin/Downloads/bootcamp/simple-fit/src/images/finishImage.png';
+import finishImage from '../images/finishImage.png';
 
 const WorkoutFinish = () => {
   return ( <div className='workoutFinish'>
