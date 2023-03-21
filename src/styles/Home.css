@@ -1,10 +1,9 @@
-
 .jumbotron {
     background: none !important;
 }
 
 #homeIntroJumbo {
-    height: calc(100vh - 194.5px);
+    height: calc(100vh - 204.5px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +14,7 @@
 
 #homeIntro {
     color: var(--myBlack);
-    margin-right: 745px;
+    margin-right: 821px;
     margin-top: 5vh;
     font-size: 35px;
     line-height: 10px;
@@ -27,6 +26,8 @@
     font-size: 82px;
     line-height: 74px;
     margin-bottom: 60px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .chooseButton {
@@ -54,14 +55,14 @@
     height: 80px;
 }
 
-#excerciseHistory {
+#exerciseHistory {
     color: white;
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
-#excerciseHistory:hover {
+#exerciseHistory:hover {
     color: var(--myBlack);
     cursor: pointer;
 }
@@ -69,5 +70,44 @@
 @media (max-width: 989px) {
     #homeIntro {
         margin-right: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    #homeIntroJumbo {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #homeIntro {
+        font-size: 30px;
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+        min-width: 297px;
+    }
+
+    #homeTitle {
+        font-size: 60px;
+        line-height: 54px;
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+        min-width: 297px;
+        margin-bottom: 40px;
+    }
+
+    #starJumper {
+        display: none;
+    }
+
+    #exerciseHistory {
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+        min-width: 297px;
+        margin-top: 50px;
     }
 }
