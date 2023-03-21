@@ -11,12 +11,14 @@ function List({exerciseList, setExerciseList, exerciseId, setExerciseId, setTime
         const [itemToMove] = arrayToEdit.splice(result.source.index, 1)
         arrayToEdit.splice(result.destination.index, 0, itemToMove)
         setExerciseList(arrayToEdit)
+        window.localStorage.setItem("workout plan", JSON.stringify(arrayToEdit))
         console.log(arrayToEdit)
     }
     const startExercise = () => {
-        setExerciseId(exerciseList[0].id)
-        setTimeRemaining(30)
-        setExerciseInProgress(true)
+        window.location.href= "/WorkoutPage"
+        // setExerciseId(exerciseList[0].id)
+        // setTimeRemaining(30)
+        // setExerciseInProgress(true)
     }
             
     return (

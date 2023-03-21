@@ -14,6 +14,7 @@ import FavouriteExercises from './pages/FavouriteExercises';
 import exercises from "./exercises.json";
 import WorkoutConfirm from "./pages/WorkoutConfirm";
 import WorkoutFinish from "./pages/WorkoutFinish";
+import WorkoutList from "./pages/WorkoutList"
 
 function App() {
 
@@ -81,6 +82,7 @@ function App() {
           <Route path="List" element={<List />} />
           <Route path="WorkoutPage" element={<WorkoutPage />} />
           <Route path="WorkoutFinish" element={<WorkoutFinish />} />
+          <Route path="WorkoutList" element={<WorkoutList />} />
         </Routes>
       </div>
     </Router>

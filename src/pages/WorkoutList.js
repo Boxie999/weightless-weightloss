@@ -89,10 +89,7 @@ const WorkoutPage = () => {
       exerciseId={exerciseId} setExerciseId={setExerciseId} setExerciseInProgress={setExerciseInProgress}
       setTimeRemaining={setTimeRemaining}
       ></List>
-       < TimerCard  exerciseInProgress={exerciseInProgress}
-      exerciseIndex={exerciseIndex}
-      timeRemaining={timeRemaining}
-      setExerciseInProgress={setExerciseInProgress}/>   
+     
     </div>
     
   )
