@@ -39,7 +39,7 @@ function SampleNextArrow(props) {
 // This will be the component within which the favourite exercises will be displayed on the screen. It will display the collection of results, which we store/track within the exerciseResults state which will be passed as props
 
 
-const FavouritesDisplay = ( { favouritesArray }) => {
+const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
     
     console.log(favouritesArray); // To show the output from local storage
 
@@ -114,7 +114,16 @@ const FavouritesDisplay = ( { favouritesArray }) => {
 
     // We can track the indexes within the favouritesArray of every exercise that is checked.
 
-    let indexesOfCheckedFaveArray = checkedFaveArray.map((id) => favouritesArray.findIndex((exercise) => exercise.id == id));
+    let indexesOfCheckedFaveArray = [];
+    
+    checkedFaveArray.forEach((id) => {
+      const indexToCheck = favouritesArray.findIndex((exercise) => exercise.id == id)
+      if( indexToCheck !== -1) {
+
+        indexesOfCheckedFaveArray.push(indexToCheck);
+
+      }
+      });
 
     console.log(indexesOfCheckedFaveArray);
 
@@ -128,7 +137,7 @@ const FavouritesDisplay = ( { favouritesArray }) => {
 
         window.localStorage.setItem("workout builder list", JSON.stringify(faveWorkoutBuilderExercises));
 
-        window.location.href = "/WorkoutConfirm";
+        window.location.href = "/WorkoutList";
 
     }
 
@@ -136,8 +145,12 @@ const FavouritesDisplay = ( { favouritesArray }) => {
 
     const clearAllFavourites = () => {
 
-        window.localStorage.removeItem("fave exercises list")
-        window.location.reload()
+        window.localStorage.removeItem("fave exercises list");
+
+        console.log("setFavouritesArray", "150")
+
+        setFavouritesArray([]);
+        //window.location.reload()
     }
 
     // Function to delete checked exercises from the Favourites Page
@@ -148,7 +161,7 @@ const FavouritesDisplay = ( { favouritesArray }) => {
         console.log(favouritesArray);
         console.log((JSON.parse(window.localStorage.getItem("fave exercises list"))).length);
 
-        let splicedFavouritesArray = favouritesArray;
+        let splicedFavouritesArray = [...favouritesArray];
 
         for (const i of indexesOfCheckedFaveArray) {
 
@@ -160,7 +173,13 @@ const FavouritesDisplay = ( { favouritesArray }) => {
 
         console.log(JSON.parse(localStorage.getItem("fave exercises list")));
 
-        window.location.reload();        
+        setCheckedFaveArray([]);
+
+        console.log("setFavouritesArray", "176")
+
+        setFavouritesArray(splicedFavouritesArray);
+
+        //window.location.reload();        
         
     }
 
@@ -181,7 +200,8 @@ const FavouritesDisplay = ( { favouritesArray }) => {
                         
                             <FavouritesDisplayCard  
                             exercise={exercise}
-                            handleSelectFave={handleSelectFave} />
+                            handleSelectFave={handleSelectFave}
+                            checkedFaveArray={checkedFaveArray} />
                         
                         
                         </Col>                                  

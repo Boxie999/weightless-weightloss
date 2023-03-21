@@ -6,7 +6,7 @@ import "../styles/TimerCard.css"
 import testerGif from "../images/testerGif.gif"
 import restImage from '../images/restImage.png';
 
-const TimerCard = () => {
+const TimerCard = ( {objects, setObjects}) => {
   
   const [key, setKey] = useState(0)
     const [exerciseInProgress, setExerciseInProgress] = useState(false);
@@ -25,7 +25,7 @@ const TimerCard = () => {
 
     const exerciseGif = <img className='timerCardGif' src={testerGif} alt="Card image cap" />
     const restImageShow = <img className='timerCardGif' src={restImage} alt='Card image cap' />
-    const exerciseTitle = <h6 className="card-title">{exerciseInProgress === false ? "Rest" : exerciseList[exerciseIndex-1].name}</h6>
+    const exerciseTitle = <h6 className="card-title">{exerciseInProgress === false ? "Rest" : objects[exerciseIndex-1].name}</h6>
   
   return (
     <div className='timerCard'>
@@ -76,7 +76,7 @@ const TimerCard = () => {
 
         <div>
         <p className={"nextExerciseText"}>
-          Next Exercise: { exerciseIndex < exerciseList.length ? exerciseList[exerciseIndex].name : "Finish Workout" } 
+          Next Exercise: { exerciseIndex < objects.length ? objects[exerciseIndex].name : "Finish Workout" } 
         </p>
         </div>
       

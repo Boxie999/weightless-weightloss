@@ -2,7 +2,7 @@ import React from 'react';
 import "../styles/SearchResultCard.css";
 import Row from 'react-bootstrap/Row';
 
-const FavouritesDisplayCard = ({ exercise, handleSelectFave }) => {
+const FavouritesDisplayCard = ({ exercise, handleSelectFave, checkedFaveArray }) => {
     return (
         <div className="card searchResultCard shadow p-3 mb-5 bg-white rounded border-0" style={{ width: '18rem' }}>
             <img className="card-img-top" src={exercise.gifUrl} alt={exercise.name} />
@@ -15,6 +15,7 @@ const FavouritesDisplayCard = ({ exercise, handleSelectFave }) => {
                     <input 
                     className="exerciseCheck"
                     type="checkbox"
+                    checked={checkedFaveArray.includes(exercise.id)}
                     value={exercise.id}
                     onChange={handleSelectFave} />
                 </Row>

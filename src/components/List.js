@@ -4,18 +4,9 @@ import React, { useState } from 'react';
 import "../styles/List.css"
 
 
-function List() {
+function List({ objects, setObjects }) {
 
-    const [objects, setObjects] = useState(
-        [
-            { name: 'exercise 1' },
-            { name: 'exercise 2' },
-            { name: 'exercise 3' },
-            { name: 'exercise 4' },
-            { name: 'exercise 5' },
-            { name: 'exercise 6' }
-        ]
-    )
+    
     const updateArray = (result) => {
         const arrayToEdit = [...objects]
         const [itemToMove] = arrayToEdit.splice(result.source.index, 1)
