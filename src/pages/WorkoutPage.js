@@ -3,6 +3,7 @@ import ExerciseCard from '../components/ExerciseCard'
 import Timer from '../components/Timer'
 import list from '../components/List'
 import TimerCard from '../components/TimerCard'
+import StarterCard from '../components/StarterCard'
 import "../styles/WorkoutPage.css"
 
 
@@ -18,7 +19,7 @@ const WorkoutPage = () => {
       < TimerCard  exerciseInProgress={exerciseInProgress}
       exerciseIndex={exerciseIndex}
       timeRemaining={timeRemaining}
-      setExerciseInProgress={setExerciseInProgress}/>   
+      setExerciseInProgress={setExerciseInProgress}/>  
       
     </div>
     
