@@ -6,13 +6,13 @@
 }
 
 .card-title {
-    font-size: 22px;
+    font-size: 20px;
     margin: 0px !important;
     line-height: 24px;
 }
 
 .card-text {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--myBlue);
     margin-bottom: 18px;
     line-height: 20px;
