@@ -78,7 +78,7 @@ function App() {
           {/* Define routes using the Route component to render different page components at different paths */}
           {/* Define a default route that will render the Home component */}
           <Route path="/" element={<Home />} />
-          <Route path="WorkoutPicker" element={<WorkoutPicker />} />
+          <Route path="WorkoutPicker" element={<WorkoutPicker setExerciseList={setExerciseList} />} />
           <Route path="Home2" element={<Home2 />} />
           <Route path="BuildWorkout" element={<BuildWorkout />} />
           <Route path="Timer" element={<WorkoutPage />} />
