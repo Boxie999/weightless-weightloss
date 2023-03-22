@@ -5,35 +5,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import Logo from "../images/logo.svg"
 
+
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 function Header() {
     return (
-            <nav className="navbar navbar-expand-lg navbar-light">
-                <Nav.Link href="/">
-                    <img id="Logo" src={Logo} alt="Weightless Weightloss" />
-                </Nav.Link>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon" />
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ms-auto">
-                        <Nav.Link href="BuildWorkoutX">
-                            <li className="nav-item">
-                                <p className="nav-link myLink">CREATE WORKOUT</p>
-                            </li>
-                        </Nav.Link>
-                        <Nav.Link href="FavouriteExercises">
-                            <li className="nav-item">
-                                <p className="nav-link myLink">FAVOURITES</p>
-                            </li>
-                        </Nav.Link>
-                        <Nav.Link href="/">
-                            <li className="nav-item">
-                                <p className="nav-link myLink">HOME</p>
-                            </li>
-                        </Nav.Link>
-                    </ul>
-                </div>
-            </nav>
+        <Navbar expand="lg">
+            <Nav.Link href="/">
+                <img id="Logo" src={Logo} alt="Weightless Weightloss" />
+            </Nav.Link>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ms-auto text-center">
+                    <Nav.Link href="BuildWorkoutX">
+                        <li className="nav-item">
+                            <p className="nav-link myLink">CREATE WORKOUT</p>
+                        </li>
+                    </Nav.Link>
+                    <Nav.Link href="WorkoutPicker">
+                        <li className="nav-item">
+                            <p className="nav-link myLink"> QUICK WORKOUT</p>
+                        </li>
+                    </Nav.Link>
+                    <Nav.Link href="FavouriteExercises">
+                        <li className="nav-item">
+                            <p className="nav-link myLink">FAVOURITES</p>
+                        </li>
+                    </Nav.Link>
+                    <Nav.Link href="/">
+                        <li className="nav-item">
+                            <p className="nav-link myLink">HOME</p>
+                        </li>
+                    </Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+
+        </Navbar>
     );
 }
 
