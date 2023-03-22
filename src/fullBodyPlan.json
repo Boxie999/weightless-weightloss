@@ -1,0 +1,52 @@
+[
+    {
+        "bodyPart": "cardio",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3224.gif",
+        "id": "3224",
+        "name": "jack jump (male)",
+        "target": "cardiovascular system"
+    },
+    {
+        "bodyPart": "cardio",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1160.gif",
+        "id": "1160",
+        "name": "burpee",
+        "target": "cardiovascular system"
+    },
+    {
+        "bodyPart": "cardio",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3360.gif",
+        "id": "3360",
+        "name": "bear crawl",
+        "target": "cardiovascular system"
+    },
+    {
+        "bodyPart": "cardio",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
+        "id": "3220",
+        "name": "astride jumps (male)",
+        "target": "cardiovascular system"
+    },
+    {
+        "bodyPart": "cardio",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0630.gif",
+        "id": "0630",
+        "name": "mountain climber",
+        "target": "cardiovascular system"
+    },
+      
+    {
+        "bodyPart": "cardio",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3672.gif",
+        "id": "3672",
+        "name": "back and forth step",
+        "target": "cardiovascular system"
+    }    
+   
+]

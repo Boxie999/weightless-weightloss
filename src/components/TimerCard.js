@@ -6,6 +6,7 @@ import "../styles/TimerCard.css"
 import testerGif from "../images/testerGif.gif"
 import restImage from '../images/restImage.png';
 
+//setting the states here 
 const TimerCard = ({exerciseList, setExerciseId, exerciseIndex, setExerciseIndex}) => {
   // console.log(exerciseList);
     const [key, setKey] = useState(0)
@@ -13,10 +14,13 @@ const TimerCard = ({exerciseList, setExerciseId, exerciseIndex, setExerciseIndex
     const [duration, setDuration] = useState(30);
     const [isPlaying, setIsPlaying] = useState(true);
    
-
+    //the images change whether if it's the exercise card or the rest card
     const exerciseGif = <img className='timerCardGif' src={exerciseIndex < exerciseList.length ? exerciseList[exerciseIndex].gifUrl : '' } alt="Card image cap" />
     const restShow = <img className='timerCardGif' src={restImage} alt='Card image cap' />
+
     const exerciseTitle = <h6 className="card-title">{exerciseInProgress === false ? "Rest" : exerciseList[exerciseIndex].name}</h6>
+
+    // Buttons added in the JSX below to toggle between Pause and Play, and to give the user the opportunity to increase or decrease the time for rest or exercise.
   
   return (
     <div className='timerCard'>

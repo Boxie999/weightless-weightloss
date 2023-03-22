@@ -1,0 +1,59 @@
+[
+    {
+        "bodyPart": "cardio",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1160.gif",
+        "id": "1160",
+        "name": "burpee",
+        "target": "cardiovascular system"
+      },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0283.gif",
+        "id": "0283",
+        "name": "diamond push-up",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1399.gif",
+        "id": "1399",
+        "name": "bench dip on floor",
+        "target": "triceps"
+        },
+        {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0662.gif",
+        "id": "0662",
+        "name": "push-up",
+        "target": "pectorals"
+        },
+        {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1689.gif",
+        "id": "1689",
+        "name": "push and pull bodyweight",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1365.gif",
+        "id": "1365",
+        "name": "upper back stretch",
+        "target": "upper back"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1405.gif",
+        "id": "1405",
+        "name": "back pec stretch",
+        "target": "lats"
+    }
+   
+]

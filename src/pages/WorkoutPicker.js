@@ -1,265 +1,32 @@
 import React, { useEffect, useState } from "react";
 import "../styles/WorkoutPicker.css";
 import { NavLink } from "react-router-dom";
-import "../styles/WorkoutPicker.css"
-import wholeBody from "../images/body/WholeBody.svg"
-import upperBody from "../images/body/UpperBody.svg"
-import core from "../images/body/Core.svg"
-import legs from "../images/body/Legs.svg"
-import upperBodyX from "../images/body/UpperBodyX.svg"
-import coreX from "../images/body/CoreX.svg"
-import legsX from "../images/body/LegsX.svg"
+import "../styles/WorkoutPicker.css";
+import wholeBody from "../images/body/WholeBody.svg";
+import upperBody from "../images/body/UpperBody.svg";
+import core from "../images/body/Core.svg";
+import legs from "../images/body/Legs.svg";
+import upperBodyX from "../images/body/UpperBodyX.svg";
+import coreX from "../images/body/CoreX.svg";
+import legsX from "../images/body/LegsX.svg";
+import fullBodyPlan from "../fullBodyPlan.json";
+import corePlan from "../corePlan.json";
+import upperBodyPlan from "../upperBodyPlan.json";
+import legsPlan from "../legsPlan.json";
 
-const fullBodyPlan =
-    [
-        {
-            "bodyPart": "cardio",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3224.gif",
-            "id": "3224",
-            "name": "jack jump (male)",
-            "target": "cardiovascular system"
-        },
-        {
-            "bodyPart": "cardio",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1160.gif",
-            "id": "1160",
-            "name": "burpee",
-            "target": "cardiovascular system"
-        },
-        {
-            "bodyPart": "cardio",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3360.gif",
-            "id": "3360",
-            "name": "bear crawl",
-            "target": "cardiovascular system"
-        },
-        {
-            "bodyPart": "cardio",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
-            "id": "3220",
-            "name": "astride jumps (male)",
-            "target": "cardiovascular system"
-        },
-        {
-            "bodyPart": "cardio",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0630.gif",
-            "id": "0630",
-            "name": "mountain climber",
-            "target": "cardiovascular system"
-        },
-          
-        {
-            "bodyPart": "cardio",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3672.gif",
-            "id": "3672",
-            "name": "back and forth step",
-            "target": "cardiovascular system"
-        },    
-       
-    ];
-
-const upperBodyPlan =
-    [
-        {
-            "bodyPart": "cardio",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1160.gif",
-            "id": "1160",
-            "name": "burpee",
-            "target": "cardiovascular system"
-          },
-        {
-            "bodyPart": "upper arms",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0283.gif",
-            "id": "0283",
-            "name": "diamond push-up",
-            "target": "triceps"
-        },
-        {
-            "bodyPart": "upper arms",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1399.gif",
-            "id": "1399",
-            "name": "bench dip on floor",
-            "target": "triceps"
-            },
-            {
-            "bodyPart": "chest",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0662.gif",
-            "id": "0662",
-            "name": "push-up",
-            "target": "pectorals"
-            },
-            {
-            "bodyPart": "chest",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1689.gif",
-            "id": "1689",
-            "name": "push and pull bodyweight",
-            "target": "pectorals"
-        },
-        {
-            "bodyPart": "back",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1365.gif",
-            "id": "1365",
-            "name": "upper back stretch",
-            "target": "upper back"
-        },
-        {
-            "bodyPart": "back",
-            "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1405.gif",
-            "id": "1405",
-            "name": "back pec stretch",
-            "target": "lats"
-        },
-       
-    ];
-
-const corePlan =
-[
-    {
-        "bodyPart": "waist",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0687.gif",
-        "id": "0687",
-        "name": "russian twist",
-        "target": "abs"
-      },
-      {
-        "bodyPart": "waist",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3544.gif",
-        "id": "3544",
-        "name": "bodyweight incline side plank",
-        "target": "abs"
-      },
-      {
-        "bodyPart": "waist",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0664.gif",
-        "id": "0664",
-        "name": "push-up to side plank",
-        "target": "abs"
-      },
-      {
-        "bodyPart": "waist",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0464.gif",
-        "id": "0464",
-        "name": "front plank with twist",
-        "target": "abs"
-      },
-      {
-        "bodyPart": "waist",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0872.gif",
-        "id": "0872",
-        "name": "reverse crunch",
-        "target": "abs"
-      },
-      {
-        "bodyPart": "waist",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0003.gif",
-        "id": "0003",
-        "name": "air bike",
-        "target": "abs"
-      },
-      {
-        "bodyPart": "waist",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0006.gif",
-        "id": "0006",
-        "name": "alternate heel touchers",
-        "target": "abs"
-      },
-
-   
-];
-
-const legsPlan =
-[
-    {
-        "bodyPart": "upper legs",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1460.gif",
-        "id": "1460",
-        "name": "walking lunge",
-        "target": "glutes"
-      },
-      {
-        "bodyPart": "upper legs",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3433.gif",
-        "id": "3433",
-        "name": "swimmer kicks v. 2 (male)",
-        "target": "glutes"
-      },
-      {
-        "bodyPart": "upper legs",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2368.gif",
-        "id": "2368",
-        "name": "split squats",
-        "target": "quads"
-      },
-      {
-        "bodyPart": "upper legs",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0778.gif",
-        "id": "0778",
-        "name": "spider crawl push up",
-        "target": "glutes"
-      },
-      {
-        "bodyPart": "upper legs",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1587.gif",
-        "id": "1587",
-        "name": "seated wide angle pose sequence",
-        "target": "hamstrings"
-      },
-      {
-        "bodyPart": "upper legs",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1576.gif",
-        "id": "1576",
-        "name": "leg up hamstring stretch",
-        "target": "hamstrings"
-      }, 
-      {
-        "bodyPart": "upper legs",
-        "equipment": "body weight",
-        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1585.gif",
-        "id": "1585",
-        "name": "runners stretch",
-        "target": "hamstrings"
-      },
-   
-];
 
 function WorkoutPicker() {
 
-    const [bodyPart, setBodyPart] = useState(fullBodyPlan)
-    const [UpperIsShown, setUpperIsShown] = useState(false);
-    const [CoreIsShown, setCoreIsShown] = useState(false);
-    const [LegsIsShown, setLegsIsShown] = useState(false);
-    const [UpperIsSelected, setUpperIsSelected] = useState(false);
-    const [CoreIsSelected, setCoreIsSelected] = useState(false);
-    const [LegsIsSelected, setLegsIsSelected] = useState(false);
+    const [bodyPart, setBodyPart] = useState(fullBodyPlan) // Dictates which body part workout plan will be implemented
+    const [UpperIsShown, setUpperIsShown] = useState(false); // Relates to the hover effect on the Quick Workout figure for Upper Body
+    const [CoreIsShown, setCoreIsShown] = useState(false); // Relates to the hover effect on the Quick Workout figure for Core
+    const [LegsIsShown, setLegsIsShown] = useState(false); // Relates to the hover effect on the Quick Workout figure for Legs
+    const [UpperIsSelected, setUpperIsSelected] = useState(false); // Relates to the upperbody part lighting up when selected
+    const [CoreIsSelected, setCoreIsSelected] = useState(false); // Relates to the core part lighting up when selected
+    const [LegsIsSelected, setLegsIsSelected] = useState(false); // Relates to the legs part lighting up when selected
     const [bodyRegionName, setBodyRegionName] = useState("FULL BODY");
 
-    useEffect(() => { localStorage.setItem('workout builder list', JSON.stringify(bodyPart)) }, [bodyPart]);
+    useEffect(() => { localStorage.setItem('workout builder list', JSON.stringify(bodyPart)) }, [bodyPart]); // Sets the body part in question into local storage
     useEffect(() => { document.body.style.backgroundColor = 'white' }, [])
     useEffect(() => { document.body.style.backgroundImage = 'linear-gradient(0deg, rgba(0, 233, 255, 0) 23%, rgba(62, 240, 220, 0) 80%)' }, [])
 
@@ -268,12 +35,19 @@ function WorkoutPicker() {
             <p id="selectText">Select the body area you would like to work out</p>
 
             <div id="figure">
+                {/*Code for the Whole Body Figure*/}
                 <img id="wholeBody" src={wholeBody} alt="whole body" />
+                {/*Code for the Upper Body part - when clicked, it should be selected and light up*/}
                 <img id="upperBody" src={upperBody} alt="upper body" onMouseEnter={() => setUpperIsShown(true)} onMouseLeave={() => setUpperIsShown(false)} onClick={() => { setBodyPart(upperBodyPlan); setBodyRegionName("UPPER BODY") }} onMouseUp={() => { setUpperIsSelected(true); setCoreIsSelected(false); setLegsIsSelected(false) }} />
+                {/*Code for the Upper Body part - when clicked again, it should turn off, and current body part should revert to fullBodyPlan*/}
                 {UpperIsSelected && (<img id="upperBodyX" src={upperBodyX} alt="upper body" onClick={() => { setUpperIsSelected(false); setBodyPart(fullBodyPlan); setBodyRegionName("FULL BODY") }} />)}
+                {/*Code for the Core part - when clicked, it should be selected and light up*/}
                 <img id="core" src={core} alt="core" onMouseEnter={() => setCoreIsShown(true)} onMouseLeave={() => setCoreIsShown(false)} onClick={() => { setBodyPart(corePlan); setBodyRegionName("CORE") }} onMouseUp={() => { setCoreIsSelected(true); setUpperIsSelected(false); setLegsIsSelected(false) }} />
+                {/*Code for the Core part - when clicked again, it should turn off, and current body part should revert to fullBodyPlan*/}
                 {CoreIsSelected && (<img id="coreX" src={coreX} alt="core" onClick={() => { setCoreIsSelected(false); setBodyPart(fullBodyPlan); setBodyRegionName("FULL BODY") }} />)}
+                {/*Code for the Legs part - when clicked, it should be selected and light up*/}
                 <img id="legs" src={legs} alt="legs" onMouseEnter={() => setLegsIsShown(true)} onMouseLeave={() => setLegsIsShown(false)} onClick={() => { setBodyPart(legsPlan); setBodyRegionName("LEGS") }} onMouseUp={() => { setLegsIsSelected(true); setUpperIsSelected(false); setCoreIsSelected(false) }} />
+                {/*Code for the Legs part - when clicked again, it should turn off, and current body part should revert to fullBodyPlan*/}
                 {LegsIsSelected && (<img id="legsX" src={legsX} alt="legs" onClick={() => { setLegsIsSelected(false); setBodyPart(fullBodyPlan); setBodyRegionName("FULL BODY") }} />)}
             </div>
             {(UpperIsShown || CoreIsShown || LegsIsShown) || (<label id="targetPart" >{bodyRegionName}</label>)}
