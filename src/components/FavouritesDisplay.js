@@ -41,7 +41,7 @@ function SampleNextArrow(props) {
 
 const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
     
-    console.log(favouritesArray); // To show the output from local storage
+    // console.log(favouritesArray); // To show the output from local storage
 
     // Settings object for the horizontal scrollbar
 
@@ -102,7 +102,7 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
     
           const filteredFaveCheckedArray = checkedFaveArray.filter((element) => element !== faveCheckedId);
 
-          console.log(filteredFaveCheckedArray);
+          // console.log(filteredFaveCheckedArray);
 
           setCheckedFaveArray(filteredFaveCheckedArray);
         }
@@ -122,7 +122,7 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
       }
       });
 
-    console.log(indexesOfCheckedFaveArray);
+    // console.log(indexesOfCheckedFaveArray);
 
     // Function to create a workout directly from Favourites 
 
@@ -130,7 +130,7 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
 
         const faveWorkoutBuilderExercises = checkedFaveArray.map((fChArrId) => (exercises.find(exercise => exercise.id === fChArrId) || {})).filter(Boolean);
 
-        console.log(faveWorkoutBuilderExercises);
+        // console.log(faveWorkoutBuilderExercises);
 
         window.localStorage.setItem("workout builder list", JSON.stringify(faveWorkoutBuilderExercises));
 
@@ -144,7 +144,7 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
 
         window.localStorage.removeItem("fave exercises list");
 
-        console.log("setFavouritesArray", "150")
+        // console.log("setFavouritesArray", "150")
 
         setFavouritesArray([]);
     }
@@ -153,9 +153,9 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
 
     const deleteSingleFavourites = () => {
 
-        console.log(JSON.parse(window.localStorage.getItem("fave exercises list")));
-        console.log(favouritesArray);
-        console.log((JSON.parse(window.localStorage.getItem("fave exercises list"))).length);
+        // console.log(JSON.parse(window.localStorage.getItem("fave exercises list")));
+        // console.log(favouritesArray);
+        // console.log((JSON.parse(window.localStorage.getItem("fave exercises list"))).length);
 
         let splicedFavouritesArray = [...favouritesArray];
 
@@ -163,15 +163,15 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
 
             splicedFavouritesArray.splice(i, 1);
         }
-        console.log(splicedFavouritesArray);
+        // console.log(splicedFavouritesArray);
 
         window.localStorage.setItem("fave exercises list", JSON.stringify(splicedFavouritesArray));
 
-        console.log(JSON.parse(localStorage.getItem("fave exercises list")));
+        // console.log(JSON.parse(localStorage.getItem("fave exercises list")));
 
         setCheckedFaveArray([]);
 
-        console.log("setFavouritesArray", "176")
+        // console.log("setFavouritesArray", "176")
 
         setFavouritesArray(splicedFavouritesArray);
         

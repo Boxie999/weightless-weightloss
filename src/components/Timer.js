@@ -20,13 +20,13 @@ const renderTime = ({ remainingTime }) => {
 
   
 function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInProgress, duration, setDuration, isPlaying, setIsPlaying, exerciseIndex, setExerciseIndex, setExerciseId, exerciseList }) {
-    
+      //colors based on if it's the exercise card or the rest card, the trail is changing color
       const exerciseColor = '#02dec4'
       const restColor = '#d10f08'
       const exerciseTrailColor = '#d0f7f3'
       const restTrailColor = '#949191'
       const firstLoad = useRef(true);
-      console.log('exerciseprogress ' + exerciseInProgress ) 
+      // console.log('exerciseprogress ' + exerciseInProgress ) 
     return (
       
       <div>
@@ -73,5 +73,6 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
       
     );
   }
-  // <AudioComponent />
+
+
 export default Timer

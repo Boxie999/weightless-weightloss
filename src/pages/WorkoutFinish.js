@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import "../styles/WorkoutFinish.css"
 import finishImage from '../images/finishImage.png';
+import { Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+
 
 const WorkoutFinish = () => {
   useEffect(() => { document.body.style.backgroundColor = 'rgb(0, 233, 255)' }, [])
@@ -9,6 +12,9 @@ const WorkoutFinish = () => {
     <div><p className='finish-text'>Yo! Do you feel like Rocky yet? 'Cause...</p></div>
     <div><h1 className='finish-heading'>YOU ROCKED YOUR EXERCISE!</h1></div>
     <div><img className='finishImage' src={finishImage} alt='Finish workout image' /></div>
+    <div><NavLink to="/">
+                        <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">GO TO HOMEPAGE</button>
+                    </NavLink></div>
     </div>
   )
 }

@@ -6,14 +6,15 @@ import "../styles/TimerCard.css"
 import testerGif from "../images/testerGif.gif"
 import restImage from '../images/restImage.png';
 
+//setting the states here 
 const TimerCard = ({exerciseList, setExerciseId, exerciseIndex, setExerciseIndex}) => {
-  console.log(exerciseList);
+  // console.log(exerciseList);
     const [key, setKey] = useState(0)
     const [exerciseInProgress, setExerciseInProgress] = useState(true);
     const [duration, setDuration] = useState(30);
     const [isPlaying, setIsPlaying] = useState(true);
    
-
+    //the images change whether if it's the exercise card or the rest card
     const exerciseGif = <img className='timerCardGif' src={exerciseIndex < exerciseList.length ? exerciseList[exerciseIndex].gifUrl : '' } alt="Card image cap" />
     const restShow = <img className='timerCardGif' src={restImage} alt='Card image cap' />
 
