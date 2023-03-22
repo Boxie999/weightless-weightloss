@@ -35,9 +35,9 @@ function App() {
         
         if(searchTerm) {
 
-            const exerciseApiResults = exercises;
-
-            //= await retrieveApiData("https://exercisedb.p.rapidapi.com/exercises", searchOptions);
+            const exerciseApiResults = await retrieveApiData("https://exercisedb.p.rapidapi.com/exercises", searchOptions);
+            
+            //= exercises;            
 
             // The searchOptions variable contains the information that will authorise the API call during the search
 
