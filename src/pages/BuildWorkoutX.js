@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import "../styles/BuildWorkout.css";
-import exercises from "../exercises.json";
-import { Stack, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import SearchResults from "../components/SearchResults";
-import { searchOptions, retrieveApiData } from '../utils/retrieveApiData';
 
 
 function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResults, setExerciseResults }) {
@@ -16,7 +14,9 @@ function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResult
 
 
     const [showText, setShowText] = useState(false);
+
     const onPress = () => setShowText(true);
+
     const ResultsContainer = () =>
         <Container fluid>
             <SearchResults
@@ -40,11 +40,11 @@ function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResult
                         onClick={handleSubmit} onMouseUp={onPress}>SEARCH</button>
                 </div>
             </div>
+            <br />
+            <p id="searchText">Search for exercises by body part or target muscle. <br /> Then you can select exercises to add to your Favourites, or to use in your workout!</p>
             {showText ? <ResultsContainer /> : null}
         </div>
     );
 }
-
-// div id="searchResults" class="row row-cols-1 row-cols-md-4 d-flex justify-content-center"
 
 export default BuildWorkoutX;
