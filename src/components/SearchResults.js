@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Col } from "react-bootstrap";
-// import { searchOptions, retrieveApiData } from '../utils/retrieveApiData';
+import { searchOptions, retrieveApiData } from '../utils/retrieveApiData';
 import SearchResultCard from './SearchResultCard';
 import exercises from "../exercises.json";
 import "../styles/SearchResults.css"

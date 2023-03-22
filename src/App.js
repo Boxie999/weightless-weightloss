@@ -14,7 +14,8 @@ import FavouriteExercises from './pages/FavouriteExercises';
 import exercises from "./exercises.json";
 import WorkoutConfirm from "./pages/WorkoutConfirm";
 import WorkoutFinish from "./pages/WorkoutFinish";
-import WorkoutList from "./pages/WorkoutList"
+import WorkoutList from "./pages/WorkoutList";
+import { searchOptions, retrieveApiData } from './utils/retrieveApiData';
 
 function App() {
   let localStorageArray;
@@ -34,11 +35,13 @@ function App() {
         if(searchTerm) {
 
             const exerciseApiResults = exercises;
+            //= await retrieveApiData("https://exercisedb.p.rapidapi.com/exercises", searchOptions)
+            //= exercises;
 
             // This mimics the API call, and is the full array of exercises that is produced from the API call/request
             // USED THIS TO CONSERVE API CALL CREDITS
             //************************
-            //await retrieveApiData("https://exercisedb.p.rapidapi.com/exercises", searchOptions)
+            //= await retrieveApiData("https://exercisedb.p.rapidapi.com/exercises", searchOptions)
 
             // The searchOptions contains the information that will authorise the API call during the search
 
