@@ -16,8 +16,6 @@ const WorkoutPage = ({exerciseList, setExerciseList}) => {
   const [exerciseIndex, setExerciseIndex] = useState(0)
   const [exerciseId, setExerciseId] = useState(0)
 
-    
-   
 
   return (
     <div className='workoutPage'>

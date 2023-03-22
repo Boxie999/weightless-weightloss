@@ -2,7 +2,8 @@
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import React, { useState } from 'react';
 import "../styles/List.css"
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function List({ exerciseList,
     setExerciseList,
@@ -28,10 +29,21 @@ function List({ exerciseList,
         // setTimeRemaining(30)
         // setExerciseInProgress(true)
     }
-
+const warning = () => {
+    toast("you must add at least one exercise")
+}
     return (
         <div className="text-center listContainer">
-            <button onClick={startExercise} className={`btn btn-primary border-0 btn-lg startButton ${startButtonHidden ? 'd-none' : ''}`} href="#" type="button">START</button>
+            <button onClick={()=> {   
+                if (exerciseList.length !== 0) {
+                    startExercise()
+                } else {
+                    warning()
+                }
+                
+                }} className={`btn btn-primary border-0 btn-lg startButton ${startButtonHidden ? 'd-none' : ''}`} href="#" type="button">START</button>
+            <ToastContainer></ToastContainer>
+            
             <div>
                 <DragDropContext onDragEnd={updateArray}>
                     <Droppable droppableId='exercises'>

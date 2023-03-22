@@ -7,6 +7,8 @@ import "../styles/SearchResults.css"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 // First writing functions to create custom arrows for the React Slick carousel we will display the search results in.
@@ -80,7 +82,9 @@ const SearchResults = ({ exerciseResults }) => {
     ]
 
   }
-
+  const warning = () => {
+    toast("Exercises added to Favourites.")
+}
   // We want to be able to render the search results on the page when the user clicks "Search".
 
   // Following that, we also want to give the possibility of choosing exercise cards, so that we can track that information and use it to build the workout.
@@ -175,7 +179,7 @@ const SearchResults = ({ exerciseResults }) => {
 
             setCheckedArray([]); // Once the exercises have been added to Favourites, we want checkedArray to be cleared, so that previous choices do not persist within any subsequent operations
 
-            alert("Exercises added to Favourites.");
+        warning();
 
             
 
@@ -215,7 +219,7 @@ const SearchResults = ({ exerciseResults }) => {
 
       <button className="btn btn-primary border-0 btn-lg chooseButton text-center" href="#" type="button" onClick={addToFavourites}>ADD TO FAVOURITES</button>
 
-
+<ToastContainer></ToastContainer>
     </Container>
   )
 }
