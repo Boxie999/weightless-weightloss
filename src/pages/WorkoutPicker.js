@@ -259,6 +259,7 @@ function WorkoutPicker({setExerciseList}) {
     const [LegsIsSelected, setLegsIsSelected] = useState(false);
     const [bodyRegionName, setBodyRegionName] = useState("FULL BODY");
     // setExerciseList(fullBodyPlan)
+    useEffect(() => { setExerciseList(fullBodyPlan) }, [])
     useEffect(() => { localStorage.setItem('workout builder list', JSON.stringify(bodyPart)) }, [bodyPart]);
     useEffect(() => { document.body.style.backgroundColor = 'white' }, [])
     useEffect(() => { document.body.style.backgroundImage = 'linear-gradient(0deg, rgba(0, 233, 255, 0) 23%, rgba(62, 240, 220, 0) 80%)' }, [])
