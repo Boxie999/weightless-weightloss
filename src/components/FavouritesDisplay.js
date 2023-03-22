@@ -108,10 +108,7 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
         }
     }
 
-    // console.log(favouritesArray);
-
-    // console.log(checkedFaveArray);
-
+    
     // We can track the indexes within the favouritesArray of every exercise that is checked.
 
     let indexesOfCheckedFaveArray = [];
@@ -150,7 +147,6 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
         console.log("setFavouritesArray", "150")
 
         setFavouritesArray([]);
-        //window.location.reload()
     }
 
     // Function to delete checked exercises from the Favourites Page
@@ -178,8 +174,6 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
         console.log("setFavouritesArray", "176")
 
         setFavouritesArray(splicedFavouritesArray);
-
-        //window.location.reload();        
         
     }
 
