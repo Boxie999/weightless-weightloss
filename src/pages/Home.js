@@ -12,7 +12,7 @@ function Home() {
     return (
         <div>
             <div id="homeIntroJumbo" className="jumbotron">
-                <p id="homeIntro">Hey you!</p>
+                <p id="homeIntro">Hey! Welcome to Weightless Weightloss!</p>
                 <h1 id="homeTitle">LET'S GET YOUR BLOOD PUMPING</h1>
                 <p>
                     <NavLink to="/WorkoutPicker">

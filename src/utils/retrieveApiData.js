@@ -1,5 +1,5 @@
 
-import React from 'react'; 
+// This contains all the information related to making API data requests 
 
 export const searchOptions = {
 	method: 'GET',
