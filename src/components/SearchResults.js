@@ -158,9 +158,7 @@ const SearchResults = ({ exerciseResults }) => {
 
         parsedFaveExercises = JSON.parse(stringifiedFaveExercises);
       }
-
-      //console.log(parsedFaveExercises.length);
-
+      
       // We map through the newly collated list of exercise objects for their ids
 
       let exerciseObjectIds = addToFavesExercises.map(exercise => exercise.id);
@@ -168,25 +166,12 @@ const SearchResults = ({ exerciseResults }) => {
       // We will get our final list of faveExercises by joining/concatenating the new list of exercises chosen by the user  to what is already in local storage - AFTER ensuring that any duplicates in local storage are filtered out. This keeps the most recently selected choice near the 'top' of the list.
 
       let faveExercises = addToFavesExercises.concat(parsedFaveExercises.filter(({ id }) => !exerciseObjectIds.includes(id)));
-
-      // console.log(faveExercises);
-
-      // console.log(faveExercises.length);
+     
 
       // Then we stringify the new array of favourite exercises and set it back in local storage
 
       window.localStorage.setItem("fave exercises list", JSON.stringify(faveExercises));
-
-           // To try and make sure all checkboxes are unchecked after this operation
-
-            // let allCheckboxes = document.getElementsByTagName("input");
-
-            // for (let i = 0; i < exerciseResults.length; i++) {
-            //     if (allCheckboxes[i].type == "checkbox") {
-
-            //         allCheckboxes.checked = false;
-            //     }
-            // }
+        
 
             setCheckedArray([]); // Once the exercises have been added to Favourites, we want checkedArray to be cleared, so that previous choices do not persist within any subsequent operations
 
