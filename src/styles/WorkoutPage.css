@@ -6,7 +6,25 @@ body {
 .workoutPage {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
+.listContainer {
+    margin-right: 10px;
+}
+
+.timerCard {
+    margin-left: 10px;
+}
+
+@media (max-width: 780px) {
+    .workoutPage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .listContainer {
+        margin-right: 0px;
+        margin: auto;
+    }
+}
