@@ -21,7 +21,7 @@ function List({ exerciseList,
         arrayToEdit.splice(result.destination.index, 0, itemToMove)
         setExerciseList(arrayToEdit)
         window.localStorage.setItem("workout plan", JSON.stringify(arrayToEdit))
-        console.log(arrayToEdit)
+        // console.log(arrayToEdit)
     }
     const startExercise = () => {
         window.location.href = "/WorkoutPage"

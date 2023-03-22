@@ -40,7 +40,7 @@ const BuildWorkout = () => {
     
                 setExerciseResults(specificExerciseSearches);
 
-                console.log(specificExerciseSearches);
+                // console.log(specificExerciseSearches);
     
                 // Next step is to display these specified results where they should be. The idea is to show all the exercises, as well as the body parts they target. So that the user can click on the body part "button" to light it up and whittle the results down further.
     

@@ -15,7 +15,7 @@ const FavouriteExercises = ({ searchTerm, setSearchTerm, handleSubmit, exerciseR
 
     useEffect(() => {
 
-        console.log("setFavouritesArray", "18")
+        // console.log("setFavouritesArray", "18")
 
         setFavouritesArray(JSON.parse(localStorage.getItem("fave exercises list")) || []);
     }, [])

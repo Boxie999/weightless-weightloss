@@ -7,7 +7,7 @@ import testerGif from "../images/testerGif.gif"
 import restImage from '../images/restImage.png';
 
 const TimerCard = ({exerciseList, setExerciseId, exerciseIndex, setExerciseIndex}) => {
-  console.log(exerciseList);
+  // console.log(exerciseList);
     const [key, setKey] = useState(0)
     const [exerciseInProgress, setExerciseInProgress] = useState(true);
     const [duration, setDuration] = useState(30);

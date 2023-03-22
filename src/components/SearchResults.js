@@ -41,7 +41,7 @@ function SamplePrevArrow(props) {
 
 const SearchResults = ({ exerciseResults }) => {
 
-  console.log(exerciseResults); // Remember exerciseResults is the output search result from a user search
+  // console.log(exerciseResults); // Remember exerciseResults is the output search result from a user search
 
   // Settings object for the horizontal scrollbar
 
@@ -117,7 +117,7 @@ const SearchResults = ({ exerciseResults }) => {
         }
     }
 
-  console.log(checkedArray);
+  // console.log(checkedArray);
 
   const createWorkout = (event) => {
 
@@ -127,7 +127,7 @@ const SearchResults = ({ exerciseResults }) => {
     const workoutBuilderExercises = checkedArray.map((chArrId) => (exercises.find(exercise => exercise.id === chArrId) || {})).filter(Boolean);
     // const result = checkedArray.map((chA) => (exercises.find(exercise => exercise.id === chA) || {}).name).filter(Boolean);
 
-    console.log(workoutBuilderExercises);
+    // console.log(workoutBuilderExercises);
 
     // setWorkoutBuilderExercises([result]);
 

@@ -31,7 +31,7 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
       const exerciseTrailColor = '#d0f7f3'
       const restTrailColor = '#949191'
       const firstLoad = useRef(true);
-      console.log('exerciseprogress ' + exerciseInProgress ) 
+      // console.log('exerciseprogress ' + exerciseInProgress ) 
     return (
       
       <div>
