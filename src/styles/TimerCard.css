@@ -5,7 +5,7 @@
     }
   } 
 
-.timerCard {
+.timerCard, .starterCard {
     width: 360px;
     height: 500px;
     padding: 5px;
@@ -16,6 +16,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.card-title-start {
+    text-align: center;
 }
 
 .card-title {
@@ -60,4 +64,10 @@ button {
     width: 300px;
     text-align: center;
 
+}
+
+.timerCard:nth-child(2)>div:nth-child(4) {
+    font-size: 35px;
+    line-height: 125px;
+    color: #02DEC4;
 }

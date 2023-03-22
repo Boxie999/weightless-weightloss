@@ -61,12 +61,7 @@ const fullBodyPlan =
             "name": "back and forth step",
             "target": "cardiovascular system"
         },    
-        { name: 'full body 1' },
-        { name: 'full body 2' },
-        { name: 'full body 3' },
-        { name: 'full body 4' },
-        { name: 'full body 5' },
-        { name: 'full body 6' }
+       
     ];
 
 const upperBodyPlan =
@@ -127,12 +122,7 @@ const upperBodyPlan =
             "name": "back pec stretch",
             "target": "lats"
         },
-        { name: 'upper body 1' },
-        { name: 'upper body 2' },
-        { name: 'upper body 3' },
-        { name: 'upper body 4' },
-        { name: 'upper body 5' },
-        { name: 'upper body 6' }
+       
     ];
 
 const corePlan =
@@ -194,12 +184,7 @@ const corePlan =
         "target": "abs"
       },
 
-    { name: 'core 1' },
-    { name: 'core 2' },
-    { name: 'core 3' },
-    { name: 'core 4' },
-    { name: 'core 5' },
-    { name: 'core 6' }
+   
 ];
 
 const legsPlan =
@@ -260,12 +245,7 @@ const legsPlan =
         "name": "runners stretch",
         "target": "hamstrings"
       },
-    { name: 'legs 1' },
-    { name: 'legs 2' },
-    { name: 'legs 3' },
-    { name: 'legs 4' },
-    { name: 'legs 5' },
-    { name: 'legs 6' }
+   
 ];
 
 function WorkoutPicker() {
@@ -301,7 +281,7 @@ function WorkoutPicker() {
             {CoreIsShown && (<label id="targetPart" >CORE</label>)}
             {LegsIsShown && (<label id="targetPart" >LEGS</label>)}
 
-            <NavLink to="/WorkoutConfirm">
+            <NavLink to="/WorkoutList">
                 <button id="pickerStart" className="btn btn-primary border-0 btn-lg chooseButton" role="button">START WORKOUT</button>
             </NavLink>
         </div>

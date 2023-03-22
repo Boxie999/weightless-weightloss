@@ -25,9 +25,9 @@
     margin-bottom: 10px !important;
     height: 47px;
     width: 360px;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
-    line-height: 40px;
+    line-height: 41px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(0, 0, 0, .2);
 }
@@ -41,4 +41,28 @@ li {
     .exerciseList {
         margin-left: calc(50% - 180px);
     }
+}
+
+/* .exerciseListItem {
+    height: 50px;
+    width: 300px;
+    font-size: 28px;
+    background-color: aliceblue;
+    margin: 4px;
+    border-radius: 8px;
+} */
+
+.listContainer {
+    width: 360px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.inProgress {
+color: var(--myGreen);
+font-size: 32px;
+font-weight: 500;
+line-height: 39px;
 }

@@ -15,7 +15,7 @@
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     color: white;
-    padding-right:16px;
+    padding-right: 16px;
     margin: 0px;
     height: 40px;
 }
@@ -26,4 +26,15 @@
 
 .slick-next:before {
     color: black !important;
+}
+
+@media (max-width: 576px) {
+    #exerciseSearch {
+        width: 350px;
+    }
+    #exerciseSearchInput {
+        font-size: 14px;
+        padding-top: 3px;
+        padding-right: 0px;
+    }
 }

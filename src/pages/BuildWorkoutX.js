@@ -75,7 +75,7 @@ function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResult
                 <input id="exerciseSearchInput" type="search"
                     value={searchTerm}
                     onChange={(event) => { setSearchTerm(event.target.value.toLowerCase()) }}
-                    className="form-control border-0 bg-transparent" placeholder="Search exercises by 'body part', 'equipment' or 'muscle target'" aria-label="Search" aria-describedby="search-addon" />
+                    className="form-control border-0 bg-transparent" placeholder="Search exercises by body part or muscle target" aria-label="Search" aria-describedby="search-addon" />
                 <div className="input-group-append">
                     <button id="searchButton" className="btn btn-outline-secondary border-0" type="button"
                         onClick={handleSubmit} onMouseUp={onPress}>SEARCH</button>

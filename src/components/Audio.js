@@ -7,7 +7,7 @@ function AudioComponent() {
      
 // I want the music file to play as soon as the component renders. 
 
-     useEffect(() => {
+     useEffect(() => { 
         audio.play();
         audio.loop=true;
       }, [])
