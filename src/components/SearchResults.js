@@ -216,7 +216,8 @@ const SearchResults = ({ exerciseResults }) => {
 
               <SearchResultCard
                 exercise={exercise}
-                handleSelect={handleSelect} />
+                handleSelect={handleSelect}
+                checkedArray={checkedArray} />
 
 
             </Col>

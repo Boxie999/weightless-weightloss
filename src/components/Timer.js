@@ -78,5 +78,5 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
       
     );
   }
-  
+  // <AudioComponent />
 export default Timer
