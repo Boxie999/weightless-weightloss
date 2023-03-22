@@ -8,17 +8,19 @@ import restImage from '../images/restImage.png';
 
 const TimerCard = ({exerciseList, setExerciseId, exerciseIndex, setExerciseIndex}) => {
   console.log(exerciseList);
+    //setting the states
     const [key, setKey] = useState(0)
     const [exerciseInProgress, setExerciseInProgress] = useState(true);
     const [duration, setDuration] = useState(30);
     const [isPlaying, setIsPlaying] = useState(true);
    
-
+    //different images and titles and can change it on the card if it's exercise or rest, it shows different things
     const exerciseGif = <img className='timerCardGif' src={exerciseIndex < exerciseList.length ? exerciseList[exerciseIndex].gifUrl : '' } alt="Card image cap" />
     const restShow = <img className='timerCardGif' src={restImage} alt='Card image cap' />
     const exerciseTitle = <h6 className="card-title">{exerciseInProgress === false ? "Rest" : exerciseList[exerciseIndex].name}</h6>
   
   return (
+    //this is the timercard with the timer component and the image, exercise name, buttons and next exercise, the buttons can change the duration of the timer and the next exercise shows the next title in the array
     <div className='timerCard'>
       
       <div>{exerciseInProgress ? exerciseGif : restShow }</div>

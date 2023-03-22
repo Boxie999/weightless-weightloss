@@ -5,6 +5,7 @@ import List from '../components/List'
 import TimerCard from '../components/TimerCard'
 import "../styles/WorkoutPage.css"
 import { json } from 'react-router-dom'
+import StarterCard from '../components/StarterCard'
 
 
 const WorkoutList = ({exerciseList, setExerciseList}) => {
@@ -89,6 +90,7 @@ const WorkoutList = ({exerciseList, setExerciseList}) => {
       exerciseId={exerciseId} setExerciseId={setExerciseId} setExerciseInProgress={setExerciseInProgress}
       setTimeRemaining={setTimeRemaining}
       ></List>
+      <StarterCard />
      
     </div>
     
