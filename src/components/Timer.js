@@ -18,7 +18,7 @@ const renderTime = ({ remainingTime }) => {
     );
 };
 
-// Made-up array of exercises
+
 
 
 
@@ -78,5 +78,6 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
       
     );
   }
-  // <AudioComponent />
+
+
 export default Timer
