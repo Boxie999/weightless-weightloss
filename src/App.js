@@ -22,6 +22,7 @@ function App() {
       localStorageArray=[];
   } else {
       localStorageArray = JSON.parse(localStorage.getItem("workout builder list"));
+      
   }
     const [searchTerm, setSearchTerm] = useState(""); // This tracks and represents what the user will type into the search field
     const [exerciseList, setExerciseList] = useState(localStorageArray) // excercise list *Global State*

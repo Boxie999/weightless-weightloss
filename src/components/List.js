@@ -44,7 +44,7 @@ function List({ exerciseList,
                                                 {(provided) => {
                                                     return (
                                                         <li className="exerciseList" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                                                            <div className={`exerciseListItem ${exerciseIndex - 1 === exerciseList.findIndex((listItem) => {
+                                                            <div className={`exerciseListItem ${exerciseIndex === exerciseList.findIndex((listItem) => {
                                                                 return listItem.id === item.id
                                                             }) ? 'inProgress' : ''}`}>{item.name}</div>
                                                         </li>

@@ -8,15 +8,15 @@ import restImage from '/Users/admin/Downloads/bootcamp/simple-fit/src/images/res
 
 const TimerCard = ({exerciseList, setExerciseId, exerciseIndex, setExerciseIndex}) => {
   console.log(exerciseList);
-  const [key, setKey] = useState(0)
-    const [exerciseInProgress, setExerciseInProgress] = useState(false);
-    const [duration, setDuration] = useState(10);
+    const [key, setKey] = useState(0)
+    const [exerciseInProgress, setExerciseInProgress] = useState(true);
+    const [duration, setDuration] = useState(30);
     const [isPlaying, setIsPlaying] = useState(true);
    
 
-    const exerciseGif = <img className='timerCardGif' src={testerGif} alt="Card image cap" />
+    const exerciseGif = <img className='timerCardGif' src={exerciseIndex < exerciseList.length ? exerciseList[exerciseIndex].gifUrl : '' } alt="Card image cap" />
     const restShow = <img className='timerCardGif' src={restImage} alt='Card image cap' />
-    const exerciseTitle = <h6 className="card-title">{exerciseInProgress === false ? "Rest" : exerciseList[exerciseIndex-1].name}</h6>
+    const exerciseTitle = <h6 className="card-title">{exerciseInProgress === false ? "Rest" : exerciseList[exerciseIndex].name}</h6>
   
   return (
     <div className='timerCard'>
@@ -69,7 +69,7 @@ const TimerCard = ({exerciseList, setExerciseId, exerciseIndex, setExerciseIndex
 
         <div>
         <p className={"nextExerciseText"}>
-          Next Exercise: { exerciseIndex < exerciseList.length ? exerciseList[exerciseIndex].name : "Finish Workout" } 
+          Next Exercise: { exerciseIndex < exerciseList.length - 1 ? exerciseList[exerciseIndex + 1].name : "Finish Workout" } 
         </p>
         </div>
       
