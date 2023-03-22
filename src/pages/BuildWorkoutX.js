@@ -28,6 +28,7 @@ function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResult
     return (
         <div className="text-center">
             <div id="exerciseSearch" className="input-group border rounded-pill rounded">
+                {/*Search Icon, Field and Button*/}
                 <span className="input-group-text bg-transparent border-0">
                     <FontAwesomeIcon id="searchIcon" icon={faSearch} />
                 </span>

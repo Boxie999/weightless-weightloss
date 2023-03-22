@@ -87,11 +87,7 @@ const SearchResults = ({ exerciseResults }) => {
 
   // So we need to manage two states - one for the checked card data (id, as we need unique information), and the other to populate the workout list 
 
-    const [checkedArray, setCheckedArray] = useState([]);
-
-    //const [boxIsChecked, setBoxIsChecked] = useState(false);
-
-  // const [workoutBuilderExercises, setWorkoutBuilderExercises] = useState([]); // This tracks the workouts chosen by the user from the search results page, which will be collated and used for the workout list
+  const [checkedArray, setCheckedArray] = useState([]);
 
   const handleSelect = (event) => {
 
