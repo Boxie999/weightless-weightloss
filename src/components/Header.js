@@ -18,17 +18,17 @@ function Header() {
                     <ul className="navbar-nav ms-auto">
                         <Nav.Link href="BuildWorkoutX">
                             <li className="nav-item">
-                                <a className="nav-link myLink">CREATE WORKOUT</a>
+                                <p className="nav-link myLink">CREATE WORKOUT</p>
                             </li>
                         </Nav.Link>
                         <Nav.Link href="FavouriteExercises">
                             <li className="nav-item">
-                                <a className="nav-link myLink">FAVOURITES</a>
+                                <p className="nav-link myLink">FAVOURITES</p>
                             </li>
                         </Nav.Link>
                         <Nav.Link href="/">
                             <li className="nav-item">
-                                <a className="nav-link myLink">HOME</a>
+                                <p className="nav-link myLink">HOME</p>
                             </li>
                         </Nav.Link>
                     </ul>
