@@ -25,15 +25,18 @@ nav {
 #Logo {
     cursor: pointer;
     height: 30px;
-    margin-top: 15px;
+    margin-top: 12px;
     margin-bottom: 15px;
     margin-left: 23px;
 }
 
 .myLink {
     color: var(--myBlack);
+    font-size: 18px;
     font-weight: 500;
     margin-right: 23px;
+    padding: 0px !important;
+    padding-top: 12px !important;
 }
 
 .myLink:hover {
@@ -45,9 +48,17 @@ nav {
 }
 
 .navbar {
-    margin-right: 10px !important;
-    margin-left: 10px !important;
     min-width: 297px;
+    padding: 0px;
+}
+
+@media (max-width: 992px) {
+    .myLink {
+        margin-right: 0px;
+        font-size: 20px;
+        height: 20px;
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 576px) {

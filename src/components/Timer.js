@@ -25,7 +25,7 @@ const renderTime = ({ remainingTime }) => {
 
   
 function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInProgress, duration, setDuration, isPlaying, setIsPlaying, exerciseIndex, setExerciseIndex, setExerciseId, exerciseList }) {
-    
+      //colors based on if it's the exercise card or the rest card, the trail is changing color
       const exerciseColor = '#02dec4'
       const restColor = '#d10f08'
       const exerciseTrailColor = '#d0f7f3'
@@ -48,7 +48,7 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
             onComplete={() => {
                 
               if(exerciseInProgress === false) {
-
+                    //it starts with the excercise card and always add +1 to the array
                     setExerciseInProgress(true);
                     setDuration(30);
                     setKey((prevKey) => prevKey + 1)
