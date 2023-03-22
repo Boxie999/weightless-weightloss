@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { CountdownCircleTimer } from "react-countdown-circle-timer"
 import "../styles/WorkoutPage.css"
 import "../styles/TimerCard.css"
-import AudioComponent from './Audio'
+
 
 const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {
@@ -35,7 +35,7 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
     return (
       
       <div>
-      <AudioComponent />
+      
           <CountdownCircleTimer
             key={key}
             isPlaying={isPlaying}
