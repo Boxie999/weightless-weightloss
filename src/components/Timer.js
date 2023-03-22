@@ -8,7 +8,7 @@ import AudioComponent from './Audio'
 
 const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {
-      return <div className="timer">Here We Go!</div>;
+      return <div className="timer">Well done!</div>;
     }
   
     return (
@@ -54,7 +54,7 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
                     setKey((prevKey) => prevKey + 1)
                     setExerciseIndex(exerciseIndex + 1)
                       //should indicate the color change for the next button here
-                } else {
+                } else if (exerciseInProgress === true && exerciseIndex < exerciseList.length - 1) {
                     setExerciseInProgress(false);
                     setDuration(10);
                     
