@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import "../styles/BuildWorkout.css";
-import exercises from "../exercises.json";
-import { Stack, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import SearchResults from "../components/SearchResults";
-// import { searchOptions, retrieveApiData } from '../utils/retrieveApiData';
 
 
 function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResults, setExerciseResults }) {
@@ -16,59 +14,21 @@ function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResult
 
 
     const [showText, setShowText] = useState(false);
+
     const onPress = () => setShowText(true);
+
     const ResultsContainer = () =>
         <Container fluid>
             <SearchResults
                 exerciseResults={exerciseResults}
                 setExerciseResults={setExerciseResults} />
         </Container>;
-    // const [searchTerm, setSearchTerm] = useState(""); // This tracks and represents what the user will type into the search field
-
-    // const [exerciseResults, setExerciseResults] = useState([]); // This tracks and represents the entire COLLECTION of search results DISPLAYED after the user search is submitted
-
-
-    // const handleSubmit = async () => {
-
-    //     if(searchTerm) {
-
-    //         const exerciseApiResults = exercises;
-
-    //         // This mimics the API call, and is the full array of exercises that is produced from the API call/request
-    //         // USED THIS TO CONSERVE API CALL CREDITS
-    //         //************************
-    //         //await retrieveApiData("https://exercisedb.p.rapidapi.com/exercises", searchOptions)
-
-    //         // The searchOptions contains the information that will authorise the API call during the search
-
-    //         //***********************
-
-    //         //console.log(exerciseSearchResults);
-
-    //         // Now, we want to add actual search functionality, by filtering through the array of objects and grabbing all objects with values that correspond to the search term. The proviso is that they are all body weight exercises.
-
-    //         const specificExerciseSearches = exerciseApiResults.filter((exercise) => (exercise.equipment.toLowerCase() === "body weight") 
-    //         && (exercise.bodyPart.toLowerCase().includes(searchTerm)
-    //         || exercise.equipment.toLowerCase().includes(searchTerm)
-    //         || exercise.name.toLowerCase().includes(searchTerm)
-    //         || exercise.target.toLowerCase().includes(searchTerm)
-    //         )
-    //         )
-
-    //         // We want to ensure that, after the search result is submitted, the search field is cleared and the exerciseResult state value is set to the resulting data from the search.
-
-    //         setSearchTerm("");
-
-    //         setExerciseResults(specificExerciseSearches);
-
-    //         //console.log(specificExerciseSearches);
-
-    //     }
-    // }
+    
 
     return (
         <div className="text-center">
             <div id="exerciseSearch" className="input-group border rounded-pill rounded">
+                {/*Search Icon, Field and Button*/}
                 <span className="input-group-text bg-transparent border-0">
                     <FontAwesomeIcon id="searchIcon" icon={faSearch} />
                 </span>
@@ -81,11 +41,11 @@ function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResult
                         onClick={handleSubmit} onMouseUp={onPress}>SEARCH</button>
                 </div>
             </div>
+            <br />
+            <p id="searchText">Search for exercises by body part or target muscle. <br /> Then you can select exercises to add to your Favourites, or to use in your workout!</p>
             {showText ? <ResultsContainer /> : null}
         </div>
     );
 }
-
-// div id="searchResults" class="row row-cols-1 row-cols-md-4 d-flex justify-content-center"
 
 export default BuildWorkoutX;

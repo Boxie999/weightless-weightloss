@@ -18,11 +18,6 @@ const renderTime = ({ remainingTime }) => {
     );
 };
 
-
-
-
-
-
   
 function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInProgress, duration, setDuration, isPlaying, setIsPlaying, exerciseIndex, setExerciseIndex, setExerciseId, exerciseList }) {
       //colors based on if it's the exercise card or the rest card, the trail is changing color
@@ -47,14 +42,14 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
             size={130}
             onComplete={() => {
                 
-              if(exerciseInProgress === false) {
-                    //it starts with the excercise card and always add +1 to the array
+              if(exerciseInProgress === false) { // when the exercise isn't running, ie. the rest page is showing, we want it to switch to the exercise page and set the duration to 30s.
+
                     setExerciseInProgress(true);
                     setDuration(30);
-                    setKey((prevKey) => prevKey + 1)
+                    setKey((prevKey) => prevKey + 1) // the key represents cycles and revolutions of the timer
                     setExerciseIndex(exerciseIndex + 1)
-                      //should indicate the color change for the next button here
-                } else if (exerciseInProgress === true && exerciseIndex < exerciseList.length - 1) {
+                      
+                } else if (exerciseInProgress === true && exerciseIndex < exerciseList.length - 1) { // when the exercise is running and we are not on the last element of the exercise list array, we want it to switch to the rest page and set the duration to 10s.
                     setExerciseInProgress(false);
                     setDuration(10);
                     

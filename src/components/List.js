@@ -20,7 +20,7 @@ function List({ exerciseList,
         const [itemToMove] = arrayToEdit.splice(result.source.index, 1)
         arrayToEdit.splice(result.destination.index, 0, itemToMove)
         setExerciseList(arrayToEdit)
-        window.localStorage.setItem("workout plan", JSON.stringify(arrayToEdit))
+        window.localStorage.setItem("workout builder list", JSON.stringify(arrayToEdit))
         console.log(arrayToEdit)
     }
     const startExercise = () => {

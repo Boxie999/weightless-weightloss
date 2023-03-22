@@ -14,25 +14,11 @@ const FavouriteExercises = ({ searchTerm, setSearchTerm, handleSubmit, exerciseR
     useEffect(() => { document.body.style.backgroundImage = 'linear-gradient(0deg, rgba(0, 233, 255, 0) 23%, rgba(62, 240, 220, 0) 80%)' }, []);
 
     useEffect(() => {
-
-        console.log("setFavouritesArray", "18")
-
+        
         setFavouritesArray(JSON.parse(localStorage.getItem("fave exercises list")) || []);
     }, [])
 
-    // const [faveExercisesList, setFaveExercisesList] = useState(() => {
-
-    //     const initialArray = JSON.parse(localStorage.getItem("fave exercises list"));
-
-    //     if(initialArray) {
-
-    //         return initialArray
-    //     } else {
-
-    //         return []
-    //     }
-    // });
-      
+        
          
     
 
