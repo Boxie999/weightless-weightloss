@@ -1,9 +1,9 @@
 
 @media (max-width: 780px) {
     .timerCard {
-      margin-left: calc(50% - 180px);
+     margin-left: 0px;
     }
-  } 
+   }
 
 .timerCard, .starterCard {
     width: 360px;
