@@ -18,6 +18,7 @@ const WorkoutList = ({exerciseList, setExerciseList}) => {
 
   return (
     <div className='workoutPage'>
+      
       <List exerciseList={exerciseList} exerciseIndex={exerciseIndex} setExerciseList={setExerciseList} 
       exerciseId={exerciseId} setExerciseId={setExerciseId} setExerciseInProgress={setExerciseInProgress}
       setTimeRemaining={setTimeRemaining}

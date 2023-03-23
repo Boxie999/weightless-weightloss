@@ -28,3 +28,8 @@ body {
         margin: auto;
     }
 }
+
+.workoutPage {
+    display: flex;
+    flex-direction: row;
+}
