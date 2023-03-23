@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/BuildWorkout.css";
-import exercises from "../exercises.json";
-import { Stack, Container } from "react-bootstrap";
-import SearchResults from "../components/SearchResults";
+import { Container } from "react-bootstrap";
 import FavouritesDisplay from "../components/FavouritesDisplay";
 
 const FavouriteExercises = ({ searchTerm, setSearchTerm, handleSubmit, exerciseResults, setExerciseResults }) => {

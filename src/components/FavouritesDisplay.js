@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Container, Col } from "react-bootstrap";
 // import { searchOptions, retrieveApiData } from '../utils/retrieveApiData';
-import SearchResultCard from './SearchResultCard';
-import exercises from "../exercises.json";
+// import SearchResultCard from './SearchResultCard';
+// import exercises from "../exercises.json";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import FavouriteExercises from '../pages/FavouriteExercises';
+// import FavouriteExercises from '../pages/FavouriteExercises';
 import FavouritesDisplayCard from './FavouritesDisplayCard';
 
 
@@ -114,7 +114,7 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
     let indexesOfCheckedFaveArray = [];
     
     checkedFaveArray.forEach((id) => {
-      const indexToCheck = favouritesArray.findIndex((exercise) => exercise.id == id)
+      const indexToCheck = favouritesArray.findIndex((exercise) => exercise.id === id)
       if( indexToCheck !== -1) {
 
         indexesOfCheckedFaveArray.push(indexToCheck);

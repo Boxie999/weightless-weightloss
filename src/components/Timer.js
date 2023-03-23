@@ -1,6 +1,5 @@
 
-import React, { useRef, useState } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer"
 import "../styles/WorkoutPage.css"
 import "../styles/TimerCard.css"
@@ -25,8 +24,7 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
       const restColor = '#d10f08'
       const exerciseTrailColor = '#d0f7f3'
       const restTrailColor = '#949191'
-      const firstLoad = useRef(true);
-      // console.log('exerciseprogress ' + exerciseInProgress ) 
+      
     return (
       
       <div>

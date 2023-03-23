@@ -1,9 +1,7 @@
 import React, {useState} from 'react'
 import Timer from '../components/Timer'
-import list from '../components/List'
 import "../styles/WorkoutPage.css"
 import "../styles/TimerCard.css"
-import testerGif from "../images/testerGif.gif"
 import restImage from '../images/restImage.png';
 
 //setting the states here 
@@ -15,8 +13,8 @@ const TimerCard = ({exerciseList, setExerciseId, exerciseIndex, setExerciseIndex
     const [isPlaying, setIsPlaying] = useState(true);
    
     //the images change whether if it's the exercise card or the rest card
-    const exerciseGif = <img className='timerCardGif' src={exerciseIndex < exerciseList.length ? exerciseList[exerciseIndex].gifUrl : '' } alt="Card image cap" />
-    const restShow = <img className='timerCardGif' src={restImage} alt='Card image cap' />
+    const exerciseGif = <img className='timerCardGif' src={exerciseIndex < exerciseList.length ? exerciseList[exerciseIndex].gifUrl : '' } alt="Card" />
+    const restShow = <img className='timerCardGif' src={restImage} alt='Card' />
 
     const exerciseTitle = <h6 className="card-title">{exerciseInProgress === false ? "Rest" : exerciseList[exerciseIndex].name}</h6>
 

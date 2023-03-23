@@ -56,7 +56,7 @@ function WorkoutPicker() {
             {LegsIsShown && (<label id="targetPart" >LEGS</label>)}
 
             <NavLink to="/WorkoutList">
-                <button id="pickerStart" className="btn btn-primary border-0 btn-lg chooseButton" role="button">START WORKOUT</button>
+                <button id="pickerStart" className="btn btn-primary border-0 btn-lg chooseButton" type="button">START WORKOUT</button>
             </NavLink>
         </div>
     );

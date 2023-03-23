@@ -1,11 +1,7 @@
 import React, {useState} from 'react'
-import ExerciseCard from '../components/ExerciseCard'
-import Timer from '../components/Timer'
 import List from '../components/List'
 import TimerCard from '../components/TimerCard'
-import StarterCard from '../components/StarterCard'
 import "../styles/WorkoutPage.css"
-import { json } from 'react-router-dom'
 
 
 const WorkoutPage = ({exerciseList, setExerciseList}) => {

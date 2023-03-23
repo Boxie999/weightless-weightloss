@@ -1,10 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import ExerciseCard from '../components/ExerciseCard'
-import Timer from '../components/Timer'
 import List from '../components/List'
-import TimerCard from '../components/TimerCard'
 import "../styles/WorkoutPage.css"
-import { json } from 'react-router-dom'
 import StarterCard from '../components/StarterCard'
 
 
