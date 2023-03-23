@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { Nav } from "react-bootstrap";
 import React, { useEffect } from "react";
 import "../styles/Home.css"
 import jumpingGuy from "../images/StarJump.gif"
