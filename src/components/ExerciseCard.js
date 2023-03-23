@@ -6,7 +6,7 @@ import { Button, Stack } from "react-bootstrap";
 const ExerciseCard = ({ exercise}) => {
   return (
     <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
-      <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />
+      <img src={exercise.gifUrl.replace("http://", "https://")|| ""} alt={exercise.name} loading="lazy" />
       <Stack direction="horizontal" gap={3}>
         <Button style={{color: "white", background: "orange", fontSize: "10px", textTransform: "capitalise"}}>
           {exercise.bodyPart}
