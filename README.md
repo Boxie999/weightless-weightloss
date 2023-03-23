@@ -24,9 +24,11 @@ The application, linked below, was deployed using Netlify.
 To use this application, you should have Node.js downloaded on your device. Copy the src and lib folders, which contain all the required .js files with the classes and HTML templates, along with the index.js file and assets folder and upload them to your desired web server. Also, initialise your repository with a package.json file by running npm init -y. Install all the required dependencies. When you see the node_modules folder and package-lock.json file in your repo folder, then you have successfully installed everything you require to run the application.
 
 ## Usage 
-Project url: (ADD NETLIFY DEPLOYMENT LINK)  
+Project url: https://voluble-strudel-86c925.netlify.app/ 
 
-GitHub repository: https://github.com/Boxie999/simple-fit.git
+Netlify repository url:
+
+GitHub repository url: https://github.com/Boxie999/simple-fit.git
 
 
 ![main page](https://user-images.githubusercontent.com/118114317/227057901-80948d46-b26e-4230-9823-f998d9421bdf.png)
