@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 import SearchResults from "../components/SearchResults";
 
 
-function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResults, setExerciseResults }) {
+function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResults, setExerciseResults, setExerciseList }) {
 
     useEffect(() => { document.body.style.backgroundColor = 'white' }, []);
 
@@ -21,7 +21,8 @@ function BuildWorkoutX({ searchTerm, setSearchTerm, handleSubmit, exerciseResult
         <Container fluid>
             <SearchResults
                 exerciseResults={exerciseResults}
-                setExerciseResults={setExerciseResults} />
+                setExerciseResults={setExerciseResults}
+                setExerciseList={setExerciseList} />
         </Container>;
     
 

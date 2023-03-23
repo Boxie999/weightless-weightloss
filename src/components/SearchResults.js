@@ -39,7 +39,7 @@ function SamplePrevArrow(props) {
 // This will be the component within which the search results will be displayed on the screen. It will display the collection of results, which we store/track within the exerciseResults state which will be passed as props
 
 
-const SearchResults = ({ exerciseResults }) => {
+const SearchResults = ({ exerciseResults, setExerciseList }) => {
   const navigate = useNavigate()
   // console.log(exerciseResults); // Remember exerciseResults is the output search result from a user search
 
@@ -130,7 +130,7 @@ const SearchResults = ({ exerciseResults }) => {
     // console.log(workoutBuilderExercises);
 
     window.localStorage.setItem("workout builder list", JSON.stringify(workoutBuilderExercises)); // Takes the workoutBuilderExercises and sets them in local storage. This allows for it to be accessible on other pages, as well as be set from other sources than just the search page.
-
+setExerciseList(workoutBuilderExercises)
       navigate("/workoutList") // Navigate to the Workout Confirm page which will list out the workout exercises that can be reviewed before starting the workout
         
     }  

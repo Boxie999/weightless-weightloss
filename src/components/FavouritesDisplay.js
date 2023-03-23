@@ -39,7 +39,7 @@ function SampleNextArrow(props) {
 // This will be the component within which the favourite exercises will be displayed on the screen. It will display the collection of results, which we store/track within the exerciseResults state which will be passed as props
 
 
-const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
+const FavouritesDisplay = ( { favouritesArray, setFavouritesArray, setExerciseList }) => {
   const navigate = useNavigate()
     // console.log(favouritesArray); // To show the output from local storage
 
@@ -133,7 +133,7 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
         // console.log(faveWorkoutBuilderExercises);
 
         window.localStorage.setItem("workout builder list", JSON.stringify(faveWorkoutBuilderExercises));
-        
+        setExerciseList(faveWorkoutBuilderExercises)
        navigate("/workoutList")
 
     }

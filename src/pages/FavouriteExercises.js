@@ -3,7 +3,7 @@ import "../styles/BuildWorkout.css";
 import { Container } from "react-bootstrap";
 import FavouritesDisplay from "../components/FavouritesDisplay";
 
-const FavouriteExercises = ({ searchTerm, setSearchTerm, handleSubmit, exerciseResults, setExerciseResults }) => {
+const FavouriteExercises = ({ searchTerm, setSearchTerm, handleSubmit, exerciseResults, setExerciseResults, setExerciseList }) => {
 
     const [favouritesArray, setFavouritesArray] = useState([]);
   
@@ -28,7 +28,7 @@ const FavouriteExercises = ({ searchTerm, setSearchTerm, handleSubmit, exerciseR
 
             <Container fluid>
                 <FavouritesDisplay favouritesArray={favouritesArray}
-                setFavouritesArray={setFavouritesArray}  />
+                setFavouritesArray={setFavouritesArray} setExerciseList={setExerciseList}  />
             </Container>
             
         </div> 

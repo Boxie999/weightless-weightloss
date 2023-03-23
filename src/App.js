@@ -73,8 +73,8 @@ function App() {
           <Route path="home2" element={<Home2 />} />
           <Route path="buildWorkout" element={<BuildWorkout />} />
           <Route path="timer" element={<WorkoutPage />} />
-          <Route path="buildWorkoutX" element={<BuildWorkoutX searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults}/>} />
-          <Route path="favouriteExercises" element={<FavouriteExercises searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults} />} />
+          <Route path="buildWorkoutX" element={<BuildWorkoutX searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults} setExerciseList={setExerciseList}/>} />
+          <Route path="favouriteExercises" element={<FavouriteExercises searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults} setExerciseList={setExerciseList}/>} />
           <Route path="workoutConfirm" element={<WorkoutConfirm />} />
           <Route path="list" element={<List />} />
           <Route path="workoutPage" element={<WorkoutPage exerciseList={exerciseList} setExerciseList={setExerciseList} />} />

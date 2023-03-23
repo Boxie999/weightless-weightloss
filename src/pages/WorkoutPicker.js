@@ -15,7 +15,7 @@ import upperBodyPlan from "../upperBodyPlan.json";
 import legsPlan from "../legsPlan.json";
 
 
-function WorkoutPicker() {
+function WorkoutPicker({setExerciseList}) {
 
     const [bodyPart, setBodyPart] = useState(fullBodyPlan) // Dictates which body part workout plan will be implemented
     const [UpperIsShown, setUpperIsShown] = useState(false); // Relates to the hover effect on the Quick Workout figure for Upper Body
@@ -38,17 +38,17 @@ function WorkoutPicker() {
                 {/*Code for the Whole Body Figure*/}
                 <img id="wholeBody" src={wholeBody} alt="whole body" />
                 {/*Code for the Upper Body part - when clicked, it should be selected and light up*/}
-                <img id="upperBody" src={upperBody} alt="upper body" onMouseEnter={() => setUpperIsShown(true)} onMouseLeave={() => setUpperIsShown(false)} onClick={() => { setBodyPart(upperBodyPlan); setBodyRegionName("UPPER BODY") }} onMouseUp={() => { setUpperIsSelected(true); setCoreIsSelected(false); setLegsIsSelected(false) }} />
+                <img id="upperBody" src={upperBody} alt="upper body" onMouseEnter={() => setUpperIsShown(true)} onMouseLeave={() => setUpperIsShown(false)} onClick={() => { setExerciseList(upperBodyPlan); setBodyRegionName("UPPER BODY") }} onMouseUp={() => { setUpperIsSelected(true); setCoreIsSelected(false); setLegsIsSelected(false) }} />
                 {/*Code for the Upper Body part - when clicked again, it should turn off, and current body part should revert to fullBodyPlan*/}
-                {UpperIsSelected && (<img id="upperBodyX" src={upperBodyX} alt="upper body" onClick={() => { setUpperIsSelected(false); setBodyPart(fullBodyPlan); setBodyRegionName("FULL BODY") }} />)}
+                {UpperIsSelected && (<img id="upperBodyX" src={upperBodyX} alt="upper body" onClick={() => { setUpperIsSelected(false); setExerciseList(fullBodyPlan); setBodyRegionName("FULL BODY") }} />)}
                 {/*Code for the Core part - when clicked, it should be selected and light up*/}
-                <img id="core" src={core} alt="core" onMouseEnter={() => setCoreIsShown(true)} onMouseLeave={() => setCoreIsShown(false)} onClick={() => { setBodyPart(corePlan); setBodyRegionName("CORE") }} onMouseUp={() => { setCoreIsSelected(true); setUpperIsSelected(false); setLegsIsSelected(false) }} />
+                <img id="core" src={core} alt="core" onMouseEnter={() => setCoreIsShown(true)} onMouseLeave={() => setCoreIsShown(false)} onClick={() => { setExerciseList(corePlan); setBodyRegionName("CORE") }} onMouseUp={() => { setCoreIsSelected(true); setUpperIsSelected(false); setLegsIsSelected(false) }} />
                 {/*Code for the Core part - when clicked again, it should turn off, and current body part should revert to fullBodyPlan*/}
-                {CoreIsSelected && (<img id="coreX" src={coreX} alt="core" onClick={() => { setCoreIsSelected(false); setBodyPart(fullBodyPlan); setBodyRegionName("FULL BODY") }} />)}
+                {CoreIsSelected && (<img id="coreX" src={coreX} alt="core" onClick={() => { setCoreIsSelected(false); setExerciseList(fullBodyPlan); setBodyRegionName("FULL BODY") }} />)}
                 {/*Code for the Legs part - when clicked, it should be selected and light up*/}
-                <img id="legs" src={legs} alt="legs" onMouseEnter={() => setLegsIsShown(true)} onMouseLeave={() => setLegsIsShown(false)} onClick={() => { setBodyPart(legsPlan); setBodyRegionName("LEGS") }} onMouseUp={() => { setLegsIsSelected(true); setUpperIsSelected(false); setCoreIsSelected(false) }} />
+                <img id="legs" src={legs} alt="legs" onMouseEnter={() => setLegsIsShown(true)} onMouseLeave={() => setLegsIsShown(false)} onClick={() => { setExerciseList(legsPlan); setBodyRegionName("LEGS") }} onMouseUp={() => { setLegsIsSelected(true); setUpperIsSelected(false); setCoreIsSelected(false) }} />
                 {/*Code for the Legs part - when clicked again, it should turn off, and current body part should revert to fullBodyPlan*/}
-                {LegsIsSelected && (<img id="legsX" src={legsX} alt="legs" onClick={() => { setLegsIsSelected(false); setBodyPart(fullBodyPlan); setBodyRegionName("FULL BODY") }} />)}
+                {LegsIsSelected && (<img id="legsX" src={legsX} alt="legs" onClick={() => { setLegsIsSelected(false); setExerciseList(fullBodyPlan); setBodyRegionName("FULL BODY") }} />)}
             </div>
             {(UpperIsShown || CoreIsShown || LegsIsShown) || (<label id="targetPart" >{bodyRegionName}</label>)}
             {UpperIsShown && (<label id="targetPart" >UPPER BODY</label>)}
