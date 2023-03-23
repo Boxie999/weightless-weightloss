@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Col } from "react-bootstrap";
 // import { searchOptions, retrieveApiData } from '../utils/retrieveApiData';
 // import SearchResultCard from './SearchResultCard';
-// import exercises from "../exercises.json";
+import exercises from "../exercises.json";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";

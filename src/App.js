@@ -11,7 +11,6 @@ import WorkoutPicker from './pages/WorkoutPicker';
 import WorkoutPage from './pages/WorkoutPage';
 import List from './components/List';
 import FavouriteExercises from './pages/FavouriteExercises';
-// import exercises from "./exercises.json";
 import WorkoutConfirm from "./pages/WorkoutConfirm";
 import WorkoutFinish from "./pages/WorkoutFinish";
 import WorkoutList from "./pages/WorkoutList";
