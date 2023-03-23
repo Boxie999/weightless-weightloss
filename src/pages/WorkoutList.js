@@ -23,7 +23,11 @@ const WorkoutList = ({exerciseList, setExerciseList}) => {
       exerciseId={exerciseId} setExerciseId={setExerciseId} setExerciseInProgress={setExerciseInProgress}
       setTimeRemaining={setTimeRemaining}
       ></List>
-      <StarterCard />
+      <StarterCard 
+      exerciseInProgress={exerciseInProgress}
+      timeRemaining={timeRemaining}
+      setExerciseIndex={setExerciseIndex}
+      />
      
     </div>
     
