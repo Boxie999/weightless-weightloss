@@ -32,4 +32,5 @@ body {
 .workoutPage {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }

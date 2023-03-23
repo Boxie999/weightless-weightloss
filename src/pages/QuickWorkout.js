@@ -1,6 +1,9 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container, Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate()
 
 const QuickWorkout = () => {
   return (
@@ -23,7 +26,7 @@ const QuickWorkout = () => {
                     <Row>                        
                         <Col>
                             <Button className="btn btn-primary btn-lg" type="button" onClick= {(() => {
-                            window.location.href = "/buildworkout"
+                             navigate("/buildworkout")
                             })}>
                             Start Workout
                             </Button>

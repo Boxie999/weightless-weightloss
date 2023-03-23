@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+  import { useNavigate } from "react-router-dom";
 
 
 // First writing functions to create custom arrows for the React Slick carousel we will display the search results in.
@@ -39,7 +40,7 @@ function SamplePrevArrow(props) {
 
 
 const SearchResults = ({ exerciseResults }) => {
-
+  const navigate = useNavigate()
   // console.log(exerciseResults); // Remember exerciseResults is the output search result from a user search
 
   // Settings object for the horizontal scrollbar
@@ -130,7 +131,7 @@ const SearchResults = ({ exerciseResults }) => {
 
     window.localStorage.setItem("workout builder list", JSON.stringify(workoutBuilderExercises)); // Takes the workoutBuilderExercises and sets them in local storage. This allows for it to be accessible on other pages, as well as be set from other sources than just the search page.
 
-        window.location.href = "/WorkoutList"; // Navigate to the Workout Confirm page which will list out the workout exercises that can be reviewed before starting the workout
+      navigate("/workoutList") // Navigate to the Workout Confirm page which will list out the workout exercises that can be reviewed before starting the workout
         
     }  
 

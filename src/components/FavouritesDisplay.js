@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Container, Col } from "react-bootstrap";
-// import { searchOptions, retrieveApiData } from '../utils/retrieveApiData';
-// import SearchResultCard from './SearchResultCard';
 import exercises from "../exercises.json";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-// import FavouriteExercises from '../pages/FavouriteExercises';
 import FavouritesDisplayCard from './FavouritesDisplayCard';
+import { useNavigate } from "react-router-dom";
+
+
 
 
 // First writing functions to create custom arrows for the React Slick carousel we will display the search results in.
@@ -40,7 +40,7 @@ function SampleNextArrow(props) {
 
 
 const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
-    
+  const navigate = useNavigate()
     // console.log(favouritesArray); // To show the output from local storage
 
     // Settings object for the horizontal scrollbar
@@ -127,14 +127,14 @@ const FavouritesDisplay = ( { favouritesArray, setFavouritesArray }) => {
     // Function to create a workout directly from Favourites 
 
     const createWorkoutFromFave = () => {
-
+      
         const faveWorkoutBuilderExercises = checkedFaveArray.map((fChArrId) => (exercises.find(exercise => exercise.id === fChArrId) || {})).filter(Boolean);
 
         // console.log(faveWorkoutBuilderExercises);
 
         window.localStorage.setItem("workout builder list", JSON.stringify(faveWorkoutBuilderExercises));
-
-        window.location.href = "/WorkoutList";
+        
+       navigate("/workoutList")
 
     }
 

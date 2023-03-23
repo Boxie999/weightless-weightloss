@@ -1,11 +1,14 @@
 
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-// import React, { useState } from 'react';
 import "../styles/List.css"
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
-function List({ exerciseList,
+  
+
+function List({ 
+    exerciseList,
     setExerciseList,
     exerciseId,
     setExerciseId,
@@ -14,8 +17,10 @@ function List({ exerciseList,
     exerciseIndex,
     startButtonHidden,
     dragDisabled }) {
+        const navigate = useNavigate()
 
     const updateArray = (result) => {
+        
         const arrayToEdit = [...exerciseList]
         const [itemToMove] = arrayToEdit.splice(result.source.index, 1)
         arrayToEdit.splice(result.destination.index, 0, itemToMove)
@@ -24,10 +29,10 @@ function List({ exerciseList,
         console.log(arrayToEdit)
     }
     const startExercise = () => {
-        window.location.href = "/WorkoutPage"
-        // setExerciseId(exerciseList[0].id)
-        // setTimeRemaining(30)
-        // setExerciseInProgress(true)
+        navigate("/workoutPage")
+        setExerciseId(exerciseList[0].id)
+        setTimeRemaining(30)
+        setExerciseInProgress(true)
     }
 const warning = () => {
     toast("you must add at least one exercise")

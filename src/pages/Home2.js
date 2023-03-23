@@ -2,10 +2,11 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container, Row, Col } from "react-bootstrap";
 
+
 const Home2 = () => {
 
     // function handleClick(route) {
-    //     window.location.href = `/${route}`;
+    //     route = `/${route}`;
     
     // }
     
@@ -31,14 +32,14 @@ const Home2 = () => {
                     <Row>
                         <Col>
                             <Button className="btn btn-primary btn-lg" type="button" onClick={(() => {
-                            window.location.href = "/quickworkout"
+                            //we deleted this href = "/quickworkout
                             })}>
                             Quick Workout
                             </Button>
                         </Col>
                         <Col>
                             <Button className="btn btn-primary btn-lg" type="button" onClick= {(() => {
-                            window.location.href = "/buildworkout"
+                            //we deleted this href = "/buildworkout"
                             })}>
                             Build Your Workout
                             </Button>

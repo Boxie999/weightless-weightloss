@@ -3,9 +3,11 @@ import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer"
 import "../styles/WorkoutPage.css"
 import "../styles/TimerCard.css"
+import { useNavigate } from "react-router-dom";
 
 
 const renderTime = ({ remainingTime }) => {
+  
     if (remainingTime === 0) {
       return <div className="timer">Well done!</div>;
     }
@@ -19,6 +21,7 @@ const renderTime = ({ remainingTime }) => {
 
   
 function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInProgress, duration, setDuration, isPlaying, setIsPlaying, exerciseIndex, setExerciseIndex, setExerciseId, exerciseList }) {
+  const navigate = useNavigate()
       //colors based on if it's the exercise card or the rest card, the trail is changing color
       const exerciseColor = '#02dec4'
       const restColor = '#d10f08'
@@ -55,7 +58,7 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
                 }
 
                 if(exerciseIndex === exerciseList.length - 1 && exerciseInProgress === true) {
-                    window.location.href = "/WorkoutFinish";
+                    navigate("/workoutFinish")
                 }
 
             }}
