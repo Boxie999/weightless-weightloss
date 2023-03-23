@@ -26,7 +26,7 @@ To use this application, you should have Node.js downloaded on your device. Copy
 ## Usage 
 Project url: https://weightless-weightloss.netlify.app/
 
-GitHub repository url: https://github.com/Boxie999/simple-fit.git
+GitHub repository url: https://github.com/Boxie999/weightless-weightloss.git
 
 
 ![main page](https://user-images.githubusercontent.com/118114317/227057901-80948d46-b26e-4230-9823-f998d9421bdf.png)
