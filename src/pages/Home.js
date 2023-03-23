@@ -15,10 +15,10 @@ function Home() {
                 <p id="homeIntro">Hey you!</p>
                 <h1 id="homeTitle">LET'S GET YOUR BLOOD PUMPING</h1>
                 <p>
-                    <NavLink to="/workoutPicker">
+                    <NavLink to="/workoutpicker">
                         <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">QUICK WORKOUT</button>
                     </NavLink>
-                    <NavLink to="/buildWorkoutX">
+                    <NavLink to="/buildworkoutx">
                         <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">CREATE WORKOUT PLAN</button>
                     </NavLink>
                 </p>
