@@ -18,17 +18,17 @@ function Header() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto text-center">
-                    <Nav.Link href="BuildWorkoutX">
+                    <Nav.Link href="buildWorkoutX">
                         <li className="nav-item">
                             <p className="nav-link myLink">CREATE WORKOUT</p>
                         </li>
                     </Nav.Link>
-                    <Nav.Link href="WorkoutPicker">
+                    <Nav.Link href="workoutPicker">
                         <li className="nav-item">
                             <p className="nav-link myLink"> QUICK WORKOUT</p>
                         </li>
                     </Nav.Link>
-                    <Nav.Link href="FavouriteExercises">
+                    <Nav.Link href="favouriteExercises">
                         <li className="nav-item">
                             <p className="nav-link myLink">FAVOURITES</p>
                         </li>

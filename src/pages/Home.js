@@ -15,16 +15,16 @@ function Home() {
                 <p id="homeIntro">Hey you!</p>
                 <h1 id="homeTitle">LET'S GET YOUR BLOOD PUMPING</h1>
                 <p>
-                    <NavLink to="/WorkoutPicker">
+                    <NavLink to="/workoutPicker">
                         <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">QUICK WORKOUT</button>
                     </NavLink>
-                    <NavLink to="/BuildWorkoutX">
+                    <NavLink to="/buildWorkoutX">
                         <button className="btn btn-primary border-0 btn-lg chooseButton" href="#" type="button">CREATE WORKOUT PLAN</button>
                     </NavLink>
                 </p>
             </div>
             <div id="myExercisesArea">
-                <Nav.Link href="/FavouriteExercises">
+                <Nav.Link href="/favouriteExercises">
                     <img id="starJumper" src={jumpingGuy} alt="Star Jumping Guy" />
                     <p id="exerciseHistory">MY FAVOURITE EXERCISES</p>
                 </Nav.Link>
