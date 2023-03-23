@@ -24,10 +24,10 @@ function Home() {
                 </p>
             </div>
             <div id="myExercisesArea">
-                <Nav.Link href="/favouriteExercises">
+                <NavLink to="/favouriteexercises" style={{textDecoration: "none"}}>
                     <img id="starJumper" src={jumpingGuy} alt="Star Jumping Guy" />
                     <p id="exerciseHistory">MY FAVOURITE EXERCISES</p>
-                </Nav.Link>
+                </NavLink>
             </div>
         </div>
     );
