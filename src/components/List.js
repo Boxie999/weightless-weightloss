@@ -20,7 +20,9 @@ function List({
         const navigate = useNavigate()
 
     const updateArray = (result) => {
-        
+        if ( !result.destination){
+            return
+        }
         const arrayToEdit = [...exerciseList]
         const [itemToMove] = arrayToEdit.splice(result.source.index, 1)
         arrayToEdit.splice(result.destination.index, 0, itemToMove)

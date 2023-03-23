@@ -13,7 +13,7 @@ const WorkoutConfirm = (checkedArray, workoutExercises) => {
         {
             "bodyPart": "upper legs",
             "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3433.gif",
+            "gifUrl": "https://d205bpvrqc9yn1.cloudfront.net/3433.gif",
             "id": "3433",
             "name": "swimmer kicks v. 2 (male)",
             "target": "glutes"
@@ -21,7 +21,7 @@ const WorkoutConfirm = (checkedArray, workoutExercises) => {
           {
             "bodyPart": "upper legs",
             "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2368.gif",
+            "gifUrl": "https://d205bpvrqc9yn1.cloudfront.net/2368.gif",
             "id": "2368",
             "name": "split squats",
             "target": "quads"
@@ -29,7 +29,7 @@ const WorkoutConfirm = (checkedArray, workoutExercises) => {
           {
             "bodyPart": "upper legs",
             "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0778.gif",
+            "gifUrl": "https://d205bpvrqc9yn1.cloudfront.net/0778.gif",
             "id": "0778",
             "name": "spider crawl push up",
             "target": "glutes"
@@ -37,7 +37,7 @@ const WorkoutConfirm = (checkedArray, workoutExercises) => {
           {
             "bodyPart": "upper legs",
             "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1587.gif",
+            "gifUrl": "https://d205bpvrqc9yn1.cloudfront.net/1587.gif",
             "id": "1587",
             "name": "seated wide angle pose sequence",
             "target": "hamstrings"
@@ -45,7 +45,7 @@ const WorkoutConfirm = (checkedArray, workoutExercises) => {
           {
             "bodyPart": "upper legs",
             "equipment": "body weight",
-            "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1576.gif",
+            "gifUrl": "https://d205bpvrqc9yn1.cloudfront.net/1576.gif",
             "id": "1576",
             "name": "leg up hamstring stretch",
             "target": "hamstrings"
