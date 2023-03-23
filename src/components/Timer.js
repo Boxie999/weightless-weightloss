@@ -20,7 +20,7 @@ const renderTime = ({ remainingTime }) => {
 };
 
   
-function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInProgress, duration, setDuration, isPlaying, setIsPlaying, exerciseIndex, setExerciseIndex, setExerciseId, exerciseList }) {
+function Timer({ remainingTime, timerKey, setKey, exerciseInProgress, setExerciseInProgress, duration, setDuration, isPlaying, setIsPlaying, exerciseIndex, setExerciseIndex, setExerciseId, exerciseList }) {
   const navigate = useNavigate()
       //colors based on if it's the exercise card or the rest card, the trail is changing color
       const exerciseColor = '#02dec4'
@@ -33,7 +33,7 @@ function Timer({ remainingTime, key, setKey, exerciseInProgress, setExerciseInPr
       <div>
       
           <CountdownCircleTimer
-            key={key}
+            key={timerKey}
             isPlaying={isPlaying}
             duration={duration}
             colors={exerciseInProgress ? exerciseColor : restColor}
