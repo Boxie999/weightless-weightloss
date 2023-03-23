@@ -19,7 +19,7 @@ function Header() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto text-center">
-                    <NavLink to="buildWorkoutx"  style={{textDecoration: "none"}}>
+                    <NavLink to="buildworkoutx"  style={{textDecoration: "none"}}>
                         <li className="nav-item">
                             <p className="nav-link myLink">CREATE WORKOUT</p>
                         </li>

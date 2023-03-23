@@ -69,17 +69,17 @@ function App() {
           {/* Define routes using the Route component to render different page components at different paths */}
           {/* Define a default route that will render the Home component */}
           <Route path="/" element={<Home />} />
-          <Route path="workoutPicker" element={<WorkoutPicker setExerciseList={setExerciseList} />} />
+          <Route path="workoutpicker" element={<WorkoutPicker setExerciseList={setExerciseList} />} />
           <Route path="home2" element={<Home2 />} />
-          <Route path="buildWorkout" element={<BuildWorkout />} />
+          <Route path="buildworkout" element={<BuildWorkout />} />
           <Route path="timer" element={<WorkoutPage />} />
-          <Route path="buildWorkoutX" element={<BuildWorkoutX searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults} setExerciseList={setExerciseList}/>} />
-          <Route path="favouriteExercises" element={<FavouriteExercises searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults} setExerciseList={setExerciseList}/>} />
-          <Route path="workoutConfirm" element={<WorkoutConfirm />} />
+          <Route path="buildworkoutx" element={<BuildWorkoutX searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults} setExerciseList={setExerciseList}/>} />
+          <Route path="favouriteexercises" element={<FavouriteExercises searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSubmit={handleSubmit} exerciseResults={exerciseResults} setExerciseResults={setExerciseResults} setExerciseList={setExerciseList}/>} />
+          <Route path="workoutconfirm" element={<WorkoutConfirm />} />
           <Route path="list" element={<List />} />
-          <Route path="workoutPage" element={<WorkoutPage exerciseList={exerciseList} setExerciseList={setExerciseList} />} />
-          <Route path="workoutFinish" element={<WorkoutFinish />} />
-          <Route path="workoutList" element={<WorkoutList exerciseList={exerciseList} setExerciseList = {setExerciseList} />} />
+          <Route path="workoutpage" element={<WorkoutPage exerciseList={exerciseList} setExerciseList={setExerciseList} />} />
+          <Route path="workoutfinish" element={<WorkoutFinish />} />
+          <Route path="workoutlist" element={<WorkoutList exerciseList={exerciseList} setExerciseList = {setExerciseList} />} />
         </Routes>
       </div>
     </Router>
