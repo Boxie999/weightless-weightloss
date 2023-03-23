@@ -38,7 +38,7 @@ function WorkoutPicker({setExerciseList}) {
                 {/*Code for the Whole Body Figure*/}
                 <img id="wholeBody" src={wholeBody} alt="whole body" />
                 {/*Code for the Upper Body part - when clicked, it should be selected and light up*/}
-                <img id="upperBody" src={upperBody} alt="upper body" onMouseEnter={() => setUpperIsShown(true)} onMouseLeave={() => setUpperIsShown(false)} onClick={() => { setExerciseList(upperBodyPlan); setBodyRegionName("UPPER BODY") }} onMouseUp={() => { setUpperIsSelected(true); setCoreIsSelected(false); setLegsIsSelected(false) }} />
+                <img id="upperBody" src={upperBody} alt="upper body" onMouseEnter={() => setUpperIsShown(true)} onMouseLeave={() => setUpperIsShown(false)} onClick={() => { setExerciseList(upperBodyPlan); setBodyPart(upperBodyPlan); setBodyRegionName("UPPER BODY") }} onMouseUp={() => { setUpperIsSelected(true); setCoreIsSelected(false); setLegsIsSelected(false) }} />
                 {/*Code for the Upper Body part - when clicked again, it should turn off, and current body part should revert to fullBodyPlan*/}
                 {UpperIsSelected && (<img id="upperBodyX" src={upperBodyX} alt="upper body" onClick={() => { setUpperIsSelected(false); setExerciseList(fullBodyPlan); setBodyRegionName("FULL BODY") }} />)}
                 {/*Code for the Core part - when clicked, it should be selected and light up*/}
